@@ -1,0 +1,181 @@
+<div>
+    <h3 id="badge">Popover</h3>
+    <p class="comments-section">Popover can be used to display some content on top of another.
+    </p>
+    <h4 id="basic-example-2">Basic Popover</h4>
+    <p class=""><img src="./images/component/popovers.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Cards you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;Button variant="raised" color="primary" id="Popover1" onClick={this.toggle}&gt;
+        Launch Popover
+&lt;/Button&gt;
+&lt;Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}&gt;
+        &lt;PopoverHeader&gt;Popover Title&lt;/PopoverHeader&gt;
+    &lt;PopoverBody&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem
+         lacinia quam venenatis vestibulum.
+    &lt;/PopoverBody&gt;
+&lt;/Popover&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">action</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>This is callback property. It's called by the component on mount. This is useful when you want to trigger an action programmatically. It currently only supports updatePosition() action.<br><br><strong>Signature:</strong><br><code>function(actions: object) =&gt; void</code><br><em>actions:</em> This object contains all posible actions that can be triggered programmatically.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">anchorEl</span></td>
+            <td><span class="prop-type">union:&nbsp;object&nbsp;|<br>&nbsp;func<br></span></td>
+            <td></td>
+            <td>This is the DOM element, or a function that returns the DOM element, that may be used to set the position of the popover.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">anchorOrigin</span></td>
+            <td><span class="prop-type">{horizontal?: union:&nbsp;number&nbsp;|<br>&nbsp;enum:&nbsp;'left'&nbsp;|<br>&nbsp;'center'&nbsp;|<br>&nbsp;'right'<br><br>, vertical?: union:&nbsp;number&nbsp;|<br>&nbsp;enum:&nbsp;'top'&nbsp;|<br>&nbsp;'center'&nbsp;|<br>&nbsp;'bottom'<br><br>}</span></td>
+            <td><span class="prop-default">{  vertical: 'top',  horizontal: 'left',}</span></td>
+            <td>This is the point on the anchor where the popover's <code>anchorEl</code> will attach to. This is not used when the anchorReference is 'anchorPosition'.<br>Options: vertical: [top, center, bottom]; horizontal: [left, center, right].</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">anchorPosition</span></td>
+            <td><span class="prop-type">{top?: number, left?: number}</span></td>
+            <td></td>
+            <td>This is the position that may be used to set the position of the popover. The coordinates are relative to the application's client area.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">anchorReference</span></td>
+            <td><span class="prop-type">enum:&nbsp;'anchorEl'&nbsp;|<br>&nbsp;'anchorPosition'&nbsp;|<br>&nbsp;'none'<br></span></td>
+            <td><span class="prop-default">'anchorEl'</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">container</span></td>
+            <td><span class="prop-type">union:&nbsp;object&nbsp;|<br>&nbsp;func<br></span></td>
+            <td></td>
+            <td>A node, component instance, or function that returns either. The <code>container</code> will passed to the Modal component. By default, it's using the body of the anchorEl's top-level document object, so it's simply <code>document.body</code> most of the time.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">elevation</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td><span class="prop-default">8</span></td>
+            <td>The elevation of the popover.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">getContentAnchorEl</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>This function is called in order to retrieve the content anchor element. It's the opposite of the <code>anchorEl</code> property. The content anchor element should be an element inside the popover. It's used to correctly scroll and set the position of the popover. The positioning strategy tries to make the content anchor element just above the anchor element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">marginThreshold</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td><span class="prop-default">16</span></td>
+            <td>Specifies how close to the edge of the window the popover can appear.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onClose</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component requests to be closed.<br><br><strong>Signature:</strong><br><code>function(event: object) =&gt; void</code><br><em>event:</em> The event source of the callback.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEnter</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the component is entering.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntered</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component has entered.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntering</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component is entering.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExit</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the component is exiting.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExited</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component has exited.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExiting</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component is exiting.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name required">open&nbsp;*</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the popover is visible.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">PaperProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Paper</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">transformOrigin</span></td>
+            <td><span class="prop-type">{horizontal?: union:&nbsp;number&nbsp;|<br>&nbsp;enum:&nbsp;'left'&nbsp;|<br>&nbsp;'center'&nbsp;|<br>&nbsp;'right'<br><br>, vertical?: union:&nbsp;number&nbsp;|<br>&nbsp;enum:&nbsp;'top'&nbsp;|<br>&nbsp;'center'&nbsp;|<br>&nbsp;'bottom'<br><br>}</span></td>
+            <td><span class="prop-default">{  vertical: 'top',  horizontal: 'left',}</span></td>
+            <td>This is the point on the popover which will attach to the anchor's origin.<br>Options: vertical: [top, center, bottom, x(px)]; horizontal: [left, center, right, x(px)].</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TransitionComponent</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">Grow</span></td>
+            <td>Transition component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">transitionDuration</span></td>
+            <td><span class="prop-type">union:&nbsp;number&nbsp;|<br>&nbsp;{enter?: number, exit?: number}&nbsp;|<br>&nbsp;enum:&nbsp;'auto'<br><br></span></td>
+            <td><span class="prop-default">'auto'</span></td>
+            <td>Set to 'auto' to automatically calculate transition time based on height.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TransitionProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Transition</code> element.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

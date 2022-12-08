@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Callouts component.
+// -----------------------------------------------------------------------------
+
+.#{$class-prefix}-callout {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+	
+	&__col {
+		width: 50%;
+		order: 1;
+		&-content {
+			padding: 2rem 5.5rem;
+		}
+		
+	}
+	
+	&.odd &__col {
+		&-content {
+			text-align: right;
+		}
+		
+		&-media {
+			order: 2;
+		}
+	}
+	
+	@include media-breakpoint-down(lg) {
+		&__col {
+			width: 100%;
+			&-content {
+				padding: 2.4rem 0;
+			}
+		}
+		
+		&.odd &__col {
+			&-content {
+				text-align: left;
+			}
+			
+			&-media {
+				order: 1;
+			}
+		}
+	}
+	
+	@include media-breakpoint-down(md) {
+		&__col {
+			width: 50%;
+			&-content {
+				padding: 2rem 3.2rem;
+			}
+		}
+		
+		&.odd &__col {
+			&-content {
+				text-align: right;
+			}
+			
+			&-media {
+				order: 2;
+			}
+		}
+	}
+	
+	@include media-breakpoint-down(sm) {
+		&__col {
+			width: 100%;
+			&-content {
+				padding: 2.4rem 0;
+			}
+		}
+		
+		&.odd &__col {
+			&-content {
+				text-align: left;
+			}
+			
+			&-media {
+				order: 1;
+			}
+		}
+	}
+	
+}
+

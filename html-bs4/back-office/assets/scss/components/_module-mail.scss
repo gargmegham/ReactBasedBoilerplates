@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Mail Module.
+// -----------------------------------------------------------------------------
+
+//Mail Section
+.mail-detail-list {
+  & .#{$class-prefix}-module__list-item {
+
+    & .#{$class-prefix}-module__list-item-content {
+      cursor: pointer;
+
+      & br {
+        display: none;
+      }
+    }
+
+    &.open {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      & .#{$class-prefix}-avatar,
+      & .#{$class-prefix}-module__list-item-info {
+        align-self: flex-start;
+      }
+
+      & .#{$class-prefix}-module__list-item-content {
+        overflow: visible;
+        text-overflow: initial;
+        white-space: normal;
+        cursor: initial;
+
+        & br {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.compose-mail-box {
+  width: 55rem;
+  @include box-shadow($box-shadow-xl);
+  @include border-top-radius($border-radius);
+  position: fixed;
+  right: 4rem;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    right: 0;
+  }
+
+  &__header {
+    @include border-top-radius($border-radius);
+    background-color: $text-color-dark;
+    color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 16px;
+  }
+
+  &__body {
+    background-color: $white;
+    padding: 20px 15px;
+  }
+
+  & textarea,
+  & input {
+    @include border-radius(0);
+    @include box-shadow(none);
+    border: 0 none;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:focus {
+      @include box-shadow(none);
+      outline: none;
+    }
+  }
+
+  & input {
+    border-bottom: $dt-border;
+
+    &:focus {
+      border-color: $text-color-dark;
+    }
+  }
+
+  & textarea {
+    height: 220px;
+    resize: none;
+    @include media-breakpoint-down(sm) {
+      height: 180px;
+    }
+  }
+}

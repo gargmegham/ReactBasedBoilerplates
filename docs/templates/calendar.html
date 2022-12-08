@@ -1,0 +1,41 @@
+<div>
+    <h3>Calendar</h3>
+    <p class="comments-section">If you want to render Calendar component like the following images for different Views.
+    </p>
+    <h4 id="basic-example-2">Simple Calendar</h4>
+    <p class="center-cropped center-cropped-xlg"><img src="./images/component/calendar.png" alt=""/></p>
+    <p class="comments-section">To show this type of Calendar you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;div className="app-calendar animated slideInUpTiny animation-duration-3"&gt;
+            &lt;BigCalendar
+                    {...props}
+                    events={events}
+                    views={allViews}
+                    step={60}
+                    defaultDate={new Date(2015, 3, 1)}/&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+
+    <h4 >Popup</h4>
+    <p class="center-cropped center-cropped-lg"><img src="./images/component/popup.png" alt=""/></p>
+    <pre>
+<code class="html">
+&lt;div className="app-calendar app-cul-calendar animated slideInUpTiny animation-duration-3"&gt;
+        &lt;h3 className='callout'&gt;
+            Click the "+x more" link on any calendar day that cannot fit all the days events to
+            see an inline popup of all the events.
+        &lt;/h3&gt;
+        &lt;BigCalendar
+                popup
+                events={events}
+                defaultDate={new Date(2015, 3, 1)}
+        /&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+</div>

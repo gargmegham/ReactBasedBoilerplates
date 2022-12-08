@@ -1,0 +1,33 @@
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Setup Demo on Local</h2>
+    <div class="adocs-section-content ng-binding"><p>Note: <em>dist/ </em>folder contains the built distribution (production) version, which is for demo purpose only</p>
+        <p class="lead">You need to put the files on a server to run it. Here we told about how to<br>
+            build a server locally.</p>
+        <div class="callout callout-info">
+            <p><em>You can build a locally server using WAMP or MAMP (if you<br>
+                uses PHP). Also it’s pretty easy to build one with Python or Ruby (if you prefer Python or<br>
+                Ruby). And here we’ll build a local server with NodeJS</em></p>
+        </div>
+        <p><strong>Preparation:</strong></p>
+        <p>You’ll need to install <a href="http://nodejs.org/">Node.js &gt;=v6.5.0</a> (NPM comes along with<br>
+            it) and <a href="https://github.com/cloudhead/node-static">node-static</a> (a NPM package)</p>
+        <p></p>
+        <p><strong>Steps:</strong></p>
+        <p>It’s easy if you are familiar with Node. <a href="http://nodejs.org/" target="_blank">Download<br>
+            Node.js here</a> then install it, and install <a href="https://github.com/cloudhead/node-static">node-static package</a> with one command<br>
+            line</p>
+        <pre>$ npm install -g node-static</pre>
+        <p>The usage of node-static is simple. Just enter the “dist” directory with command line</p>
+        <pre>$ cd dist/</pre>
+        <p>and type:</p>
+        <pre>$ static</pre>
+        <p>It’ll return something like this: </p>
+        <pre>serving "." at http://127.0.0.1:8080</pre>
+        <p>Then you can view the template on <code>http://127.0.0.1:8080</code> with your browser</p>
+        <div class="callout callout-info">
+            <p>Note: Because the dist/ folder built with webpack uses absolute<br>
+                path, you need to run it from root path, if not, please compile a new <em>dist/</em> with a new<br>
+                publicPath variable and run `npm run build`.</p>
+        </div>
+    </div>
+</div>

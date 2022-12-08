@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main content of the site/application.
+// -----------------------------------------------------------------------------
+.#{$class-prefix}-root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $root-bg;
+}
+
+.#{$class-prefix}-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  -ms-flex: 1;
+  overflow: auto;
+}
+
+.#{$class-prefix}-content-wrapper {
+  flex: 1 1 auto;
+  width: calc(100% - #{$sidebar-width});
+  display: flex;
+  flex-direction: column;
+  @include transition(all 0.2s ease);
+
+  @media screen and (min-width: 1367px) {
+    width: calc(100% - #{$sidebar-width + 40px});
+  }
+}
+
+.#{$class-prefix}-content {
+  padding: 3.2rem 3.2rem 0.2rem;
+  flex: 1;
+  -ms-flex: 1;
+}
+
+.#{$class-prefix}-page {
+  &__header {
+    margin-bottom: 3.2rem;
+  }
+
+}
+
+.#{$class-prefix}-entry {
+
+  &__header {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: $dt-border;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 3px;
+      width: 45px;
+      background-color: $primary;
+      @include border-radius(10px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font: {
+      size: 16px;
+    }
+  }
+}
+
+/*
+.#{$class-prefix}-quick-drawer {
+  height: 100vh;
+  width: $sidebar-width;
+  background-color: $white;
+}*/

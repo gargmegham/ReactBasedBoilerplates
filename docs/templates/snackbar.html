@@ -1,0 +1,184 @@
+<div>
+    <h3 id="badge">Snackbars</h3>
+    <p class="comments-section">Snackbars provide brief feedback about an operation through a message - typically at the bottom of the screen.
+        Snackbars contain a single line of text directly related to the operation performed. They may contain a text action, but no icons.
+    </p>
+    <h4 id="basic-example-2">Simple</h4>
+    <p><img src="./images/component/snackbars.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Snackbars you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;Button variant="raised" color="primary" onClick={this.handleClick}&gt;
+                    {this.props.children}
+&lt;/Button&gt;
+&lt;Snackbar
+        anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'left',
+         }}
+    open={this.state.open}
+    autoHideDuration={6e3}
+    onClose={this.handleRequestClose}
+    SnackbarContentProps={{
+        'aria-describedby': 'message-id',
+    }}
+    message={&lt;span id="message-id"&gt;Note archived&lt;/span&gt;}
+    action={[
+        &lt;Button key="undo" color="secondary" size="small" onClick={this.handleRequestClose}&gt;
+            UNDO
+        &lt;/Button&gt;,
+        &lt;IconButton
+                key="close"
+                aria-label="Close"
+                color="inherit"
+                onClick={this.handleRequestClose}&gt;
+            &lt;CloseIcon/&gt;
+        &lt;/IconButton&gt;,
+       ]}
+ /&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">action</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The action to display.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">anchorOrigin</span></td>
+            <td><span class="prop-type">{horizontal?: union:&nbsp;number&nbsp;|<br>&nbsp;enum:&nbsp;'left'&nbsp;|<br>&nbsp;'center'&nbsp;|<br>&nbsp;'right'<br><br>, vertical?: union:&nbsp;number&nbsp;|<br>&nbsp;enum:&nbsp;'top'&nbsp;|<br>&nbsp;'center'&nbsp;|<br>&nbsp;'bottom'<br><br>}</span></td>
+            <td><span class="prop-default">{  vertical: 'bottom',  horizontal: 'center',}</span></td>
+            <td>The anchor of the <code>Snackbar</code>.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">autoHideDuration</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td></td>
+            <td>The number of milliseconds to wait before automatically calling the <code>onClose</code> function. <code>onClose</code> should then set the state of the <code>open</code> prop to hide the Snackbar. This behavior is disabled by default with the <code>null</code> value.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">element</span></td>
+            <td></td>
+            <td>If you wish the take control over the children of the component you can use this property. When used, you replace the <code>SnackbarContent</code> component with the children.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">ContentProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>SnackbarContent</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disableWindowBlurListener</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the <code>autoHideDuration</code> timer will expire even if the window is not focused.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">key</span></td>
+            <td><span class="prop-type">any</span></td>
+            <td></td>
+            <td>When displaying multiple consecutive Snackbars from a parent rendering a single &lt;Snackbar/&gt;, add the key property to ensure independent treatment of each message. e.g. &lt;Snackbar key={message} /&gt;, otherwise, the message may update-in-place and features such as autoHideDuration may be canceled.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">message</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The message to display.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onClose</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component requests to be closed. Typically <code>onClose</code> is used to set state in the parent component, which is used to control the <code>Snackbar</code> <code>open</code> prop. The <code>reason</code> parameter can optionally be used to control the response to <code>onClose</code>, for example ignoring <code>clickaway</code>.<br><br><strong>Signature:</strong><br><code>function(event: object, reason: string) =&gt; void</code><br><em>event:</em> The event source of the callback<br><em>reason:</em> Can be:<code>"timeout"</code> (<code>autoHideDuration</code> expired) or: <code>"clickaway"</code></td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEnter</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the transition is entering.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntered</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the transition has entered.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntering</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the transition is entering.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExit</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the transition is exiting.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExited</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the transition has exited.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExiting</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the transition is exiting.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">open</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If true, <code>Snackbar</code> is open.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">resumeHideDuration</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td></td>
+            <td>The number of milliseconds to wait before dismissing after user interaction. If <code>autoHideDuration</code> property isn't specified, it does nothing. If <code>autoHideDuration</code> property is specified but <code>resumeHideDuration</code> isn't, we default to <code>autoHideDuration / 2</code> ms.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TransitionComponent</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">Slide</span></td>
+            <td>Transition component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">transitionDuration</span></td>
+            <td><span class="prop-type">union:&nbsp;number&nbsp;|<br>&nbsp;{enter?: number, exit?: number}<br></span></td>
+            <td><span class="prop-default">{  enter: duration.enteringScreen,  exit: duration.leavingScreen,}</span></td>
+            <td>The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TransitionProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Transition</code> element.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

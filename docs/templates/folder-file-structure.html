@@ -1,0 +1,73 @@
+<h1>Folder &amp; File Structure</h1>
+<div class="adocs-section-content ng-binding">
+	<p>In this article, we will take a closer look into the folder structure of Wieldy .</p>
+	<p>Let's get started.</p>
+	<ul>
+
+		<li>
+			<span class="f-path">node_modules/</span><br>
+			<p>All the dependency and third party libraries are placed in this folder.</p>
+		</li>
+		<li>
+			<span class="f-path">public/</span><br>
+			<p>This folder basically keeps the public assets. </p>
+		</li>
+		<li>
+			<span class="f-path">src/</span><br>
+			<p>You can find all the pages, components, modules, apps etc. here in this folder. This is the main workplace for you to start writing/extending the application source code.</p>
+			<ul>
+				<li>
+					<span class="f-path">appRedux/</span><br>
+					<p>AppRedux folder contains all the redux related functionality</p>
+				<Ol type="i">
+					<li>
+						<span class="f-path">actions/</span><br>
+						<p>Actions folder contains all the redux actions. For example, collapsing the drawer, changing the theme color in demo etc.</p>
+
+					<li>
+						<span class="f-path">reducers/</span><br>
+						<p>reducers/ folder keeps all the reducers related files</p>
+					</li>
+					<li>
+						<span class="f-path">saga/</span><br>
+						<p>saga/ folder keeps alternative side effect model for Redux</p>
+					</li>
+					<li>
+						<span class="f-path">store/</span><br>
+						<p>store/ folder stores all the state of app</p>
+					</li>
+				</Ol>
+				</li>
+				<li>
+					<span class="f-path">routes/</span><br>
+					<p>app folder has all the layouts, pages and routes. We will come back to this shortly.</p>
+					<p>Here in this app folder, you will find routes/ folder which contains all the pages components and this index.js has all the parent routes defined in it.<p>
+					<p>Wieldy  has kept the folder structure so easy to remember where the folder structure follow the structure defined in route.</p>
+					<p>All the routes defined for sub-menus are inside those parent page component. For example, routes defined for sub-menus of dashboard are inside the dashboard folder’s index.js</p>
+				</li>
+				<li>
+					<span class="f-path">assets/</span><br>
+					<p>This folder keeps the images and other raw materials needed in the app.</p>
+				</li>
+				<li>
+					<span class="f-path">components/</span><br>
+					<p>Now, here comes the components/ folder where we place common components used throughout the app. So, if you want to create a component which you want to reuse throughout the app, you should place that component here.</p>
+				</li>
+				<li>
+					<span class="f-path">constants/</span><br>
+					<p>constants/ folder contains all the constants defined here which are being used throughout the app</p>
+				</li>
+				<li>
+					<span class="f-path">containers/</span><br>
+					<p>All the stateful components rests here in this folder. For example sidenav where we manage the state of the opened link or its style.</p>
+				</li>
+				<li>
+					<span class="f-path">styles/</span><br>
+					<p>This folder contains all the less implementation. So, this is the right place for you to change the color theme or do any theme related customization</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<p>So, this was all about the folder structure Wieldy  uses.</p>
+	<p>I hope this article was helpful.</p>
+</div>

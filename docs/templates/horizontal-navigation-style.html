@@ -1,0 +1,358 @@
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Changing Horizontal Navigation Style</h2>
+    <div class="adocs-section-content ng-binding">
+        <p>In this section we are going to learn how to change the horizontal navigation style.</p>
+
+        <!--<p>There are two ways to do it:</p>-->
+
+        <!--  <ol>
+              <li>--><strong>Changing the reducer file Settings.js</strong><br>
+        <p>
+            In this method, open the Settings.js file which you can find inside the
+            <strong>src/appRedux/reducers/</strong> folder.
+        </p>
+        <p>Here in this file, you will find a initialSettings constant object</p>
+
+        <pre>
+     <code class="html">
+const initialSettings = {
+    ....
+  navStyle: NAV_STYLE_FIXED,
+    ...
+};
+  </code>
+</pre>
+
+        <p> The Horizontal Nav Style property could have one of five values given below:
+        <ol type="i">
+            <li>
+                <strong class="mt-1">NAV_STYLE_DEFAULT_HORIZONTAL</strong><br/>
+                <img src="./images/layouts/default_horizontal.png"
+                     alt="To set Horizontal default style">
+                To set Horizontal default style
+            </li>
+            <li class="mt-1">
+                <strong class="mt-1">NAV_STYLE_DARK_HORIZONTAL</strong><br/>
+                <img src="./images/layouts/dark_horizontal.png"
+                     alt="To set Horizontal dark style">
+                To set Horizontal dark style
+            </li>
+            <li class="mt-1">
+                <strong class="mt-1">NAV_STYLE_INSIDE_HEADER_HORIZONTAL</strong><br/>
+                <img src="./images/layouts/inside_header_horizontal.png"
+                     alt="To set Horizontal inside Header style">
+                To set Horizontal inside Header style
+            </li>
+            <li class="mt-1">
+                <strong class="mt-1">NAV_STYLE_BELOW_HEADER</strong><br/>
+                <img src="./images/layouts/below_header.png"
+                     alt="To set Horizontal below Header style">
+                To set Horizontal below Header style
+            </li>
+            <li class="mt-1">
+                <strong class="mt-1">NAV_STYLE_ABOVE_HEADER</strong><br/>
+                <img src="./images/layouts/top_to_header.png"
+                     alt="To set Horizontal above Header style">
+                To set Horizontal above Header style
+            </li>
+        </ol>
+
+
+        <!-- </li>--><!--
+            <li>
+                <strong>Manually Changing the layout</strong>
+                <p>To achieve the required horizontal navigation style, you will need to make changes in three files
+                    given below: </p>
+
+                <ol type="i">
+                    <li><strong>src/app/MainApp.js</strong>
+                        <p>Open this file in your code editor and then copy one of the three source code given below for
+                            3 different positions of the navigation bar:
+                        </p>
+                        <p> Note: three dots (...) mentions your written or customized code. So, avoid replacing that
+                            content with these three dots given in below source code.
+                        </p>
+
+                        <ol type="a">
+                            <li>For the HorizontalDefault, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;Layout className="gx-app-layout"&gt;
+    {width &lt; TAB_SIZE ? &lt;Sidebar/&gt; : null}
+    &lt;Layout&gt;
+      &lt;HorizontalDefault/&gt;
+     &lt;Content className="gx-layout-content"&gt;
+        &lt;App .../&gt;
+        &lt;Footer&gt;
+          &lt;div className="gx-layout-footer-content"&gt;
+            {footerText}
+          &lt;/div&gt;
+        &lt;/Footer&gt;
+      &lt;/Content&gt;
+    &lt;/Layout&gt;
+    &lt;Customizer/&gt;
+&lt;/Layout&gt;
+  </code>
+</pre>
+                            <li>For HorizontalDark, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;Layout className="gx-app-layout"&gt;
+    {width &lt; TAB_SIZE ? &lt;Sidebar/&gt; : null}
+    &lt;Layout&gt;
+     &lt;HorizontalDark/&gt;
+     &lt;Content className="gx-layout-content"&gt;
+        &lt;App .../&gt;
+        &lt;Footer&gt;
+          &lt;div className="gx-layout-footer-content"&gt;
+            {footerText}
+          &lt;/div&gt;
+        &lt;/Footer&gt;
+      &lt;/Content&gt;
+    &lt;/Layout&gt;
+    &lt;Customizer/&gt;
+&lt;/Layout&gt;
+  </code>
+</pre>
+                            <li>For InsideHeader, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;Layout className="gx-app-layout"&gt;
+    {width &lt; TAB_SIZE ? &lt;Sidebar/&gt; : null}
+    &lt;Layout&gt;
+     &lt;InsideHeader/&gt;
+     &lt;Content className="gx-layout-content"&gt;
+        &lt;App .../&gt;
+        &lt;Footer&gt;
+          &lt;div className="gx-layout-footer-content"&gt;
+            {footerText}
+          &lt;/div&gt;
+        &lt;/Footer&gt;
+      &lt;/Content&gt;
+    &lt;/Layout&gt;
+    &lt;Customizer/&gt;
+&lt;/Layout&gt;
+  </code>
+</pre>
+                            <li>For AboveHeader, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;Layout className="gx-app-layout"&gt;
+    {width &lt; TAB_SIZE ? &lt;Sidebar/&gt; : null}
+    &lt;Layout&gt;
+     &lt;AboveHeader/&gt;
+     &lt;Content className="gx-layout-content"&gt;
+        &lt;App .../&gt;
+        &lt;Footer&gt;
+          &lt;div className="gx-layout-footer-content"&gt;
+            {footerText}
+          &lt;/div&gt;
+        &lt;/Footer&gt;
+      &lt;/Content&gt;
+    &lt;/Layout&gt;
+    &lt;Customizer/&gt;
+&lt;/Layout&gt;
+  </code>
+</pre>
+                            <li>For BelowHeader, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;Layout className="gx-app-layout"&gt;
+    {width &lt; TAB_SIZE ? &lt;Sidebar/&gt; : null}
+    &lt;Layout&gt;
+     &lt;BelowHeader/&gt;
+     &lt;Content className="gx-layout-content"&gt;
+        &lt;App .../&gt;
+        &lt;Footer&gt;
+          &lt;div className="gx-layout-footer-content"&gt;
+            {footerText}
+          &lt;/div&gt;
+        &lt;/Footer&gt;
+      &lt;/Content&gt;
+    &lt;/Layout&gt;
+    &lt;Customizer/&gt;
+&lt;/Layout&gt;
+  </code>
+</pre>
+                            <li>For NoHeaderNotification, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;Layout className="gx-app-layout"&gt;
+    {width &lt; TAB_SIZE ? &lt;Sidebar/&gt; : null}
+    &lt;Layout&gt;
+    &lt;NoHeaderNotification/&gt;
+     &lt;Content className="gx-layout-content"&gt;
+        &lt;App .../&gt;
+        &lt;Footer&gt;
+          &lt;div className="gx-layout-footer-content"&gt;
+            {footerText}
+          &lt;/div&gt;
+        &lt;/Footer&gt;
+      &lt;/Content&gt;
+    &lt;/Layout&gt;
+    <Customizer/>
+         </Layout>
+  </code>
+</pre>
+                        </ol>
+                        <p> Now, replace the content of return function of app component’s src/app/index.js with the
+                            copied one.</p>
+
+                    </li>
+                    <li>
+                        <strong>src/container/SideNav/index.js </strong>
+                        <p>Now copy the below source code and replace that with the content of render() function in this
+                            file.</p>
+                        <pre>
+     <code class="html">
+ &lt;div className="app-sidebar d-none"&gt;
+        &lt;Drawer className="app-sidebar-content"
+                variant="temporary"
+                open={navCollapsed}
+                onClose={this.onToggleCollapsedNav}
+                classes={{
+                paper: 'side-nav',
+                }}
+        &gt;
+            &lt;UserInfo/&gt;
+            &lt;SidenavContent/&gt;
+     &lt;/Drawer&gt;
+    &lt;/div&gt;
+  </code>
+</pre>
+                    </li>
+                    <li>
+                        <strong>src/components/Header/index.js</strong>
+                        <p>Now copy the below source code and replace that with the content of render() function in this
+                            file.</p>
+                        <ol type="a">
+                            <li>For Navigation Inside Header, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;AppBar className="app-main-header"&gt;
+    &lt;Toolbar className="app-toolbar" disableGutters={false}&gt;
+        &lt;div className="d-block d-md-none pointer mr-3" onClick={this.onToggleCollapsedNav}&gt;
+            &lt;span className="jr-menu-icon"&gt;
+              &lt;span className="menu-icon"/&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;Link className="app-logo mr-2 d-none d-sm-block" to="/"&gt;
+            &lt;img src="http://via.placeholder.com/177x65" alt="Jambo" title="Jambo"/&gt;
+        &lt;/Link&gt;
+
+
+        &lt;SearchBox styleName="d-none d-lg-block" placeholder=""
+                   onChange={this.updateSearchText.bind(this)}
+                   value={this.state.searchText}/&gt;
+        &lt;Menu/&gt;
+
+        &lt;ul className="header-notifications list-inline ml-auto"&gt;
+            &lt;li&gt;
+                ...
+            &lt;/li&gt;
+            &lt;li&gt;
+                ...
+            &lt;/li&gt;
+            &lt;li&gt;
+                ...
+            &lt;/li&gt;
+            &lt;li&gt;
+                ...
+            &lt;/li&gt;
+
+            &lt;li className="list-inline-item user-nav"&gt;
+                &lt;Dropdown
+                        className="quick-menu"
+                        isOpen={this.state.userInfo}
+                        toggle={this.onUserInfoSelect.bind(this)}&gt;
+
+                    &lt;DropdownToggle
+                            className="d-inline-block"
+                            tag="span"
+                            data-toggle="dropdown"&gt;
+                        &lt;IconButton className="icon-btn size-30"&gt;
+                            &lt;Avatar
+                                    alt='...'
+                                    src='http://via.placeholder.com/150x150'
+                                    className="size-30"
+                            /&gt;
+                        &lt;/IconButton&gt;
+                    &lt;/DropdownToggle&gt;
+
+                    &lt;DropdownMenu right&gt;
+                        &lt;UserInfoPopup/&gt;
+                    &lt;/DropdownMenu&gt;
+                &lt;/Dropdown&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/Toolbar&gt;
+&lt;/AppBar&gt;
+  </code>
+</pre>
+                            <li>For Navigation Below & Above Header, copy below source code</li>
+                            <pre>
+     <code class="html">
+&lt;AppBar className="app-main-header app-main-header-top"&gt;
+    &lt;Toolbar className="app-toolbar" disableGutters={false}&gt;
+        &lt;div className="d-block d-md-none pointer mr-3" onClick={this.onToggleCollapsedNav}&gt;
+            &lt;span className="jr-menu-icon"&gt;
+              &lt;span className="menu-icon"/&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+            ...
+        &lt;ul className="header-notifications list-inline ml-auto"&gt;
+            &lt;li&gt;
+              ...
+            &lt;/li&gt;
+            &lt;li&gt;
+              ...
+            &lt;/li&gt;
+            &lt;li&gt;
+              ...
+            &lt;/li&gt;
+            &lt;li&gt;
+              ...
+            &lt;/li&gt;
+
+            &lt;li className="list-inline-item user-nav"&gt;
+                &lt;Dropdown
+                        className="quick-menu"
+                        isOpen={this.state.userInfo}
+                        toggle={this.onUserInfoSelect.bind(this)}&gt;
+
+                    &lt;DropdownToggle
+                            className="d-inline-block"
+                            tag="span"
+                            data-toggle="dropdown"&gt;
+                        &lt;IconButton className="icon-btn size-30"&gt;
+                            &lt;Avatar
+                                    alt='...'
+                                    src='http://via.placeholder.com/150x150'
+                                    className="size-30"
+                            /&gt;
+                        &lt;/IconButton&gt;
+                    &lt;/DropdownToggle&gt;
+
+                    &lt;DropdownMenu right&gt;
+                        &lt;UserInfoPopup/&gt;
+                    &lt;/DropdownMenu&gt;
+                &lt;/Dropdown&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/Toolbar&gt;
+&lt;/AppBar&gt;
+  </code>
+</pre>
+                        </ol>
+                    </li>
+
+                </ol>
+            </li>
+        </ol>-->
+
+        That is all you need to do to achieve the desired horizontal navigation style.
+
+
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div>
+    <h3 id="badge">Alert</h3>
+    <p class="comments-section">Alerts are available for any length of text. There are total of eight css classes could
+        be used to draw an alert message. These classes are .alert-success, .alert-danger, .alert-info, .alert-primary,
+        .alert-secondary, .alert-warning, .alert-light, .alert-dark</p>
+    <p><img src="./images/component/alert.png" alt=""/></p>
+    <p class="comments-section">To show this type of Alerts you will need this code in down here.
+    </p>
+
+    <pre>
+<code class="html">
+ <br/> &lt;Alert classname="shadow-lg" color="default"&gt;<br/>        This is a default alert — check it out!<br/> &lt;/Alert&gt;<br/><br/>&lt;h5&gt;primary Alerts&lt;/h5&gt;<br/>&lt;Alert classname="shadow-lg" color="primary"&gt;<br/>         This is a primary alert — check it out!<br/>&lt;/Alert&gt;<br/><br/>&lt;h5&gt;Secondary Alerts&lt;/h5&gt;<br/>&lt;Alert classname="shadow-lg" color="secondary"&gt;<br/>           This is a secondary alert — check it out!<br/>&lt;/Alert&gt;<br/><br/>&lt;h5&gt;Success Alerts&lt;/h5&gt;<br/>&lt;Alert classname="shadow-lg" color="success"&gt;<br/>         This is a success alert — check it out!<br/>&lt;/Alert&gt;<br/><br/>&lt;h5&gt;Danger Alerts&lt;/h5&gt;<br/>&lt;Alert classname="shadow-lg" color="danger"&gt;<br/>          This is a danger alert — check it out!<br/>&lt;/Alert&gt;<br/>
+</code>
+        </pre>
+    <h4>Highlighted Alerts</h4>
+    <p>Alerts are available for any length of text. There are total of eight css classes could be used to draw an alert
+        message. These classes are .alert-success, .alert-danger, .alert-info, .alert-primary, .alert-secondary,
+        .alert-warning, .alert-light, .alert-dark</p>
+    <img src="./images/component/highlighted-alert.png" alt=""/>
+    <pre>
+  <code class="html">
+<br/>&lt;h5&gt;Primary Alerts&lt;/h5&gt;<br/>&lt;Alert classname="bg-primary shadow-lg text-white"&gt;<br/>          This is a primary alert — check it out!<br/>&lt;/Alert&gt;<br/>
+   </code>
+</pre>
+    <h4 class="mb-4">Available Properties, type and descriptions are down below.</h4>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>className</td>
+            <td>PropTypes.string</td>
+        </tr>
+        <tr>
+            <td style="text-align:left">closeClassName</td>
+            <td style="text-align:left">PropTypes.string</td>
+        </tr>
+        <tr>
+            </td>
+            <td><span class="prop-default">color</span></td>
+            <td style="text-align:left">PropTypes.string</td>
+        </tr>
+        <tr>
+            <td><span class="prop-default">isOpen</span></td>
+            <td>PropTypes.bool</td>
+        </tr>
+        <tr>
+            </td>
+            <td><span class="prop-default">toggle</span></td>
+            <td style="text-align:left">PropTypes.func</td>
+        </tr>
+        <tr>
+            </td>
+            <td><span class="prop-default">tag</span></td>
+            <td style="text-align:left">PropTypes.oneOfType([PropTypes.func, PropTypes.string])</td>
+        </tr>
+        <tr>
+            </td>
+            <td><span class="prop-default">transition</span></td>
+            <td>PropTypes.shape(Fade.propTypes)</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

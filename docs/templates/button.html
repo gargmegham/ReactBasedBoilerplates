@@ -1,0 +1,117 @@
+<div>
+    <h3 id="badge">Buttons</h3>
+    <p class="comments-section">Buttons communicate the action that will occur when the user touches them.
+        Ant buttons trigger an ink reaction on press. They may display text, imagery, or both. Flat buttons and raised buttons are the most commonly used types.</p>
+    <p><img src="./images/component/button.png" alt=""/></p>
+    <p class="comments-section">To show this type of Buttons you will need this code in down here.
+    </p>
+
+    <pre>
+<code class="html">
+&lt;Button variant="raised" className="jr-btn bg-white text-black"&gt;Default&lt;/Button&gt;
+&lt;Button variant="raised" color="primary" className="jr-btn text-white"&gt;Primary&lt;/Button&gt;
+&lt;Button variant="raised" color="secondary" className="jr-btn text-white"&gt;Secondary&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-warning text-white"&gt;Warning&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-info text-white"&gt;Info&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-success text-white"&gt;Success&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-danger text-white"&gt;Danger&lt;/Button&gt;
+</code>
+    </pre>
+    <h4>Optional Ant Design Colors</h4>
+    <img src="./images/component/button1.png" alt=""/>
+    <pre>
+<code class="html">
+&lt;Button variant="raised" className="jr-btn bg-cyan text-white"&gt;Cyan&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-teal text-white"&gt;Teal&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-amber text-white"&gt;Amber&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-orange text-white"&gt;Orange&lt;/Button&gt;
+&lt;Button variant="raised" className="jr-btn bg-deep-orange text-white"&gt;Deep Orange&lt;/Button&gt;
+</code>
+   </pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the button.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">color</span></td>
+            <td><span class="prop-type">enum:&nbsp;'default'&nbsp;|<br>&nbsp;'inherit'&nbsp;|<br>&nbsp;'primary'&nbsp;|<br>&nbsp;'secondary'<br></span></td>
+            <td><span class="prop-default">'default'</span></td>
+            <td>The color of the component. It supports those theme colors that make sense for this component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">component</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td></td>
+            <td>The component used for the root node. Either a string to use a DOM element or a component. The default value is a <code>button</code>.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disabled</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the button will be disabled.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disableFocusRipple</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the  keyboard focus ripple will be disabled. <code>disableRipple</code> must also be true.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disableRipple</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the ripple effect will be disabled.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">fullWidth</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the button will take up the full width of its container.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">href</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>The URL to link to when the button is clicked. If defined, an <code>a</code> element will be used as the root node.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">mini</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, and <code>variant</code> is <code>'fab'</code>, will use mini floating action button styling.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">size</span></td>
+            <td><span class="prop-type">enum:&nbsp;'small'&nbsp;|<br>&nbsp;'medium'&nbsp;|<br>&nbsp;'large'<br></span></td>
+            <td><span class="prop-default">'medium'</span></td>
+            <td>The size of the button. <code>small</code> is equivalent to the dense button styling.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">variant</span></td>
+            <td><span class="prop-type">enum:&nbsp;'flat'&nbsp;|<br>&nbsp;'raised'&nbsp;|<br>&nbsp;'fab'<br></span></td>
+            <td><span class="prop-default">'flat'</span></td>
+            <td>The type of button.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

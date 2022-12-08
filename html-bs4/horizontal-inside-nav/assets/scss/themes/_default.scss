@@ -1,0 +1,297 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+// Base Folder
+// -----------------------------------------------------------------------------
+
+//helper.scss
+.pulse-primary {
+  @include pulse-effect($primary, 20px, pulse-primary);
+}
+
+.dot-shape {
+  background-color: $primary;
+}
+
+// Components Folder
+// -----------------------------------------------------------------------------
+
+//button.scss
+.btn {
+  &-group &-default {
+    &.active {
+      background-color: $primary;
+    }
+  }
+}
+
+//form.scss
+.switch {
+  & input {
+    &:checked + .slider {
+      background-color: $primary;
+    }
+
+    &:focus + .slider {
+      @include box-shadow(0 0 1px $primary);
+    }
+  }
+}
+
+//module-base.scss
+.#{$class-prefix}-contacts {
+  & .#{$class-prefix}-contact {
+    @include hover-focus {
+      background-color: lighten($primary-light, 10%);
+
+      & .#{$class-prefix}-contact__title {
+        color: $primary;
+      }
+    }
+  }
+}
+
+//module-chat.scss
+.#{$class-prefix}-chat__item {
+  & .#{$class-prefix}-chat__message {
+    background-color: darken($primary, 12%);
+
+    &:last-child {
+
+      &:after {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" style="enable-background:new 0 0 14.9 17.3;"><path fill="#{unicode-color(darken($primary, 12%))}" d="M9.2,0c0,6.2-3.6,11.7-8.4,15c-0.4,0.3-0.2,0.9,0.3,0.9h8.1"></path><path fill="#{unicode-color(darken($primary, 10%))}" d="M9.2,16.4H1.1c-0.4,0-0.8-0.3-1-0.7c-0.1-0.4,0-0.9,0.4-1.1C5.3,11.3,8.2,5.8,8.2,0h1c0,6.2-3,11.9-8.1,15.4   l8.1,0V16.4z"></path></svg>') no-repeat;
+      }
+    }
+  }
+
+  &.reply {
+    & .#{$class-prefix}-chat__message {
+
+      &:last-child {
+        &:after {
+          background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" style="enable-background:new 0 0 14.9 17.3;"><path fill="#{unicode-color($white)}" d="M9.2,0c0,6.2-3.6,11.7-8.4,15c-0.4,0.3-0.2,0.9,0.3,0.9h8.1"></path><path fill="#{unicode-color($border-color)}" d="M9.2,16.4H1.1c-0.4,0-0.8-0.3-1-0.7c-0.1-0.4,0-0.9,0.4-1.1C5.3,11.3,8.2,5.8,8.2,0h1c0,6.2-3,11.9-8.1,15.4   l8.1,0V16.4z"></path></svg>') no-repeat;
+        }
+      }
+    }
+  }
+}
+
+//navs.scss
+.nav-underline {
+  & .nav-link {
+
+    &.active:before {
+      background-color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+    }
+    @include hover-focus-active {
+      color: $primary;
+    }
+  }
+}
+
+//pickers.scss
+.bootstrap-datetimepicker-widget {
+  & table {
+
+    & td {
+      &.today:before {
+        border-bottom-color: theme-color("primary");
+      }
+
+      &.active,
+      &.active:hover {
+        background-color: theme-color("primary");
+      }
+
+      span {
+        &.active {
+          background-color: theme-color("primary");
+        }
+      }
+    }
+  }
+}
+
+//tooltip.scss
+.custom-tooltip {
+  background-color: $primary;
+
+  &:after {
+    color: $primary;
+  }
+}
+
+// Layout Folder
+// -----------------------------------------------------------------------------
+
+//grid.scss
+.#{$class-prefix}-entry {
+  &__header {
+    &:after {
+      background-color: $primary;
+    }
+  }
+}
+
+//module.scss
+.#{$class-prefix}-module__sidebar {
+  &-header .quick-menu-list {
+    & .quick-menu {
+      @include media-breakpoint-down(sm) {
+        &.active {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.#{$class-prefix}-module-side-nav {
+  &__item {
+    &.active .#{$class-prefix}-module-side-nav__link {
+      background-color: $module-sidebar-color-hover;
+    }
+  }
+
+  &__link {
+    @include hover-focus-active {
+      color: $module-sidebar-color-hover;
+    }
+  }
+}
+
+.#{$class-prefix}-module__drawer {
+  & .#{$class-prefix}-action {
+    &-nav {
+      &__item {
+        &.active .#{$class-prefix}-action-nav__link {
+          background-color: $module-sidebar-color-hover;
+        }
+      }
+
+      &__link {
+        @include hover-focus-active {
+          color: $module-sidebar-color-hover;
+        }
+      }
+    }
+  }
+}
+
+//sidebar-left.scss
+.#{$class-prefix}-side-nav {
+  & > &__item {
+    &.selected > a,
+    &.open > a {
+      color: $sidebar-color-hover;
+    }
+  }
+
+  &__link {
+    @include hover-focus-active {
+      color: $sidebar-color-hover;
+    }
+  }
+}
+
+.#{$class-prefix}-side-nav__sub-menu {
+  & .#{$class-prefix}-side-nav__link {
+    &.active {
+      background-color: $sidebar-active-bg;
+      color: $sidebar-color-hover;
+    }
+
+    &.active:after {
+      background-color: $sidebar-color-hover;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $sidebar-color-hover;
+    }
+  }
+}
+
+// Pages Folder
+// -----------------------------------------------------------------------------
+
+//dashboard-crm.scss
+.#{$class-prefix}-widget-hover {
+  & .#{$class-prefix}-widget__item {
+    @include hover {
+      & .#{$class-prefix}-widget__title {
+        color: $primary;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include hover {
+        & .#{$class-prefix}-task {
+          & .#{$class-prefix}-task__number {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &-bg {
+    & .#{$class-prefix}-widget__item {
+      @include hover {
+        background-color: rgba($primary, 0.06);
+
+        & .#{$class-prefix}-widget__title {
+          color: $primary;
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        @include hover {
+          & .#{$class-prefix}-task {
+            & .#{$class-prefix}-task__number {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//login.scss
+.#{$class-prefix}-login {
+  &__bg-section {
+    &:before {
+      background-color: rgba($primary, 0.8);
+    }
+  }
+}
+
+//profile.scss
+.profile {
+  &__banner {
+    background-color: rgba(darken($primary, 15%), 0.9);
+  }
+}
+
+// Vendor Folder
+// -----------------------------------------------------------------------------
+
+//owl-carousel.scss
+.owl-theme {
+  & .owl-dots {
+    & .owl-dot {
+      &.active span {
+        border-color: $primary;
+        @include size(14px);
+      }
+    }
+  }
+}

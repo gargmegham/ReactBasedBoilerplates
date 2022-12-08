@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <meta name="description" content="A fully responsive, HTML5 based admin theme">
+
+    <meta name="keywords" content="Responsive, HTML5, business, professional, Adapt, web design, CSS3">
+
+    <title>Wieldy - Docs</title>    <!-- Site favicon -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">    <!-- /site favicon -->
+
+    <!-- Ant font stylesheet -->
+
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- /material font stylesheet -->    <!-- Bootstrap stylesheet min version -->
+
+    <link href="css/bootstrap.css" rel="stylesheet">    <!-- /bootstrap stylesheet min version -->
+
+    <!-- Style css stylesheet -->
+
+    <link href="css/style.css" rel="stylesheet">    <!-- /style css stylesheet -->    <!-- Highlight css stylesheet -->
+
+    <link href="js/plugin/highlight/styles/dark.css" rel="stylesheet">    <!-- /highlight css stylesheet -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
+
+    <script src="js/html5shiv.min.js"></script>
+
+    <script src="js/respond.min.js"></script>    <![endif]--></head>
+
+<body><!--Site-->
+
+<div class="site">    <!--Site header-->
+
+    <header class="site-header">
+
+        <nav class="navbar fixed-top navbar-expand-lg d-flex align-items-center">
+
+            <div class="container">
+
+                <div class="navbar-bottom"><a class="site-logo" href="index.html"> <img src="images/logo.png"
+
+                                                                                        alt="Wieldy" title="Wieldy">
+                </a>
+
+                    <div class="d-flex flex-grow-1">
+
+                        <ul class="quick-links align-self-center">
+
+                            <li><a target="_blank" href="http://wieldy.g-axon.work/">
+                                <i class="zmdi zmdi-open-in-new zmdi-hc-fw"></i>Take Demo</a></li>
+
+                            
+
+                        </ul>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>    <!--/site header-->    <!--Site main-->
+
+    <main class="site-main">
+
+        <div class="container">
+
+            <div class="site-main-inner">
+			<section class="docs-section">
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Setup Wieldy </h2>
+    <div class="adocs-section-content ng-binding">
+
+        <p class="lead">
+            In this article, we are considering that you have already setup all the tools mentioned in the article Setup
+            React Development Environment
+        </p>
+        <p>Now, when you download <a
+                href="https://themeforest.net/item/wieldy-react-redux-admin-template/22277962?s_rank=1">Wieldy - React
+            Redux Admin Template based on Ant Framework</a> from themeforest.net. You will receive a zip file with a
+            name like <span class="f-path small">Wieldy-{x.x}</span> where {x.x} represents to the latest version
+            number.
+        </p>
+        <p>Extracting this file will give you a folder which will further contain 4 sub-folders. This folder represents to the React version of Wieldy .</p>
+
+        <p><span class="f-path small">source/</span>. You can use this folder to setup your demo project.</p>
+    
+        <p><span class="f-path small">build/</span>. Build folder contains the built distribution (production) version,
+            which is for demo purpose only</p>
+
+        <h4>To Run the Demo</h4>
+
+        <div class="callout callout-warning"><p>Note: <em>build/ </em>folder contains the built distribution
+            (production) version, which is for demo purpose only</p></div>
+        <section>
+            <div class="callout callout-info"><p>You can build a local server using WAMP or XAMP (if you
+                use PHP). Also it's pretty easy to build one with Python or Ruby (if you prefer either of them). Here,
+                in our case, we are going to build a local server in NodeJS</p></div>
+            <p><strong>Preparation:</strong></p>
+            <P>You'll need to install <a href="http://nodejs.org/">Node.js >=v8.5.0 (Recommended Version)</a> (NPM comes
+                along with
+                it) and serve (a NPM package)</P>
+            <p>For environments using Node, the easiest way to handle this would be to install
+                <strong>serve</strong> and let it handle the rest:</p>
+            <pre>
+$ npm install -g serve
+$ serve -s build</pre>
+            <p>The last command shown above will serve your static site on the port 5000. Like many of serve’s
+                internal settings, the port can be adjusted using the <strong>-p</strong> or <strong>--port</strong>
+                flags.</p>
+            <p>It'll return something like this: </p>
+            <pre>
+
+   ┌──────────────────────────────────────────────────┐
+   │                                                  │
+   │   Serving!                                       │
+   │                                                  │
+   │   - Local:            http://localhost:5000      │
+   │   - On Your Network:  http://192.168.9.63:5000   │
+   │                                                  │
+   │   Copied local address to clipboard!             │
+   │                                                  │
+   └──────────────────────────────────────────────────┘
+                </pre>
+
+            <p>Then you can view the template on <code>http://localhost:5000</code> in your browser</p>
+        </section>
+
+
+        <h4>To setup Wieldy react demo</h4>
+        <p>you can copy this source/ folder to the location where you want to setup the demo.</p>
+        <p>For example, to your desktop.</p>
+        <p>Now, after copying the folder, you can rename this with the project name you want to give it to. Let’s say
+            wieldy-demo</p>
+        <p>Then open your command line tool. This is powershell in windows and terminal on mac/linux.</p>
+        <p>In this command line tool, let’s go inside the wieldy-demo folder with command CD</p>
+        <p>Once you are there, all you need to do is, run the command <span class="f-path small command">$ yarn</span>.
+            This will import all the dependencies Wieldy react demo uses.</p>
+        <p>Okay, so now we have all the dependency libraries imported successfully. Its the time to start demo in
+            browser and all you need to do for that is run the command <span
+                    class="f-path small command">$ yarn start</span>.</p>
+        <p>This will shortly run the demo in your default browser automatically.</p>
+        <p>So, that is all you have to do to import source code of the Wieldy react demo and run it locally. If you
+            want to build a compiled version of demo. You need to run the command <span class="f-path small command">$ yarn build</span>
+            and this will build a compiled version of demo for you.</p>
+        <p>I hope this article was helpful</p>
+    </div>
+</div>
+</section>
+
+                <div class="sidebar-wrapper">
+
+                    <aside class="right-sidebar">
+
+                        <ul class="sidebar-menu">
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">About Wieldy </a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="javascript:void(0);" data-template="introduction">Introduction</a>
+
+                                    </li>
+
+                                    <li><a href="javascript:void(0);" data-template="product-overview">Product
+
+                                        Overview</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            <li class="open"><a href="javascript:void(0)" class="collapse-hadle">Installation</a>
+
+                                <ul class="sub-menu document-menus" style="display:block">
+
+                                    <li><a href="#setup-dev-env" data-template="setup-dev-env">Setup Development
+
+                                        Environment</a></li>
+
+                                    <li class="active"><a href="#setup-wieldy" data-template="setup-wieldy">Setup Wieldy</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Structure &amp; Layouts</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="#folder-file-structure" data-template="folder-file-structure">Folder
+
+                                        and File Structure</a></li>
+
+                                    <li><a href="#layout-structure" data-template="layout-structure">Layout
+                                        Structure</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Settings &amp; Customization</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="#change-color-theme" data-template="change-color-theme">Change Color
+
+                                        Theme</a></li>
+
+                                    <li><a href="#vertical-navigation-style" data-template="vertical-navigation-style">Vertical
+
+                                        Navigation style</a></li>
+
+                                    <li><a href="#horizontal-navigation-style"
+
+                                           data-template="horizontal-navigation-style">Horizontal Navigation style</a>
+
+                                    </li>
+
+                                    <li><a href="#change_layouts"
+
+                                           data-template="change_layouts">Layout style</a>
+
+                                    </li>
+                                    <li><a href="#change_themes"
+
+                                           data-template="change_themes">Theme style</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+
+                                <a href="javascript:void(0)" class="collapse-hadle">Add New Menu</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li>
+
+                                        <a href="#to-horizontal-nav" data-template="to-horizontal-nav">To Horizontal
+
+                                            Nav</a></li>
+
+                                    <li>
+
+                                        <a href="#to-vertical-nav" data-template="to-vertical-nav">To Vertical Nav</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Multi Language</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="#add-new-language" data-template="add-new-language">Add New
+
+                                        Language</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Other Elements</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <!-- <li><a href="#widgets" data-template="widgets">Widgets</a></li>-->
+
+                                    <li><a href="#map" data-template="map">Map</a></li>
+
+                                    <li><a href="#chart" data-template="chart">Charts</a></li>
+
+                                    <li><a href="#calendar" data-template="calendar">Calendar</a></li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+
+                    </aside>
+
+                    <a href="javascript:void(0)" class="btn-fixed"> <span class="hamburger-inner"></span> </a></div>
+
+            </div>
+
+        </div>
+
+    </main>   
+    <!--/site main-->    
+    
+    <!--Site footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo footer-widget"><img src="images/logo.png" alt="Footer logo"></div>
+                    <p class="copy-right">Copyright © 2020 G-axon</p></div>
+                <div class="col-lg-8">
+                    <ul class="footer-menu-wrapper">
+                        <li>
+                            <div class="footer-widget"><h3 class="footer-menu-title">Products</h3>
+                                <ul class="footer-menu">
+                                    <li><a target="_blank" href="https://themeforest.net/item/drift-admin-template-html-jquery-and-bootstrap4/23385839?s_rank=2">Drift</a></li>
+                                    <li><a target="_blank" href="https://themeforest.net/item/react-material-bootstrap-4-admin-template/20978545?s_rank=2">Jumbo React</a></li>
+                                    <li><a target="_blank" href="https://themeforest.net/item/jumbo-admin-responsive-admin-dashboard-template/21368029?s_rank=1">Jumbo Admin</a></li>
+                                    <li><a target="_blank" href="https://wrapbootstrap.com/theme/mouldifi-html-react-redux-admin-template-WB009538N">Mouldifi</a></li>
+                                    <li><a target="_blank" href="https://themeforest.net/item/wieldy-react-redux-admin-template/22277962?s_rank=1">Flexile</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="footer-widget"><h3 class="footer-menu-title">Support</h3>
+                                <ul class="footer-menu">
+                                    <li><a target="_blank" href="https://themeforest.net/item/wieldy-react-redux-admin-template/22277962/support">Submit a Ticket</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
+    <!--/site foter-->
+
+</div><!--/site--><!--Load JQuery-->
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/plugin/highlight/highlight.pack.js"></script>
+
+<script src="js/functions.js"></script>
+
+</body>
+
+</html>

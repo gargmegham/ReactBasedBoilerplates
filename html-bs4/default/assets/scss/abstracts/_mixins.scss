@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+//Pulse Effect
+@mixin pulse-effect($color, $value: 6px, $pulse-prefix: pulse) {
+  //Pulse Effect
+  display: inline-block;
+  @include box-shadow (0 0 0 rgba($color, 0.4));
+  animation: #{$pulse-prefix} 2s infinite;
+
+  @-webkit-keyframes #{$pulse-prefix} {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba($color, 0.4);
+    }
+    70% {
+      -webkit-box-shadow: 0 0 0 $value rgba($color, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba($color, 0);
+    }
+  }
+
+  @keyframes #{$pulse-prefix} {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba($color, 0.4);
+      box-shadow: 0 0 0 0 rgba($color, 0.4);
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 $value rgba($color, 0);
+      box-shadow: 0 0 0 $value rgba($color, 0);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba($color, 0);
+      box-shadow: 0 0 0 0 rgba($color, 0);
+    }
+  }
+}
+
+//Transition
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+// Transformations
+
+//Translate Y
+@mixin transform($value...) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value; // IE9 only
+  -o-transform: $value;
+  transform: $value;
+}
+
+//Rotate
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees); // IE9 only
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+//Scale
+@mixin scale($value...) {
+  -webkit-transform: scale($value);
+  -ms-transform: scale($value); // IE9 only
+  -o-transform: scale($value);
+  transform: scale($value);
+}
+
+//Translate X
+@mixin translateX($value) {
+  -webkit-transform: translateX($value);
+  -moz-transform: translateX($value);
+  -ms-transform: translateX($value); // IE9 only
+  -o-transform: translateX($value);
+  transform: translateX($value);
+}
+
+//Translate Y
+@mixin translateY($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value); // IE9 only
+  -o-transform: translateY($value);
+  transform: translateY($value);
+}
+
+//Translate Y
+@mixin translate($valueX, $valueY) {
+  -webkit-transform: translate($valueX, $valueY);
+  -moz-transform: translate($valueX, $valueY);
+  -ms-transform: translate($valueX, $valueY); // IE9 only
+  -o-transform: translate($valueX, $valueY);
+  transform: translate($valueX, $valueY);
+}
+
+//Background Image
+@mixin background-img($imgpath,$position:0 0,$repeat: no-repeat,$size: cover) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+    size: $size;
+  }
+}

@@ -1,0 +1,120 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Framed and Boxed of the site/application.
+// -----------------------------------------------------------------------------
+
+//Framed Layout style
+@include media-breakpoint-up(lg) {
+  .#{$class-prefix}-layout--framed {
+    background-color: $primary;
+    padding: $framed-layout-base;
+	
+	&.theme-dark {
+		background-color: $body-bg;
+	}
+	
+    & .#{$class-prefix}-root {
+      height: calc(100vh - 2*#{$framed-layout-base});
+      @include border-radius($border-radius-xl);
+      @include box-shadow($box-shadow);
+      overflow: hidden;
+    }
+
+    & .#{$class-prefix}-header {
+      background-color: transparent;
+    }
+
+    & .#{$class-prefix}-sidebar {
+      border-bottom-left-radius: $border-radius-xl;
+    }
+
+    &.#{$class-prefix}-header--fixed {
+      & .#{$class-prefix}-header {
+        width: calc(100% - 2*#{$framed-layout-base});
+      }
+
+      & .#{$class-prefix}-sidebar {
+        height: calc(100vh - (#{$header-height} + 2*#{$framed-layout-base}));
+      }
+    }
+
+    & .#{$class-prefix}-brand {
+      border-top-left-radius: $border-radius-xl;
+    }
+
+    & .#{$class-prefix}-header__toolbar {
+      border-top-right-radius: $border-radius-xl;
+    }
+
+    & .compose-mail-box,
+    & .#{$class-prefix}-customizer-toggle {
+      position: absolute;
+    }
+
+    & .#{$class-prefix}-drawer {
+      position: absolute;
+
+      &.position-right {
+        border-top-right-radius: $border-radius-xl;
+        border-bottom-right-radius: $border-radius-xl;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.position-right.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+//Boxed Layout style
+.#{$class-prefix}-layout--boxed {
+  @include make-container-max-widths($dt-boxed-max-widths, $dt-boxed-breakpoints);
+}
+
+@media (min-width: map-get($dt-boxed-breakpoints, xl)) {
+  .#{$class-prefix}-layout--boxed {
+    position: relative;
+    background-color: $primary;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @include box-shadow($box-shadow);
+	
+	&.theme-dark {
+		background-color: $body-bg;
+	}
+	
+    & .#{$class-prefix}-root {
+      overflow: hidden;
+    }
+
+    &.#{$class-prefix}-header--fixed {
+      & .#{$class-prefix}-header {
+        position: absolute;
+      }
+    }
+
+    & .compose-mail-box,
+    & .#{$class-prefix}-customizer-toggle {
+      position: absolute;
+    }
+
+    & .#{$class-prefix}-drawer {
+      position: absolute;
+
+      &.position-left,
+      &.position-right {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.position-left.open,
+      &.position-right.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Maps.
+// -----------------------------------------------------------------------------
+
+//Login Style
+.#{$class-prefix}-app-login--container {
+	padding-top: 3rem;
+}
+
+.#{$class-prefix}-login {
+  &--container {
+    height: 100%;
+    flex: 1;
+    -ms-flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-bottom: 3rem;
+  }
+
+  &__content-wrapper {
+    position: relative;
+    @include border-radius(10px);
+    @include box-shadow($box-shadow);
+    background-color: $dt-card-bg;
+    max-width: 420px;
+    width: 94%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+	
+	.#{$class-prefix}-app-login--container & {
+		max-width: 680px;
+	}
+	
+    @include media-breakpoint-down(xs) {
+      flex-flow: column nowrap;
+    }
+  }
+
+  &__bg-section {
+    position: relative;
+    padding: $dt-card-padding-y $dt-card-padding-x;
+    @include background-img('#{$image_path}/272x395', center bottom);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(sm) {
+      width: 40%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($primary, 0.8);
+    }
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    & .#{$class-prefix}-login__logo {
+      margin-top: auto;
+    }
+  }
+
+  &__content {
+    @include media-breakpoint-up(sm) {
+      width: 60%;
+    }
+
+    &-inner {
+      padding: 3.5rem 3.5rem 2rem;
+	  flex: 1;
+      -ms-flex: 1;
+    }
+
+    &-footer {
+      padding: ($dt-card-padding-y / 4) $dt-card-padding-x;
+      background-color: $gray-100;
+    }
+  }
+}
+
+.#{$class-prefix}-login {
+  &__title {
+    position: relative;
+    color: $white;
+    margin-bottom: 1rem;
+  }
+
+  &__content-wrapper {
+    
+    .#{$class-prefix}-forgot-password & {
+      max-width: 420px;
+
+      & .#{$class-prefix}-login__content {
+        width: 100%;
+      }
+
+      & .#{$class-prefix}-login__logo {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

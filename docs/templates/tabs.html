@@ -1,0 +1,147 @@
+<div>
+    <h3 id="badge">Tabs</h3>
+    <p class="comments-section">Tabs make it easy to explore and switch between different views.
+    </p>
+    <h4 id="basic-example-2">Basic Tabs</h4>
+    <p class=""><img src="./images/component/tab.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Cards you will need this code in down here.
+    </p>
+
+    <pre>
+    <code class="html">
+ &lt;AppBar className="bg-primary" position="static"&gt;
+    &lt;Tabs value={value} onChange={this.handleChange} scrollable scrollButtons="on"&gt;
+        &lt;Tab className="tab" label="Item One" /&gt;
+        &lt;Tab className="tab" label="Item Two" /&gt;
+        &lt;Tab className="tab" label="Item Three" /&gt;
+    &lt;/Tabs&gt;
+&lt;/AppBar&gt;
+    {value === 0 &&
+    &lt;TabContainer&gt;
+        {'Item One'}
+    &lt;/TabContainer&gt;}
+    {value === 1 &&
+    &lt;TabContainer&gt;
+        {'Item Two'}
+    &lt;/TabContainer&gt;}
+    {value === 2 &&
+    &lt;TabContainer&gt;
+        {'Item Three'}
+    &lt;/TabContainer&gt;}
+  </code>
+</pre>
+
+    <h4>Icon Tabs</h4>
+    <p class=""><img src="./images/component/tab1.gif" alt=""/></p>
+
+    <pre>
+     <code class="html">
+ &lt;Tabs
+     value={this.state.value}
+     onChange={this.handleChange}
+     fullWidth
+     indicatorColor="secondary"
+     textColor="secondary"
+     scrollable
+     scrollButtons="on" &gt;
+    &lt;Tab icon={&lt;PhoneIcon /&gt;} label="RECENTS" /&gt;
+    &lt;Tab icon={&lt;FavoriteIcon /&gt;} label="FAVORITES" /&gt;
+    &lt;Tab icon={&lt;PersonPinIcon /&gt;} label="NEARBY" /&gt;
+&lt;/Tabs&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">action</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component mounts. This is useful when you want to trigger an action programmatically. It currently only supports <code>updateIndicator()</code> action.<br><br><strong>Signature:</strong><br><code>function(actions: object) =&gt; void</code><br><em>actions:</em> This object contains all possible actions that can be triggered programmatically.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">centered</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the tabs will be centered. This property is intended for large views.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">fullWidth</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the tabs will grow to use all the available space. This property is intended for small views, like on mobile.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">indicatorColor</span></td>
+            <td><span class="prop-type">enum:&nbsp;'secondary'&nbsp;|<br>&nbsp;'primary'<br></span></td>
+            <td><span class="prop-default">'secondary'</span></td>
+            <td>Determines the color of the indicator.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onChange</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the value changes.<br><br><strong>Signature:</strong><br><code>function(event: object, value: number) =&gt; void</code><br><em>event:</em> The event source of the callback<br><em>value:</em> We default to the index of the child</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">scrollable</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>True invokes scrolling properties and allow for horizontally scrolling (or swiping) the tab bar.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">ScrollButtonComponent</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">TabScrollButton</span></td>
+            <td>The component used to render the scroll buttons.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">scrollButtons</span></td>
+            <td><span class="prop-type">enum:&nbsp;'auto'&nbsp;|<br>&nbsp;'on'&nbsp;|<br>&nbsp;'off'<br></span></td>
+            <td><span class="prop-default">'auto'</span></td>
+            <td>Determine behavior of scroll buttons when tabs are set to scroll <code>auto</code> will only present them on medium and larger viewports <code>on</code> will always present them <code>off</code> will never present them</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TabIndicatorProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>TabIndicator</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">textColor</span></td>
+            <td><span class="prop-type">enum:&nbsp;'secondary'&nbsp;|<br>&nbsp;'primary'&nbsp;|<br>&nbsp;'inherit'<br></span></td>
+            <td><span class="prop-default">'inherit'</span></td>
+            <td>Determines the color of the <code>Tab</code>.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">value</span></td>
+            <td><span class="prop-type">any</span></td>
+            <td></td>
+            <td>The value of the currently selected <code>Tab</code>. If you don't want any selected <code>Tab</code>, you can set this property to <code>false</code>.</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

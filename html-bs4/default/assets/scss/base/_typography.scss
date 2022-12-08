@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains Typography CSS
+// -----------------------------------------------------------------------------
+
+//Anchor Style
+a {
+  @include hover-focus {
+    outline: 0 none;
+  }
+}
+
+.#{$class-prefix}-letter-spacing-base {
+	letter-spacing: 3px;
+}
+
+.display-5 {
+  font-size: $display5-size;
+  font-weight: $display5-weight;
+  line-height: $display-line-height;
+}
+
+.display-6 {
+  font-size: $display6-size;
+  font-weight: $display6-weight;
+  line-height: $display-line-height;
+}
+
+@include media-breakpoint-down(xs) {
+  h4, .h4 {
+    font-size: ($h4-font-size + 0.2rem);
+  }
+  h5, .h5 {
+    font-size: ($h5-font-size + 0.2rem);
+  }
+  h6, .h6 {
+    font-size: ($font-size-base);
+  }
+}

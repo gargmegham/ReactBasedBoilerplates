@@ -1,0 +1,269 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Customizer of the site/application.
+// -----------------------------------------------------------------------------
+.#{$class-prefix}-customizer {
+  position: relative;
+  z-index: 1501;
+  width: ($sidebar-width + 130px);
+  background-color: $white;
+  
+  @include media-breakpoint-down(md) {
+  	width: ($sidebar-width + 60px);
+  }
+  
+  @include media-breakpoint-down(xs) {
+  	width: ($sidebar-width + 40px);
+  }
+
+  &-toggle {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    z-index: 100;
+
+    & a {
+      @include transition(all 0.5s ease);
+      @include border-left-radius(50px);
+      @include box-shadow($box-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 4.2rem;
+      width: 5.5rem;
+      font-size: 1.8rem;
+      @include gradient-directional($warning, $danger, 135deg);
+      color: $white;
+	  padding-left: 2px;
+
+      @include hover-focus {
+        @include gradient-directional($danger, $warning, 90deg);
+      }
+    }
+  }
+
+  &__inner {
+    height: 100%;
+  }
+}
+
+.#{$class-prefix}-customizer {
+  &__header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+    min-height: $header-height;
+    @include box-shadow(0 2px 2px 0 rgba($text-color, 0.1));
+
+    & .close {
+      margin-left: auto;
+      font-size: 3.5rem;
+      font-weight: normal;
+      line-height: 0.8;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__body {
+    height: calc(100% - #{$header-height});
+    overflow-y: auto;
+
+    &-inner {
+      padding: 3rem 2rem;
+    }
+
+    & section {
+	  &:not(:last-child) {
+	  	border-bottom: $dt-border;
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+	  }
+    }
+
+    & .#{$class-prefix}-list-sm {
+      margin-left: -5px;
+      margin-right: -5px;
+
+      & > .#{$class-prefix}-list__item {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+  
+  &__btn-group {
+  	& .btn-outline-light {
+		color: $text-color;
+		background-color: transparent !important;
+		@include hover() {
+			color: $primary;
+		}
+		&.active {
+			z-index: 5;
+			border-color: $primary !important;
+			color: $primary !important;
+		}
+	}
+  }
+  
+}
+
+.#{$class-prefix}-customizer {
+  & .choose-option {
+    position: relative;
+
+    &__icon {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+
+    &.active .choose-option__icon {
+      @include transition($transition-base);
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -3px;
+        top: -3px;
+        z-index: 2;
+        height: 14px;
+        width: 14px;
+        display: inline-block;
+        @include background-img('#{$image_path}/customizer-icons/check.png', center center);
+      }
+    }
+
+    &__name {
+      font-size: 12px;
+      color: $text-color;
+      text-transform: capitalize;
+    }
+  }
+
+  & .#{$class-prefix}-color-option {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @include size(40px);
+    @include border-radius($border-radius-circle);
+    background-color: $gray-100;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 100%;
+      @include border-left-radius(20px);
+    }
+
+    &.active {
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -3px;
+        top: -3px;
+        z-index: 2;
+        height: 14px;
+        width: 14px;
+        display: inline-block;
+        @include background-img('#{$image_path}/customizer-icons/check.png', center center);
+      }
+    }
+  }
+
+  & .#{$class-prefix}-color-options  {
+    & > li:nth-child(1) .#{$class-prefix}-color-option {
+      background-color: #fa8c16;
+
+      &:before {
+        background-color: #038fde;
+      }
+    }
+
+    & > li:nth-child(2) .#{$class-prefix}-color-option {
+      background-color: #00B378;
+
+      &:before {
+        background-color: #8A2BE2;
+      }
+    }
+
+    & > li:nth-child(3) .#{$class-prefix}-color-option {
+      background-color: #00d9c9;
+
+      &:before {
+        background-color: #FF2B7A;
+      }
+    }
+
+    & > li:nth-child(4) .#{$class-prefix}-color-option {
+      background-color: #FCB53B;
+
+      &:before {
+        background-color: #3DA4E6;
+      }
+    }
+
+    & > li:nth-child(5) .#{$class-prefix}-color-option {
+      background-color: #17BDE5;
+
+      &:before {
+        background-color: #0469B9;
+      }
+    }
+
+    & > li:nth-child(6) .#{$class-prefix}-color-option {
+      background-color: #F1D065;
+
+      &:before {
+        background-color: #F18805;
+      }
+    }
+
+    & > li:nth-child(7) .#{$class-prefix}-color-option {
+      background-color: #59DCFF;
+
+      &:before {
+        background-color: #6A95FF;
+      }
+    }
+
+    & > li:nth-child(8) .#{$class-prefix}-color-option {
+      background-color: #70A288;
+
+      &:before {
+        background-color: #F87060;
+      }
+    }
+
+    & > li:nth-child(9) .#{$class-prefix}-color-option {
+      background-color: #E14594;
+
+      &:before {
+        background-color: #A172E7;
+      }
+    }
+
+    & > li:nth-child(10) .#{$class-prefix}-color-option {
+      background-color: #64D7D6;
+
+      &:before {
+        background-color: #956FE7;
+      }
+    }
+  }
+}

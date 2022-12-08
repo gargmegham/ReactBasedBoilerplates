@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Chat Module.
+// -----------------------------------------------------------------------------
+
+.#{$class-prefix}-module--chat {
+  & .#{$class-prefix}-module__sidebar-content {
+    overflow-y: initial;
+  }
+  
+  & .#{$class-prefix}-module__sidebar {
+  	
+	.search-box {
+		max-width: 100%;
+	}
+	
+  	@include media-breakpoint-up(md) {
+		max-width: $module-sidebar-width + 85px;
+		flex: 0 0 $module-sidebar-width + 85px;
+		-ms-flex: 0 0 $module-sidebar-width + 85px;
+	  }
+  }
+  
+  & .#{$class-prefix}-module__header {
+  	 padding: 1.6rem;
+  }
+  
+  & .#{$class-prefix}-module__container {
+    @include media-breakpoint-up(md) {
+      max-width: calc(100% - #{$module-sidebar-width} + 85px);
+    }
+  }
+  
+  & .#{$class-prefix}-module__content {
+  	 background-color: $module-chat-bg;
+  }
+  
+  & .#{$class-prefix}-module__sidebar-header {
+  	@include media-breakpoint-up(md) {
+  	 padding: 2.5rem 2rem 1.2rem;
+	 border-bottom: $dt-border;
+    }
+  }
+  
+}
+
+
+//Chat Section
+.#{$class-prefix}-chat__item {
+  display: flex;
+  padding: 1.6rem;
+
+  & .#{$class-prefix}-avatar {
+    margin-right: 16px;
+    align-self: flex-end;
+  }
+
+  & .#{$class-prefix}-chat__message {
+    position: relative;
+    padding: 1.8rem 2.6rem;
+    margin-bottom: 6px;
+    background-color: $white;
+    border: 1px solid $border-color;
+    @include border-radius(12px);
+    max-width: 600px;
+    color: $text-color;
+
+    &:last-child {
+      @include border-radius(20px 20px 20px 0);
+      margin-bottom: 0;
+    }
+  }
+
+  &.reply {
+    flex-direction: row-reverse;
+
+    & .#{$class-prefix}-avatar {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+
+    & .#{$class-prefix}-chat__message {
+	  background-color: $primary-lighten;
+      border-color: $border-color;
+      color: $text-color;
+
+      &:last-child {
+        @include border-radius(20px 20px 0 20px);
+      }
+    }
+  }
+}

@@ -1,0 +1,385 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+.ps-custom-scrollbar {
+  position: relative;
+}
+
+.bg-focus {
+  background-color: transparent;
+  &:focus {
+    background-color: $gray-100;
+  }
+
+  .theme-dark & {
+    &:focus {
+      background-color: $body-bg;
+    }
+  }
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-width-2 {
+  border-width: 2px !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+// Toggle Button
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  & .show {
+    display: block;
+  }
+  & .hide {
+    display: none;
+  }
+
+  &.active {
+    & .show {
+      display: none;
+    }
+    & .hide {
+      display: block;
+    }
+  }
+}
+
+// Cursor pointer
+[data-toggle='mdrawer'],
+[data-switch='mdrawer'],
+[data-dismiss='mdrawer'],
+[data-open='compose'],
+[data-dismiss='compose'],
+[data-toggle='minimize'],
+[data-location] {
+  cursor: pointer;
+}
+
+.rounded {
+  &-lg {
+    @include border-radius($border-radius-lg !important);
+  }
+  &-xl {
+    @include border-radius($border-radius-xl !important);
+  }
+}
+
+.flex {
+  &-1 {
+    flex: 1;
+    -ms-flex: 1;
+  }
+  &-initial {
+    flex: initial !important;
+  }
+}
+
+.more-thumb {
+  position: relative;
+  overflow: hidden;
+
+  & > .count-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    color: $white;
+    z-index: 2;
+    display: inline-block;
+  }
+
+  &:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: rgba($black, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include transition(all 0.5s ease);
+  }
+
+  @include hover {
+    &:after {
+      background-color: rgba($black, 0.65);
+    }
+  }
+}
+
+.shadow-xl {
+  @include box-shadow($box-shadow-xl);
+}
+
+//separator
+
+.#{$class-prefix}-separator {
+  display: inline-block;
+  height: 2px;
+  width: 20px;
+  background-color: $text-color;
+}
+
+.dot-shape {
+  @extend %dot-shape;
+
+  &.dot-shape-lg {
+    @include size(10px);
+  }
+
+  &.dot-shape-xl {
+    @include size(12px);
+  }
+}
+
+//Font Sizes
+.f {
+  &-10 {
+    font-size: 10px;
+  }
+
+  &-12 {
+    font-size: 12px;
+  }
+
+  &-14 {
+    font-size: 14px;
+  }
+
+  &-16 {
+    font-size: 16px;
+  }
+}
+
+.m {
+  &t--5 {
+    margin-top: -5px;
+  }
+  &t--10 {
+    margin-top: -10px;
+  }
+  &t--15 {
+    margin-top: -15px;
+  }
+  &t--30 {
+    margin-top: -30px;
+  }
+
+  &b--15 {
+    margin-bottom: -15px;
+  }
+
+  &b--20 {
+    margin-bottom: -20px;
+  }
+
+  &b--30 {
+    margin-bottom: -30px;
+  }
+
+  &l--5 {
+    margin-left: -5px;
+  }
+  &l--10 {
+    margin-left: -10px;
+  }
+  &l--15 {
+    margin-left: -15px;
+  }
+  &l--20 {
+    margin-left: -20px;
+  }
+
+  &r--20 {
+    margin-right: -20px;
+  }
+}
+
+.#{$class-prefix}-list {
+  @extend %list-style-none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -7px;
+  margin-right: -7px;
+
+  &-xs {
+    margin-left: -0.5px;
+    margin-right: -0.5px;
+
+    & > .#{$class-prefix}-list__item {
+      padding-left: 0.5px;
+      padding-right: 0.5px;
+      margin-bottom: 1px;
+    }
+  }
+
+  &-sm {
+    margin-left: -3px;
+    margin-right: -3px;
+
+    & > .#{$class-prefix}-list__item {
+      padding-left: 3px;
+      padding-right: 3px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &-xl {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    & > .#{$class-prefix}-list__item {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  &__item {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 14px;
+  }
+
+  &-bordered &__item:not(:last-child) {
+    border-right: $dt-border;
+  }
+
+  &-half &__item {
+    width: 50%;
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-one-third &__item {
+    width: 33.333%;
+
+    &:nth-last-of-type(1),
+    &:nth-last-of-type(2),
+    &:nth-last-of-type(3) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.#{$class-prefix}-list {
+  &-cm-0 &__item {
+    margin-bottom: 0;
+  }
+
+  &-square {
+    list-style-type: square;
+  }
+}
+
+//Pulse Classes
+.pulse-primary {
+  @include pulse-effect($primary, 20px, pulse-primary);
+}
+
+.pulse-danger {
+  @include pulse-effect($danger, 20px, pulse-danger);
+}
+
+.pulse-success {
+  @include pulse-effect($success, 20px, pulse-success);
+}
+
+.pulse-info {
+  @include pulse-effect($info, 20px, pulse-info);
+}
+
+.pulse-yellow {
+  @include pulse-effect($yellow, 20px, pulse-yellow);
+}
+
+.pulse-light {
+  @include pulse-effect($light, 20px, pulse-light);
+}
+
+//Gradient classes
+.bg-gradient-blue {
+  @include gradient-directional(#9298f1, #170de7, 135deg);
+}
+
+.bg-gradient-purple {
+  @include gradient-directional(#3f3f91, #ec45a0, 135deg);
+}
+
+.bg-gradient-dark-purple {
+  @include gradient-directional(#bc0a6a, #0a0a79, 135deg);
+}
+
+.bg-gradient-blueberry {
+  @include gradient-directional(#434fc0, #45e6ec, 135deg);
+}
+
+//Background Image
+.bg-image {
+  @include background-img('#{$image_path}/640x420', center center);
+
+  & [class*='bg-gradient-'] {
+    opacity: 0.85;
+    color: $white;
+  }
+}
+
+.card[class*='bg-gradient-'],
+.card [class*='bg-gradient-'],
+.#{$class-prefix}-card[class*='bg-gradient-'],
+.#{$class-prefix}-card [class*='bg-gradient-'] {
+  @include border-radius($border-radius);
+  color: $white;
+}
+
+//Primary Dark Overlay
+.bg-dark-primary {
+  position: relative;
+  background-color: $primary !important;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    background-color: rgba($black, 0.72);
+    @include border-radius(inherit);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .theme-dark & {
+    background-color: #495762 !important;
+  }
+}

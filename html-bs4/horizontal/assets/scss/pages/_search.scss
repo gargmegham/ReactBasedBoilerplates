@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Maps.
+// -----------------------------------------------------------------------------
+//Search result Style
+.search-result {
+  & .search-heading {
+    margin-bottom: 2px;
+  }
+
+  & .search-link {
+    color: $success;
+    display: inline-block;
+    margin-bottom: 6px;
+
+    @include hover-focus {
+      color: darken($success, 5%);
+    }
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,38 @@
+<div>
+    <h3 id="badge">Carousel</h3>
+    <h4 id="basic-example-2">Basic Carousel</h4>
+    <p class=""><img src="./images/component/carousel.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Cards you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;Carousel
+      activeIndex={activeIndex}
+      next={this.next}
+      previous={this.previous}&gt;
+      &lt;CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} /&gt;
+      {slides}
+      &lt;CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} /&gt;
+      &lt;CarouselControl direction="next" directionText="Next" onClickHandler={this.next} /&gt;
+&lt;/Carousel&gt;
+  </code>
+</pre>
+
+    <h4>Product Carousel</h4>
+    <p class=""><img src="./images/component/carousel1.gif" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;OwlCarousel className="owl-theme owl-app-frame" {...options} &gt;
+    &lt;ProductItem product={products[0]} /&gt;
+    &lt;ProductItem product={products[1]} /&gt;
+    &lt;ProductItem product={products[2]} /&gt;
+    &lt;ProductItem product={products[3]} /&gt;
+    &lt;ProductItem product={products[4]} /&gt;
+    &lt;ProductItem product={products[5]} /&gt;
+&lt;/OwlCarousel&gt;
+   </code>
+</pre>
+
+</div>

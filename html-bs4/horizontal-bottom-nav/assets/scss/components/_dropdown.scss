@@ -1,0 +1,103 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dropdown component.
+// -----------------------------------------------------------------------------
+.dropdown-toggle {
+  .dropleft &:before,
+  .dropright &:after,
+  .dropup &:after,
+  &:after {
+    border: 0 none;
+    font: {
+      size: 1.4rem;
+      family: 'gaxon';
+    }
+    line-height: 0.7;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .dropleft &:before {
+    content: '\e93b';
+  }
+
+  .dropright &:after {
+    content: '\e93c';
+  }
+
+  .dropup &:after {
+    content: '\e93d';
+  }
+
+  &:after {
+    content: '\e93a';
+  }
+
+  &.dropdown-toggle-split:after {
+    margin-left: 0;
+  }
+
+  &.no-arrow:after {
+    content: none;
+  }
+}
+
+.static-dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+
+  & > .dropdown-menu {
+    position: static;
+    display: inline-block;
+    float: none;
+  }
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+  pointer-events: none;
+}
+
+//Dropdown Menu
+.dropdown-menu {
+  @include media-breakpoint-down(xs) {
+    font-size: ($font-size-base + 0.2rem);
+  }
+  &.show {
+  	z-index: 1001;
+  }
+  
+  &-media {
+    padding: 0;
+  }
+
+  &-header,
+  &-footer {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    flex-wrap: wrap;
+    padding: 1.5rem 1.8rem;
+  }
+
+  &-header {
+    @include box-shadow(0 2px 2px 0 rgba($text-color, 0.05));
+
+    & .title {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-body {
+    padding: 1.5rem 1.8rem;
+  }
+
+  &-footer {
+    @include box-shadow(0 -2px 2px 0 rgba($text-color, 0.05));
+  }
+}

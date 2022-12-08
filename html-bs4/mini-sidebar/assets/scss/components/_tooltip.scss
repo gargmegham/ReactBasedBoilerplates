@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the tooltip component.
+// -----------------------------------------------------------------------------
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: $primary;
+  font-size: 1.8rem;
+  color: $white;
+  @include box-shadow($box-shadow);
+  @include border-radius($border-radius);
+  z-index: 1;
+
+  &:after {
+    display: block;
+    height: 0;
+    width: 0;
+    color: $primary;
+    content: '';
+    border-left: 6px solid currentColor;
+    border-right: 6px solid transparent;
+    border-top: 6px solid currentColor;
+    border-bottom: 6px solid transparent;
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    @include translateX(-50%);
+    @include border-radius(0 0 0 $border-radius);
+  }
+
+  &.bg-warning:after {
+    color: $warning;
+  }
+
+  &.bg-success:after {
+    color: $success;
+  }
+
+  &.bg-danger:after {
+    color: $danger;
+  }
+
+  &.bg-info:after {
+    color: $info;
+  }
+}

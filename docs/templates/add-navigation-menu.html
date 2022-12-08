@@ -1,0 +1,74 @@
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Add Navigation Menu</h2>
+    <div class="adocs-section-content ng-binding"><p>For example, let’s say we want to add a new menu named <strong>Setting</strong> and<br>
+        there could be sub menus of this menu like <strong>Change Password</strong></p>
+        <h3>Step -1 (Add new Menu to Side Navigation)</h3>
+        <p>Open file <em>src &gt; containers &gt; SideNav &gt; SideNavContent.js</em></p>
+        <p>Add a new &lt;li&gt; inside ul having class <strong>nav-menu</strong></p>
+        <p>Now, you can label this new li with name <strong>Settings</strong></p>
+        <p><strong>Here is how your new li element should look like now:</strong></p>
+        <p><code><br>
+            &lt;li className="menu"&gt;<br>
+            &lt;Button className="void" href="javascript:void(0)"&gt;<br>
+            &lt;i className="zmdi zmdi-setting zmdi-hc-fw" /&gt;<br>
+            &lt;span className="nav-text"&gt;Settings&lt;/span&gt;<br>
+            &lt;/Button&gt;<br>
+            &lt;/li&gt;<br>
+        </code></p>
+        <h4>Add Sub-menu to Side Navigation</h4>
+        <p>Similar to menu, add sub-menus as child of the Settings menu.</p>
+        <p><strong>After adding the sub-menus, it will look like:</strong></p>
+        <p><code><br>
+            &lt;ul className="sub-menu"&gt;<br>
+            &lt;li&gt;<br>
+            &lt;NavLink className="prepend-icon" to="/settings/change-password"&gt;<br>
+            &lt;span className="nav-text"&gt;Change Password&lt;/span&gt;<br>
+            &lt;/NavLink&gt;<br>
+            &lt;/li&gt;<br>
+            .....<br>
+            &lt;/ul&gt;<br>
+        </code></p>
+        <h3>Step -2 (Route the newly added menu)</h3>
+        <p>Open file src &gt; app &gt; routes</p>
+        <p>Add a new directory name <strong>settings</strong>. We will keep all the related files<br>
+            under this<br>
+            directory</p>
+        <p>Under Settings dir add <strong>index.js</strong> file and a <strong>routes</strong><br>
+            directory</p>
+        <p>&nbsp;</p>
+        <h4>Step-I (Create a file named index.js)</h4>
+        <p>&nbsp;</p>
+        <h4>Step – II (Create directory for app)</h4>
+        <p>A directory under routes folder need to be created. Let’s say the name of the directory<br>
+            is <strong>ChangePassword</strong>. This directory will be used to keep all the<br>
+            scenes/views.</p>
+        <p>Now, go back to the index.js file you created in Step-I and copy the following code<br>
+            there.</p>
+        <p><code><br>
+            import React from 'react';<br>
+            import {Route} from 'react-router-dom';</code></p>
+        <p>import ChangePassword from ‘./routes/ChangePassword/’</p>
+        <p>const Settings = ({match}) =&gt; (<br>
+            &lt;div&gt;<br>
+            &lt;Route path={`${match.url}/change-password`} component={ ChangePassword } /&gt;<br>
+            &lt;/div&gt;<br>
+            );</p>
+        <p>export default Settings;</p>
+        <p>You need to make sure that in line number 3 the directory name ChangePassword must<br>
+            match.</p>
+        <p>&nbsp;</p>
+        <h3>Step -3 (Linking routes)</h3>
+        <p>&nbsp;</p>
+        <p>open file src &gt; app &gt; index.js</p>
+        <p>import component from settings</p>
+        <p><code><br>
+            import Settings from './routes/settings/';<br>
+        </code><br>
+            Add new route in <strong>main-app-container</strong> like this</p>
+        <p><code><br>
+            &lt;Route path={`${match.url}/settings`} component={ Settings } /&gt;<br>
+        </code><br>
+            Cool, this all you need to do in order to add a new menu or sub-menus to the sidebar<br>
+            navigations.</p>
+    </div>
+</div>

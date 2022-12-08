@@ -1,0 +1,287 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Navbar of the site.
+// -----------------------------------------------------------------------------
+
+// Navbar
+.#{$class-prefix}-navbar {
+  margin-left: -1.2rem;
+  margin-right: -1.2rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: -1.8rem;
+    margin-right: -1.8rem;
+  }
+
+  & .nav-item {
+    position: relative;
+
+    & .nav-item__inner {
+      @include list-unstyled();
+    }
+
+    & .menu-heading {
+      font: {
+        size: 1.8rem;
+        weight: 500;
+      }
+      padding: $nav-link-padding-y $nav-link-padding-x;
+      margin-bottom: 0;
+    }
+  }
+
+  & .nav-link {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: $text-color-dark;
+
+    &.active {
+      color: $dt-navbar-nav-active-color;
+    }
+
+    @include hover-focus {
+      color: $dt-navbar-nav-active-color;
+    }
+
+    & i + .nav-text,
+    & .icon + .nav-text {
+      margin-left: 8px;
+    }
+
+    & .nav-text {
+      flex: 1;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.#{$class-prefix}-navbar {
+  & > .nav-item {
+    display: flex;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
+    }
+
+    & > .nav-link {
+      color: $dt-navbar-nav-color;
+
+      &:after {
+        display: inline-block;
+        content: '\e9aa';
+        font: {
+          family: 'gaxon';
+          size: 3.4rem;
+        }
+        line-height: 0.2;
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        color: $white;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+
+      @include hover-focus-active {
+        color: $dt-navbar-nav-active-color;
+
+        &:after {
+          color: $dt-navbar-nav-active-color;
+        }
+      }
+
+      &.active {
+        color: $dt-navbar-nav-active-color;
+
+        &:after {
+          color: $header-dark-bg;
+        }
+      }
+    }
+
+    @include hover-focus-active {
+      & > .nav-link,
+      & > .nav-link:after {
+        color: $dt-navbar-nav-active-color;
+      }
+    }
+  }
+}
+
+// Navbar Submenu Style
+.#{$class-prefix}-navbar {
+  & .sub-menu {
+    @include list-unstyled();
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    z-index: 2;
+    background-color: $white;
+    @include transition(all 0.5s ease);
+    @include border-radius($border-radius-xl);
+    @include box-shadow($box-shadow-sm);
+    min-width: 22rem;
+
+    & .nav-link {
+      padding-left: $nav-link-padding-x;
+      padding-right: $nav-link-padding-x;
+      & > i,
+      & > .icon {
+        @include transition(all 0.2s ease);
+      }
+
+      @include hover {
+        & > i,
+        & > .icon {
+          @include scale(1.2);
+        }
+      }
+    }
+
+    & .sub-menu {
+      top: 50px;
+      right: auto;
+      left: 100%;
+
+      & .nav-link.active {
+        background-color: $dt-navbar-nav-active-bg;
+      }
+    }
+
+    .theme-dark & {
+      background-color: lighten($card-bg, 5%);
+    }
+  }
+
+  & > .nav-item {
+    @include hover-focus {
+      & > .sub-menu {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        -webkit-animation: header-submenu-fade-in 0.4s ease 1, header-submenu-move-up 0.4s ease-out 1;
+        animation: header-submenu-fade-in 0.4s ease 1, header-submenu-move-up 0.4s ease-out 1;
+      }
+    }
+  }
+
+  & > .nav-item .sub-menu > .nav-item {
+    @include hover-focus {
+      & .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+        display: block;
+        -webkit-animation: header-submenu-fade-in 0.4s ease 1, header-submenu-move-up 0.4s ease-out 1;
+        animation: header-submenu-fade-in 0.4s ease 1, header-submenu-move-up 0.4s ease-out 1;
+      }
+
+      & > .nav-link {
+        color: $dt-navbar-nav-active-color;
+      }
+    }
+  }
+
+  & > .nav-item:last-child {
+    & .sub-menu {
+      left: auto;
+      right: 0;
+
+      & .sub-menu {
+        left: auto;
+        right: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    & > .nav-item:nth-last-of-type(2) {
+      & .sub-menu {
+        left: auto;
+        right: 0;
+
+        & .sub-menu {
+          left: auto;
+          right: 101%;
+        }
+      }
+    }
+  }
+}
+
+// Mega Menu
+.#{$class-prefix}-navbar {
+  & .mega-menu {
+    position: static;
+
+    & > .sub-menu {
+      width: 75%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      padding-left: $nav-link-padding-y;
+      padding-right: $nav-link-padding-y;
+    }
+
+    & > .sub-menu > .nav-item {
+      width: calc(100% / 3);
+    }
+
+    @include hover-focus {
+      & > .sub-menu {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+// Key Frames
+@-webkit-keyframes header-submenu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes header-submenu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes header-submenu-move-up {
+  from {
+    margin-top: 10px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes header-submenu-move-up {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}

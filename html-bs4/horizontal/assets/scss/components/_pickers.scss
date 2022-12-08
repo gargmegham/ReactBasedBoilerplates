@@ -1,0 +1,248 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pickers component.
+// -----------------------------------------------------------------------------
+
+//Date Picker
+.timepicker-sbs .datepicker-days,
+.timepicker-sbs .datepicker-months,
+.timepicker-sbs .datepicker-years,
+.timepicker-sbs .datepicker-decades,
+.timepicker-sbs .timepicker-picker,
+.timepicker-sbs .timepicker-hours,
+.timepicker-sbs .timepicker-minutes {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid $border-color;
+  @include border-radius($border-radius);
+}
+
+//Date Time pickers
+
+.bootstrap-datetimepicker-widget {
+  & .table-sm {
+    & thead th {
+      padding-top: 0.3rem;
+      border-bottom: 0 none;
+    }
+
+    & thead th:first-child,
+    & tbody th:first-child {
+      padding-left: 0.3rem;
+    }
+  }
+
+  &.dropdown-menu {
+    display: block;
+    margin: 2px 0;
+    padding: 10px;
+    width: 25rem;
+  }
+
+  & .picker-switch td span {
+    line-height: inherit;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.bootstrap-datetimepicker-widget {
+  .theme-dark & {
+    background-color: $body-bg;
+    & table {
+      & td,
+      & th {
+        background-color: $body-bg;
+      }
+    }
+  }
+
+  & table {
+
+    & td,
+    & th {
+      border-radius: $border-radius;
+      border-top: 0 none;
+    }
+
+    & td {
+      &.today:before {
+        border-bottom-color: theme-color("primary");
+      }
+
+      &.disabled,
+      &.disabled:hover {
+        background: none;
+        color: $gray-300;
+        cursor: not-allowed;
+      }
+
+      &.old,
+      &.new {
+        color: $gray-500;
+      }
+
+      &.active,
+      &.active:hover {
+        background-color: theme-color("primary");
+      }
+
+      span {
+        border-radius: $border-radius;
+
+        &.active {
+          background-color: theme-color("primary");
+        }
+      }
+    }
+  }
+}
+
+//Color pickers
+
+.sp-replacer {
+  padding: .8rem;
+  border-color: $border-color;
+  background: $gray-100;
+  color: $text-color;
+  vertical-align: middle;
+  @include border-radius($border-radius);
+
+  &:hover,
+  &.sp-active {
+    background: $gray-200;
+    border-color: darken($border-color, 5%);
+    color: $text-color-dark;
+  }
+}
+
+.sp-preview {
+  width: 35px;
+  height: 25px;
+  @include border-radius($border-radius);
+  border: 0 none;
+
+  &-inner {
+    @include border-radius($border-radius);
+  }
+}
+
+.sp-dd {
+  font-size: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  &:after {
+    content: '\e93a';
+    font: {
+      size: 1.8rem;
+      family: 'gaxon', sans-serif;
+    }
+    line-height: 1;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+}
+
+.sp-picker-container {
+  width: 18rem;
+  border: 0 none;
+}
+
+.sp-container {
+  background-color: $white;
+  border-color: $border-color;
+  @include border-radius($border-radius);
+  @include box-shadow($box-shadow);
+  z-index: 999 !important;
+}
+
+.sp-button-container,
+.sp-palette-button-container {
+  margin-top: 0.5rem;
+  text-align: right;
+  float: none;
+}
+
+.sp-cancel,
+.sp-choose,
+.sp-palette-toggle {
+  font-size: $font-size-sm;
+  display: inline-block;
+  padding: $btn-padding-y $btn-padding-x;
+  @include border-radius($border-radius);
+  @include transition(all 200ms ease);
+}
+
+.sp-cancel {
+  color: $white !important;
+  background-color: $danger;
+  margin-right: 4%;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $white !important;
+    background-color: darken($danger, 5%);
+  }
+}
+
+//Buttons
+
+.sp-container button,
+.sp-palette-toggle {
+  background-color: $primary;
+  background-image: none;
+  border: 0 none;
+  @include border-radius($border-radius);
+  color: $white;
+  padding: $btn-padding-y $btn-padding-x;
+  text-shadow: none;
+  line-height: inherit;
+
+  &:hover,
+  &:active {
+    background-color: darken($primary, 5%);
+    border: 0 none;
+  }
+
+  &:hover {
+    background-image: none;
+    text-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+// Initial
+.sp-initial {
+  float: none;
+  border: 0 none;
+
+  & span {
+    width: 50%;
+    float: left;
+
+    & .sp-thumb-inner {
+      width: 100%;
+      display: block;
+      @include box-shadow(0 0 0 1px rgba($black, .075) inset);
+    }
+  }
+}
+
+//Input
+.sp-input-container {
+  float: none;
+  width: 100%;
+}
+
+.sp-input {
+  border: 1px solid $input-border-color;
+
+  &:focus {
+    border-color: $primary;
+  }
+}

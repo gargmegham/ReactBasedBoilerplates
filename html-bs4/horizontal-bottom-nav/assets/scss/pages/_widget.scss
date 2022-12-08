@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Widget component.
+// -----------------------------------------------------------------------------
+.#{$class-prefix}-card-carousel {
+  & .owl-dots {
+    padding-left: $dt-card-padding-x;
+    padding-right: $dt-card-padding-x;
+    position: absolute;
+    bottom: 1.4rem;
+    width: 100%;
+  }
+
+  & .card-body {
+    padding-bottom: ($card-spacer-y * 2);
+  }
+
+  & img.dt-fab-btn {
+    width: inherit;
+  }
+
+  &.carousel-dot-top {
+    & .card-body {
+      padding-bottom: $card-spacer-y;
+      padding-top: ($card-spacer-y * 2);
+    }
+
+    & .owl-dots {
+      bottom: auto;
+      top: 1.4rem;
+      margin-top: 0 !important;
+    }
+  }
+
+  .carousel-thumb {
+    height: 100%;
+
+    & img {
+      min-height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+}
+
+.#{$class-prefix}-intro-card {
+  & .action-area {
+    padding-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .#{$class-prefix}-avatar {
+      @include transition(all 0.2s ease-in-out);
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      @include translateY(-50%);
+    }
+  }
+
+  @include hover {
+    & .action-area .#{$class-prefix}-avatar {
+      left: -12px;
+    }
+  }
+}

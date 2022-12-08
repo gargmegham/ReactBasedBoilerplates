@@ -1,0 +1,76 @@
+<div>
+    <h3 id="badge">Badge</h3>
+    <p class="comments-section">Bottom navigation bars make it easy to explore and switch between top-level views in a single tap.
+    </p>
+    <h4 id="basic-example-2">Bottom Navigation</h4>
+    <p><img src="./images/component/bottom-navigation.png" alt=""/></p>
+    <p class="comments-section">To show this type of Bottom Navigation you will need this code in down here.
+    </p>
+
+    <pre>
+<code class="html">
+&lt;BottomNavigation value={value} onChange={this.handleChange} className={classes.root}&gt;
+&lt;BottomNavigationAction label="Recents" icon={&lt;RestoreIcon/&gt;} /&gt;
+&lt;BottomNavigationAction label="Favorites" icon={&lt;FavoriteIcon/&gt;} /&gt;
+&lt;BottomNavigationAction label="Nearby" icon={&lt;LocationOnIcon/&gt;} /&gt;
+&lt;/BottomNavigation&gt;
+</code>
+    </pre>
+    <h4>Bottom Navigation with No Label</h4>
+    <p>If there are four or five actions, display inactive views as icons only.</p>
+    <p><img src="./images/component/bottom-navigation1.png" alt=""/></p>
+    <pre>
+<code class="html">
+&lt;BottomNavigation value={value} onChange={this.handleChange}
+               className={flex-wrap bottom-navigation} &gt;
+&lt;BottomNavigationAction label="Recents" value="recents" icon={&lt;RestoreIcon/&gt;} /&gt;
+&lt;BottomNavigationAction label="Favorites" value="favorites" icon={&lt;FavoriteIcon/&gt;} /&gt;
+&lt;BottomNavigationAction label="Nearby" value="nearby" icon={&lt;LocationOnIcon/&gt;} /&gt;
+&lt;/BottomNavigation&gt;
+</code>
+    </pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table  class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onChange</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the value changes.<br><br><strong>Signature:</strong><br><code>function(event: object, value: any) =&gt; void</code><br><em>event:</em> The event source of the callback<br><em>value:</em> We default to the index of the child</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">showLabels</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, all <code>BottomNavigationAction</code>s will show their labels. By default, only the selected <code>BottomNavigationAction</code> will show its label.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">value</span></td>
+            <td><span class="prop-type">any</span></td>
+            <td></td>
+            <td>The value of the currently selected <code>BottomNavigationAction</code>.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

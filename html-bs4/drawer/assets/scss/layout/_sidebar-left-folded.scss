@@ -1,0 +1,158 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sidebar of the site/application.
+// -----------------------------------------------------------------------------
+
+//Sidebar Folded style
+.#{$class-prefix}-sidebar--folded {
+  & .#{$class-prefix}-brand,
+  & .#{$class-prefix}-brand__logo,
+  & .#{$class-prefix}-sidebar,
+  & .#{$class-prefix}-side-nav__text,
+  & .#{$class-prefix}-sidebar__notification,
+  & .#{$class-prefix}-content-wrapper,
+  & .#{$class-prefix}-header__toolbar,
+  & .#{$class-prefix}-sidebar__notification .#{$class-prefix}-avatar-wrapper {
+    @include transition(all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0s);
+  }
+
+  & .#{$class-prefix}-brand,
+  & .#{$class-prefix}-sidebar {
+    width: $folded-sidebar-width;
+  }
+
+  & .#{$class-prefix}-content-wrapper,
+  & .#{$class-prefix}-header__toolbar {
+    width: calc(100% - #{$folded-sidebar-width});
+  }
+
+  & .#{$class-prefix}-sidebar__notification {
+    padding: 0;
+
+    & .dropdown-toggle:after,
+    & .#{$class-prefix}-avatar-info {
+      display: none;
+    }
+  }
+
+  & .#{$class-prefix}-side-nav__item {
+    &.open .#{$class-prefix}-side-nav__sub-menu:not(.#{$class-prefix}-side-nav__balloon) {
+      display: none !important;
+    }
+  }
+
+  & .#{$class-prefix}-side-nav__link {
+    padding: 12px 30px;
+  }
+
+  & .#{$class-prefix}-side-nav__text,
+  & .#{$class-prefix}-side-nav__arrow::before,
+  & .#{$class-prefix}-brand__logo {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  & .#{$class-prefix}-side-nav {
+    &__item .#{$class-prefix}-side-nav__balloon {
+      position: fixed;
+      z-index: 100;
+      background-color: $sidebar-bg;
+      @include border-radius($border-radius);
+      @include box-shadow($box-shadow);
+      display: block;
+      min-width: 16rem;
+      max-height: 70vh;
+	  overflow: hidden;
+
+      & .#{$class-prefix}-side-nav__text {
+        opacity: 1;
+        visibility: visible;
+        display: inline-block;
+      }
+    }
+	
+	&__tooltip .#{$class-prefix}-side-nav__text {
+		opacity: 1;
+		visibility: visible;
+		display: block;
+		position: fixed;
+		background-color: rgba($black, 0.75);
+		color: $white;
+		@include border-radius($border-radius);
+		padding: 5px 8px;
+		overflow: visible;
+		
+		&:after {
+			display: inline-block;
+			content: '';
+			position: absolute;
+			width: 0px;
+			height: 0px;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 5px solid rgba($black, 0.75);
+			left: -5px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 101;
+		}
+	}
+  }
+
+  & .#{$class-prefix}-sidebar__header {
+    padding: 0;
+
+    & .#{$class-prefix}-brand {
+      justify-content: center;
+    }
+
+    & .#{$class-prefix}-brand__logo-img {
+      display: none;
+    }
+
+    & .#{$class-prefix}-brand__logo-symbol {
+      display: inline-block;
+    }
+  }
+
+  & .#{$class-prefix}-sidebar__notification {
+    & .#{$class-prefix}-list {
+      margin-left: -12px;
+
+      &__item:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  & .#{$class-prefix}-side-nav__header {
+    padding: 0;
+
+    & .#{$class-prefix}-side-nav__text {
+      display: none;
+    }
+
+    &:first-child {
+      padding-top: 1rem;
+    }
+
+    &:not(:first-child):before {
+      margin-bottom: 0;
+    }
+  }
+
+  &.#{$class-prefix}-sidebar--fixed {
+    & .#{$class-prefix}-content-wrapper,
+    & .#{$class-prefix}-header__toolbar {
+      margin-left: $folded-sidebar-width;
+      width: calc(100% - #{$folded-sidebar-width});
+    }
+
+    &:not(.#{$class-prefix}-header--fixed):not(.theme-semidark):not(.theme-dark) {
+      & .#{$class-prefix}-header .#{$class-prefix}-header__toolbar {
+        margin-left: ($folded-sidebar-width + 20px);
+      }
+    }
+  }
+}
+

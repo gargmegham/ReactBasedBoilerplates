@@ -1,0 +1,111 @@
+<div>
+    <h3 id="badge">Avatars</h3>
+    <p class="comments-section">Avatars are found throughout material design with uses in everything from tables to
+        dialog menus.</p>
+    <h4 id="basic-example-2">Image Avatars</h4>
+    <p>Image avatars can be created by passing standard img props src or srcSet into the component.</p>
+    <p><img src="./images/component/avatar.png" alt=""/></p>
+    <p class="comments-section">To show this type of Avatars you will need this code in down here.
+    </p>
+
+    <pre>
+        <code class="html">
+&lt;Avatar className="size-100" alt="Remy Sharp"
+        src="assets/images/userAvatar/domnic-harris.jpg"/&gt;
+
+&lt;Avatar className="size-80" alt="Remy Sharp"
+        src="assets/images/userAvatar/garry-sobars.jpg"/&gt;
+
+&lt;Avatar className="size-60" alt="Remy Sharp"
+        src="assets/images/userAvatar/stella-johnson.png"/&gt;
+
+&lt;Avatar alt="Adelle Charles"
+        src="assets/images/userAvatar/man-3.jpg"/&gt;
+
+&lt;Avatar className="size-30" alt="Remy Sharp"
+        src="assets/images/userAvatar/alex-dolgove.png"/&gt;
+        </code>
+        </pre>
+    <h4>Letter Avatars</h4>
+    <p>Avatars containing simple characters can be created by passing your string as children.</p>
+    <img src="./images/component/avatar2.png" alt=""/>
+    <pre>
+  <code class="html">
+&lt;Avatar className="bg-primary size-100"&gt;&lt;h1 className="m-0 text-white"&gt;DK&lt;/h1&gt;&lt;/Avatar&gt;
+
+&lt;Avatar className="bg-secondary size-80"&gt;M&lt;/Avatar&gt;
+
+&lt;Avatar className="bg-success size-60 text-white"&gt;G&lt;/Avatar&gt;
+
+&lt;Avatar className="bg-warning"&gt;&lt;h3 className="m-0 text-white"&gt;R&lt;/h3&gt;&lt;/Avatar&gt;
+
+&lt;Avatar className="bg-info size-30"&gt;&lt;h3 className="m-0 text-white"&gt;s&lt;/h3&gt;&lt;/Avatar&gt;
+  </code>
+        </pre>
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">alt</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>Used in combination with <code>src</code> or <code>srcSet</code> to provide an alt attribute for the
+                rendered <code>img</code> element.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>Used to render icon or text elements inside the Avatar. <code>src</code> and <code>alt</code> props will
+                not be used and no <code>img</code> will be rendered by default.<br>This can be an element, or just a
+                string.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">component</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">'div'</span></td>
+            <td>The component used for the root node. Either a string to use a DOM element or a component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">imgProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>img</code> element when the component is used to display an image.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">sizes</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>The <code>sizes</code> attribute for the <code>img</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">src</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>The <code>src</code> attribute for the <code>img</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">srcSet</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>The <code>srcSet</code> attribute for the <code>img</code> element.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

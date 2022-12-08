@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Scrollspy component.
+// -----------------------------------------------------------------------------
+.scrollspy-horizontal,
+.scrollspy-vertical,
+.scrollspy-list-group {
+  position: relative;
+  overflow: auto;
+}
+
+.scrollspy-horizontal {
+  height: 220px;
+}
+
+.scrollspy-vertical {
+  height: 350px;
+}
+
+.scrollspy-list-group {
+  height: 180px;
+}

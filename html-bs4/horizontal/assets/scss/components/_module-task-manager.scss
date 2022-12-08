@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Task Manager Module.
+// -----------------------------------------------------------------------------
+
+.#{$class-prefix}-task {
+	
+	&__item {
+		position: relative;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+		
+		& .dt-task-date {
+			min-width: 55px;
+			text-align: right;
+			@include media-breakpoint-down(xs) {
+				position: absolute;
+				right: 2px; 
+				top: 0;
+				z-index: 1;
+			}
+		}
+		
+		& .badge {
+			min-width: 62px;
+		}
+		
+		& .#{$class-prefix}-text-hover {
+			@include hover {
+				color: $primary;
+			}
+		}
+
+	}
+	
+	&__body {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		max-width: calc(100% - 30px);
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+			max-width: calc(100% - 10px);
+		}
+		
+	}
+	
+	&__content {
+		&-left {
+			width: calc(100% - 252px);
+			@include media-breakpoint-down(xs) {
+				width: calc(100% - 65px);
+				margin-bottom: 10px;
+			}
+		}
+		&-right {
+			width: 252px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			align-items: center;
+			padding-left: 10px; 
+			@include media-breakpoint-down(xs) {
+				justify-content: flex-start;
+				padding-left: 0; 
+			}
+		}
+	}
+	
+}

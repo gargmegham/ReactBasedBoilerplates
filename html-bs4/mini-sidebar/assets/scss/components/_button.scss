@@ -1,0 +1,92 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+//
+// Base styles
+//
+
+.btn {
+  @include box-shadow(none);
+
+  &:focus,
+  &.focus {
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+
+    @include box-shadow(none);
+
+    &:focus {
+      @include box-shadow(none);
+    }
+  }
+
+  &-shadow {
+    @include box-shadow($box-shadow-lg);
+    @include hover-focus {
+      @include box-shadow($box-shadow-lg);
+    }
+
+    &:active {
+      @include box-shadow($box-shadow-sm !important);
+    }
+  }
+
+  &-rounded {
+    @include border-radius(50px);
+  }
+
+  &-default {
+    background-color: $white;
+    color: $primary;
+
+    @include hover-focus-active {
+      background-color: darken($white, 1%);
+      color: darken($primary, 5%);
+    }
+  }
+
+  &-group &-default {
+    background-color: lighten($text-color, 25%);
+    color: $text-color-dark;
+    &.active {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &-xs {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .theme-dark &-primary {
+  	 background-color: #323a43;
+     border-color: #323a43;
+  	 @include hover-focus-active {
+	 	background-color: #293037;
+        border-color: #293037;
+	 }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      color: $white;
+      background-color: #323a43;
+      border-color: #323a43;
+    }
+  }
+}
+
+.#{$class-prefix}-fab-btn {
+  @extend %circle-shape;
+  padding: 0;
+}
+
+//Compose button
+.compose-btn {
+  padding: 0.8rem 2.6rem;
+}

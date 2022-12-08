@@ -1,0 +1,70 @@
+<div>
+    <h3 id="badge">Cards</h3>
+    <p class="comments-section">A card is a sheet of material that serves as an entry point to more detailed information.
+        Cards display content composed of different elements whose size or supported actions vary.
+        Cards are a convenient means of displaying content composed of different elements. They’re also well-suited for showcasing elements whose size or supported actions vary, like photos with captions of variable length.
+    </p>
+    <h4 id="basic-example-2">Basic Cards</h4>
+    <p><img src="./images/component/card.png" alt=""/></p>
+    <p class="comments-section">To show this type of Cards you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;Card className="shadow border-0"&gt;
+   &lt;CardImg top width="100%" src={image} alt="Card image cap" /&gt;
+       &lt;CardBody&gt;
+          &lt;h3 className="card-title"&gt;{title}&lt;/h3&gt;
+          &lt;CardSubtitle&gt;{subTitle}&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;{description}&lt;/CardText&gt;
+          &lt;Button variant="raised" className="bg-primary text-white"&gt;{btnText}&lt;/Button&gt;
+       &lt;/CardBody&gt;
+&lt;/Card&gt;
+  </code>
+</pre>
+
+    <h4  class="pb-2">Solid Cards</h4>
+    <p><img class="shadow-lg" src="./images/component/card1.png" alt=""/></p>
+    <pre>
+     <code class="html">
+&lt;Card className={`shadow border-0 ${cardStyle}`}&gt;
+    &lt;CardBody&gt;
+       &lt;h4 className="mb-md-4"&gt;{headerText}&lt;/h4&gt;
+       &lt;h3 className="card-title"&gt;Card Title&lt;/h3&gt;
+       &lt;CardSubtitle className="text-white"&gt;Sub-heading text&lt;/CardSubtitle&gt;
+        &lt;CardText&gt;
+            Small plates, salads & sandwiches in an intimate setting with 12 indoor
+            seats plus patio seating
+         &lt;/CardText&gt;
+         &lt;CardText&gt;Last modified 2 days ago&lt;/CardText&gt;
+     &lt;/CardBody&gt;
+&lt;/Card&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">raised</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the card will use raised styling.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

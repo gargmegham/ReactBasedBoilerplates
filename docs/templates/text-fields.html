@@ -1,0 +1,230 @@
+<div>
+    <h3 id="badge">Text fields</h3>
+    <p class="comments-section">
+        Text fields allow users to input text and usually appear in forms. Users may enter text, numbers, or
+        mixed-format types of input.
+    </p>
+    <h4 id="basic-example-2">Basic Cards</h4>
+    <p><img src="./images/component/input.png" alt=""/></p>
+    <p class="comments-section">To show this type of Text fields you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;div className="row"&gt;
+    &lt;div className="col-md-3 col-12"&gt;
+        &lt;Input
+                defaultValue="Hello world"
+                className="w-100 mb-3"
+                inputProps={{'aria-label': 'Description', }} /&gt;
+    &lt;/div&gt;
+    &lt;div className="col-md-3 col-12"&gt;
+        &lt;Input
+                placeholder="Placeholder"
+                className="w-100 mb-3"
+                inputProps={{'aria-label': 'Description', }} /&gt;
+    &lt;/div&gt;
+    &lt;div className="col-md-3 col-12"&gt;
+        &lt;Input
+                value="Disabled"
+                className="w-100 mb-3"
+                disabled
+                inputProps={{'aria-label': 'Description', }} /&gt;
+    &lt;/div&gt;
+    &lt;div className="col-md-3 col-12"&gt;
+        &lt;Input
+                defaultValue="Error"
+                className="w-100 mb-3"
+                error
+                inputProps={{'aria-label': 'Description', }} /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">autoComplete</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>This property helps users to fill forms faster, especially on mobile devices. The name can be confusing,
+                as it's more like an autofill. You can learn more about it here: <a
+                        href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill">https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill</a>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">autoFocus</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the input will be focused during the first mount.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">defaultValue</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;number<br></span></td>
+            <td></td>
+            <td>The default value of the <code>Input</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disabled</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the input will be disabled.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">error</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the label will be displayed in an error state.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">FormHelperTextProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>FormHelperText</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">fullWidth</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the input will take up the full width of its container.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">helperText</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The helper text content.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">id</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>The id of the <code>input</code> element. Use that property to make <code>label</code> and <code>helperText</code>
+                accessible for screen readers.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">InputLabelProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>InputLabel</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">InputProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Input</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">inputProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the native <code>input</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">inputRef</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Use that property to pass a ref callback to the native input component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">label</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The label content.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">margin</span></td>
+            <td><span class="prop-type">enum:&nbsp;'none'&nbsp;|<br>&nbsp;'dense'&nbsp;|<br>&nbsp;'normal'<br></span>
+            </td>
+            <td></td>
+            <td>If <code>dense</code> or <code>normal</code>, will adjust vertical spacing of this and contained
+                components.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">multiline</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, a textarea element will be rendered instead of an input.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">name</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>Name attribute of the <code>input</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onChange</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the value is changed.<br><br><strong>Signature:</strong><br><code>function(event:
+                object) =&gt; void</code><br><em>event:</em> The event source of the callback. You can pull out the new
+                value by accessing <code>event.target.value</code>.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">placeholder</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>The short hint displayed in the input before the user enters a value.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">required</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the label is displayed as required.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">rows</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;number<br></span></td>
+            <td></td>
+            <td>Number of rows to display when multiline option is set to true.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">rowsMax</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;number<br></span></td>
+            <td></td>
+            <td>Maximum number of rows to display when multiline option is set to true.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">select</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>Render a <code>Select</code> element while passing the <code>Input</code> element to <code>Select</code>
+                as <code>input</code> parameter. If this option is set you must pass the options of the select as
+                children.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">SelectProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Select</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">type</span></td>
+            <td><span class="prop-type">string</span></td>
+            <td></td>
+            <td>Type attribute of the <code>Input</code> element. It should be a valid HTML5 input type.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">value</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;number&nbsp;|<br>&nbsp;arrayOf<br></span>
+            </td>
+            <td></td>
+            <td>The value of the <code>Input</code> element, required for a controlled component.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

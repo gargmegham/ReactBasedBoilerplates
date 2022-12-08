@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Carousel component.
+// -----------------------------------------------------------------------------
+.#{$class-prefix}-slider {
+  position: relative;
+
+  &__header {
+    padding: 10px 20px 2px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+
+    & .#{$class-prefix}-checkbox-icon {
+      float: right;
+
+      & .#{$class-prefix}-checkbox-content {
+        background: rgba($black, 0.4);
+        @extend %circle-shape;
+        @include size(30px);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.carousel-item {
+	& > img {
+		width: 100%;
+	}
+}
+
+.card .#{$class-prefix}-slider {
+  position: relative;
+
+  & .owl-dots {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+}

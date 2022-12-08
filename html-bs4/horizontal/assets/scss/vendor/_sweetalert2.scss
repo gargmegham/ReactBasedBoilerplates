@@ -1,0 +1,10 @@
+@import "../../../../node_modules/sweetalert2/src/sweetalert2";
+
+.swal2-popup {
+  & .swal2-title {
+    font-weight: $font-weight-normal;
+  }
+  & .swal2-styled {
+    padding: 1.2rem 2rem;
+  }
+}

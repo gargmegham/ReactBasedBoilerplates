@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+body {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  @include transition(all .3s ease-out);
+
+  @include media-breakpoint-down(xs) {
+    font-size: ($font-size-base + 0.2rem);
+  }
+}
+
+
+html {
+  font-size: 62.5%;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 47%;
+  }
+}

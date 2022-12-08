@@ -1,0 +1,22 @@
+@import "../../../../node_modules/owl.carousel/src/scss/owl.theme.default";
+
+.owl-theme {
+  & .owl-dots {
+    text-align: left;
+
+    & .owl-dot {
+      span {
+        border: 2px solid $text-color;
+      }
+
+      &.active span {
+        border-color: $primary;
+        @include size(14px);
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

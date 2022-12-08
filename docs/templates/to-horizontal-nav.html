@@ -1,0 +1,77 @@
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Side Nav Style</h2>
+    <div class="adocs-section-content ng-binding">
+        <p>This article is dedicated to give a step-by-step guide on how to add a new menu item to the horizontal
+            navigation.</p>
+        <p>This can be achieved in following 3 steps:</p>
+        <ol>
+            <li>
+                <strong>Create a Page</strong><br>
+                <p>All of the pages in Wieldy are placed/created under the folder location:</p>
+                <p><span class="f-path small">src/routes/{folder name based on page name}</p>
+                <p>In the example here, we are going to create a new page “About Us”. In order to do that, we are going
+                    to create a folder “About Us” inside the <span class="f-path small">src/routes/</span>.</p>
+                <p>Now, we will create a file index.js inside this “AboutUs” folder which will represent AboutUs page
+                    component.</p>
+                <p>After this, the folder structure will look like as given in following figure:</p>
+                <p class="lead"><strong>Screenshot to show the structure of src/routes/AboutUs/Index.js</strong></p>
+                <img src="./images/about-us-route-folder-structure.png" alt=""/>
+                <p>Then we will write the code in index.js to create our AboutUs page component. Following is the sample
+                    page component structure you can follow:</p>
+                <p class="lead"><strong>Screenshot with sample structure. Check in register.</strong></p>
+                <p>So, our <span class="f-path small">index.js</span> file will look like as below:</p>
+                <img src="./images/html-about-us-page.png" alt=""/>
+                <p class="lead"><strong>Here the source code will go for AboutUs page component</strong></p>
+            </li>
+            <li>
+                <strong>Create a Route</strong><br>
+                <p>In this step, we are going to create a route for our newly created About Us page.</p>
+
+                <p>To add a main route, we need to open the file <span
+                        class="f-path small">src/routes/index.js</span></p>
+
+                <p>Here, we will ada new route which we will then link to our AboutUs page component. Below is the
+                    source code which will do it for us when we add this to the above mentioned file:</p>
+
+                <p class="lead"><strong>Source code from register</strong></p>
+
+                <img src="./images/html-about-us-route.png" alt=""/>
+
+                <p>In above source code <span class="f-path small">asyncComponent()</span> is being used to implement
+                    the async loading.</p>
+
+            </li>
+            <li>
+                <strong>Add a menu item</strong><br>
+                <p>So far, we have create a page and added a route which will take user to that page when accessed in
+                    browser directly.</p>
+                <p>Now, in this final step, we are going to add a menu item which user can click to access that
+                    route.</p>
+                <p>To add a new menu item in horizontal navigation bar, we will need to add the menu item in both
+                    horizontal and vertical navigation bars as we are showing vertical navigation bars on smaller size
+                    screens.</p>
+                <h5>Add to Horizontal Navigation Bar</h5>
+                <p>So, let’s add the new menu item to the horizontal navigation bar which will show on desktop or larger
+                    screen resolutions.</p>
+                <p>To do so, we will need add the below code to the file <span class="f-path small">src/containers/Topbar/HorizontalNav.js</span>
+                </p>
+                <p class="lead"><strong>Source code structure from register</strong></p>
+                <img src="./images/html-structure-nav-v.png" alt=""/>
+                <h5>Add to Vertical Navigation Bar</h5>
+                <p>Now, let’s add the menu item to the vertical navigation bar and this will show on small devices like
+                    smartphones.</p>
+                <p>To do that, we will need to reach to the file “SidenavContent.js which can be found under <span
+                        class="f-path small">src/containers/SideNav/SidenavContent.js</span>
+                <p>Now, here in this file SidenavContent.js, we will look for the <span
+                        class="f-path small">&lt;Menu.Item&gt;</span> tag which represents default menu item “Sample Page” in
+                    the starter template.</p>
+                <p>Following is a screenshot for reference:</p>
+                <p class="lead"><strong>Screenshot of li tag for sample page menu.</strong></p>
+                <p>Now, here you can add your own menu item as per given in below sour code:</p>
+                <p class="lead"><strong>Source code structure</strong></p>
+                <img src="./images/html-structure-nav-v.png" alt=""/>
+                <p>We hope this article was helpful to you.</p>
+            </li>
+        </ol>
+    </div>
+</div>

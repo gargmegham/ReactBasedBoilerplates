@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the blockquote component.
+// -----------------------------------------------------------------------------
+.blockquote {
+  color: $headings-color;
+
+  &:not(:last-child){
+    margin-bottom: 5.2rem;
+  }
+}
+
+.blockquote-footer {
+  font-size: $font-size-base;
+}

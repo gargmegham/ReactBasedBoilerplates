@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Wieldy - A fully responsive, HTML5 based admin template">
+  <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, jQuery, web design, CSS3, sass">
+  <!-- /meta tags -->
+  <title>Wieldy - Admin Dashboard</title>
+
+  <!-- Site favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- /site favicon -->
+
+  <!-- Font Icon Styles -->
+  <link rel="stylesheet" href="../node_modules/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="../vendors/gaxon-icon/style.css">
+  <!-- /font icon Styles -->
+
+  <!-- Perfect Scrollbar stylesheet -->
+  <link rel="stylesheet" href="../node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
+  <!-- /perfect scrollbar stylesheet -->
+
+  <!-- Load Styles -->
+  <link rel="stylesheet" href="assets/css/lite-style-1.min.css">
+  <!-- /load styles -->
+
+</head>
+<body class="dt-sidebar--fixed">
+
+<!-- Loader -->
+<div class="dt-loader-container">
+  <div class="dt-loader">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+    </svg>
+  </div>
+</div>
+<!-- /loader -->
+
+<!-- Root -->
+<div class="dt-root">
+
+  <!-- Site Main -->
+  <main class="dt-main">
+    <!-- Sidebar -->
+    <aside id="main-sidebar" class="dt-sidebar">
+      <!-- Sidebar Header -->
+      <div class="dt-sidebar__header">
+        <!-- Brand -->
+        <div class="dt-brand">
+
+          <!-- Brand logo -->
+          <span class="dt-brand__logo">
+        <a class="dt-brand__logo-link" href="index.html">
+          <img class="dt-brand__logo-img" src="https://via.placeholder.com/90x18" alt="Wieldy">
+          <img class="dt-brand__logo-symbol" src="https://via.placeholder.com/35x18" alt="Wieldy">
+        </a>
+      </span>
+          <!-- /brand logo -->
+
+        </div>
+        <!-- /brand -->
+      </div>
+      <!-- /sidebar header -->
+
+      <!-- Sidebar Container -->
+      <div class="dt-sidebar__container">
+
+        <!-- Sidebar Notification -->
+        <div class="dt-sidebar__notification">
+          <!-- Dropdown -->
+          <div class="dropdown mb-6" id="user-menu-dropdown">
+
+            <!-- Dropdown Link -->
+            <a href="#" class="dropdown-toggle dt-avatar-wrapper"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="dt-avatar" src="https://via.placeholder.com/150x150" alt="Domnic Harris">
+              <span class="dt-avatar-info">
+            <span class="dt-avatar-name">Bob Hyden</span>
+          </span> </a>
+            <!-- /dropdown link -->
+
+            <!-- Dropdown Option -->
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:void(0)"> <i class="icon icon-user-o icon-fw mr-2 mr-sm-1"></i>Account
+              </a> <a class="dropdown-item" href="javascript:void(0)">
+                <i class="icon icon-setting icon-fw mr-2 mr-sm-1"></i>Setting </a>
+              <a class="dropdown-item" href="page-blank.html"> <i class="icon icon-edit icon-fw mr-2 mr-sm-1"></i>Logout
+              </a>
+            </div>
+            <!-- /dropdown option -->
+
+          </div>
+          <!-- /dropdown -->
+
+
+          <ul class="dt-list dt-list-xl">
+            <li class="dt-list__item pl-5 pr-5">
+              <a href="javascript:void(0)" class="dt-list__link"><i class="icon icon-search-new icon-xl"></i></a>
+            </li>
+            <li class="dt-list__item pl-5 pr-5">
+              <a href="javascript:void(0)" class="dt-list__link"><i class="icon icon-notification icon-xl"></i></a>
+            </li>
+            <li class="dt-list__item pl-5 pr-5">
+              <a href="javascript:void(0)" class="dt-list__link"><i class="icon icon-chat-new icon-xl"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!-- /sidebar notification -->
+
+        <!-- Sidebar Navigation -->
+        <ul class="dt-side-nav">
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">main</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item open">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Dashboard">
+              <i class="icon icon-dashboard icon-fw icon-xl"></i> <span class="dt-side-nav__text">Dashboard</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="index.html" class="dt-side-nav__link" title="Crypto"> <i
+                      class="icon icon-crypto icon-fw icon-sm"></i>
+                  <span class="dt-side-nav__text">Crypto</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=dashboard-crm" class="dt-side-nav__link" title="CRM"> <i class="icon icon-crm icon-fw icon-sm"></i>
+                  <span class="dt-side-nav__text">Crm</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=dashboard-listing" class="dt-side-nav__link" title="Listing">
+                  <i class="icon icon-listing-dbrd icon-fw icon-sm"></i> <span class="dt-side-nav__text">Listing</span> </a>
+              </li>
+
+            </ul>
+            <!-- /sub-menu -->
+
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=widget" class="dt-side-nav__link" title="Widgets"> <i
+                  class="icon icon-widgets icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Widgets</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=metrics" class="dt-side-nav__link" title="Metrics"> <i
+                  class="icon icon-apps icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Metrics</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="layouts.html?menu=layouts" class="dt-side-nav__link" title="Layouts"> <i
+                  class="icon icon-card icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Layouts</span> </a>
+          </li>
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Pre-built Apps</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=mail" class="dt-side-nav__link" title="Mail App"> <i
+                  class="icon icon-email icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Mail App</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=todo" class="dt-side-nav__link" title="Todo App"> <i
+                  class="icon icon-check-square-o icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Todo App</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=contact" class="dt-side-nav__link" title="Contacts App"> <i
+                  class="icon icon-contacts icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Contacts App</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=chat" class="dt-side-nav__link" title="Chat App"> <i
+                  class="icon icon-chat-bubble icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Chat App</span> </a>
+          </li>
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Social Apps</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=profile" class="dt-side-nav__link" title="Profile"> <i
+                  class="icon icon-profile2 icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Profile</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=wall" class="dt-side-nav__link" title="Wall App"> <i
+                  class="icon icon-avatar icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Wall App</span> </a>
+          </li>
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Components</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Basic Components">
+              <i class="icon icon-all-contacts icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Basic Components</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=alert" class="dt-side-nav__link" title="Alerts">
+                  <span class="dt-side-nav__text">Alerts</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=badges" class="dt-side-nav__link" title="Badges">
+                  <span class="dt-side-nav__text">Badges</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=breadcrumbs" class="dt-side-nav__link" title="Breadcrumbs">
+                  <span class="dt-side-nav__text">Breadcrumbs</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=button" class="dt-side-nav__link" title="Button">
+                  <span class="dt-side-nav__text">Button</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=button-group" class="dt-side-nav__link" title="Button Group">
+                  <span class="dt-side-nav__text">Button Group</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=card" class="dt-side-nav__link" title="Card">
+                  <span class="dt-side-nav__text">Card</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=card-group" class="dt-side-nav__link" title="Card Group">
+                  <span class="dt-side-nav__text">Card Group</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=carousel" class="dt-side-nav__link" title="Carousel">
+                  <span class="dt-side-nav__text">Carousel</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=collapse" class="dt-side-nav__link" title="Collapse">
+                  <span class="dt-side-nav__text">Collapse</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=dropdown" class="dt-side-nav__link" title="Dropdown">
+                  <span class="dt-side-nav__text">Dropdown</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=input-group" class="dt-side-nav__link" title="Input Group">
+                  <span class="dt-side-nav__text">Input Group</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=jumbotron" class="dt-side-nav__link" title="Jumbotron">
+                  <span class="dt-side-nav__text">Jumbotron</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=list-group" class="dt-side-nav__link" title="List Group">
+                  <span class="dt-side-nav__text">List Group</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=modal" class="dt-side-nav__link" title="Modal">
+                  <span class="dt-side-nav__text">Modal</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=navbar" class="dt-side-nav__link" title="Navbar">
+                  <span class="dt-side-nav__text">Navbar</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="navs.html?menu=navs" class="dt-side-nav__link" title="Navs & Tabs">
+                  <span class="dt-side-nav__text">Navs &amp; Tabs</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=pagination" class="dt-side-nav__link" title="Pagination">
+                  <span class="dt-side-nav__text">Pagination</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=popovers" class="dt-side-nav__link" title="Popovers">
+                  <span class="dt-side-nav__text">Popovers</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=progress" class="dt-side-nav__link" title="Progress Bar">
+                  <span class="dt-side-nav__text">Progress Bar</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=scrollspy" class="dt-side-nav__link" title="Scrollspy">
+                  <span class="dt-side-nav__text">Scrollspy</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=tooltip" class="dt-side-nav__link" title="Tooltip">
+                  <span class="dt-side-nav__text">Tooltip</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=typography" class="dt-side-nav__link" title="Typography">
+                  <span class="dt-side-nav__text">Typography</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Tables">
+              <i class="icon icon-table icon-fw icon-xl"></i> <span class="dt-side-nav__text">Tables</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=basic-table" class="dt-side-nav__link" title="Basic Table">
+                  <span class="dt-side-nav__text">Basic Table</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=data-table" class="dt-side-nav__link" title="Data Table">
+                  <span class="dt-side-nav__text">Data Table</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Forms</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=basic-form" class="dt-side-nav__link" title="Basic Form"> <i
+                  class="icon icon-feedback icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Basic Form</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=file-upload" class="dt-side-nav__link" title="File Upload"> <i
+                  class="icon icon-upload icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">File Upload</span> </a>
+          </li>
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Extra Components</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Editors">
+              <i class="icon icon-editor icon-fw icon-xl"></i> <span class="dt-side-nav__text">Editors</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=editors-summernote" class="dt-side-nav__link" title="Summernote Editor">
+                  <span class="dt-side-nav__text">Summernote Editor</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=code-editor" class="dt-side-nav__link" title="Code Editor">
+                  <span class="dt-side-nav__text">Code Editor</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Pickers">
+              <i class="icon icon-picker icon-fw icon-xl"></i> <span class="dt-side-nav__text">Pickers</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=date-time-pickers" class="dt-side-nav__link" title="Date & Time Picker">
+                  <span class="dt-side-nav__text">Date &amp; Time Picker</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=color-picker" class="dt-side-nav__link" title="Color Picker">
+                  <span class="dt-side-nav__text">Color Picker</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=drag-drop" class="dt-side-nav__link" title="Drag & Drop"> <i
+                  class="icon icon-drag-and-drop icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Drag &amp; Drop</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=sweet-alert" class="dt-side-nav__link" title="Sweet Alerts"> <i
+                  class="icon icon-sweet-alert icon-fw icon-xl"></i>
+              <span class="dt-side-nav__text">Sweet Alerts</span> </a>
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="page-blank.html?menu=notification-alert" class="dt-side-nav__link" title="Notifications">
+              <i class="icon icon-notification icon-fw icon-xl"></i> <span class="dt-side-nav__text">Notifications</span>
+            </a>
+          </li>
+
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Extensions</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Maps">
+              <i class="icon icon-extensions icon-fw icon-xl"></i> <span class="dt-side-nav__text">Maps</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=basic" class="dt-side-nav__link" title="Simple map">
+                  <span class="dt-side-nav__text">Simple map</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=events" class="dt-side-nav__link" title="Events Map">
+                  <span class="dt-side-nav__text">Events Map</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=markers" class="dt-side-nav__link" title="Markers Maps">
+                  <span class="dt-side-nav__text">Markers Maps</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=geolocation" class="dt-side-nav__link" title="Geo Location Map">
+                  <span class="dt-side-nav__text">Geo Location Map</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=geocoding" class="dt-side-nav__link" title="Geo Coding Map">
+                  <span class="dt-side-nav__text">Geo Coding Map</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=overlay" class="dt-side-nav__link" title="Overlay">
+                  <span class="dt-side-nav__text">Overlay</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=overlay-polylines" class="dt-side-nav__link" title="Overlay Polylines">
+                  <span class="dt-side-nav__text">Overlay Polylines</span>
+                </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=polygons" class="dt-side-nav__link" title="Overlay Polygons">
+                  <span class="dt-side-nav__text">Overlay Polygons</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=geojson-polygons" class="dt-side-nav__link" title="GeoJSON Polygons">
+                  <span class="dt-side-nav__text">GeoJSON Polygons</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=routes" class="dt-side-nav__link" title="Map Routes">
+                  <span class="dt-side-nav__text">Map Routes</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=advance-routes" class="dt-side-nav__link" title="Advance Routes">
+                  <span class="dt-side-nav__text">Advance Routes</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=data-maps" class="dt-side-nav__link" title="Data Maps">
+                  <span class="dt-side-nav__text">Data Maps</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=am-maps" class="dt-side-nav__link" title="Am Maps">
+                  <span class="dt-side-nav__text">Am Maps</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Charts">
+              <i class="icon icon-chart icon-fw icon-xl"></i> <span class="dt-side-nav__text">Charts</span> </a>
+
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=chartjs" class="dt-side-nav__link" title="ChartJs">
+                  <span class="dt-side-nav__text">ChartJs</span> </a>
+              </li>
+
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=am-charts" class="dt-side-nav__link" title="Am Charts">
+                  <span class="dt-side-nav__text">Am Charts</span> </a>
+              </li>
+            </ul>
+          </li>
+          <!-- /menu item -->
+
+          <!-- Menu Header -->
+          <li class="dt-side-nav__item dt-side-nav__header">
+            <span class="dt-side-nav__text">Custom Views</span>
+          </li>
+          <!-- /menu header -->
+
+          <!-- Menu Item -->
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="User Auth">
+              <i class="icon icon-auth-screen icon-fw icon-xl"></i> <span class="dt-side-nav__text">User Auth</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=login" class="dt-side-nav__link" title="Sign In">
+                  <span class="dt-side-nav__text">Sign In</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=login2" class="dt-side-nav__link" title="Sign In 2" target="_blank">
+                  <span class="dt-side-nav__text">Sign In 2</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=forgot-password" class="dt-side-nav__link" title="Forgot Password">
+                  <span class="dt-side-nav__text">Forgot Password</span>
+                </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=signup" class="dt-side-nav__link" title="Sign Up Page">
+                  <span class="dt-side-nav__text">Sign Up</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=signup2" class="dt-side-nav__link" title="Sign Up 2 Page" target="_blank">
+                  <span class="dt-side-nav__text">Sign Up 2</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=lock-screen" class="dt-side-nav__link" title="Lock Screen">
+                  <span class="dt-side-nav__text">Lock Screen</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=reset-password" class="dt-side-nav__link" title="Reset Password">
+                  <span class="dt-side-nav__text">Reset Password</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="List Type">
+              <i class="icon icon-all-contacts icon-fw icon-xl"></i> <span class="dt-side-nav__text">List Type</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=simple-list" class="dt-side-nav__link" title="Plain List View">
+                  <span class="dt-side-nav__text">Plain List View</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=strip-list" class="dt-side-nav__link" title="Plain List with Divider">
+                  <span class="dt-side-nav__text">Plain List with Divider</span>
+                </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=card-list" class="dt-side-nav__link" title="Cards List View">
+                  <span class="dt-side-nav__text">Cards List View</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="eCommerce">
+              <i class="icon icon-shopping-cart icon-fw icon-xl"></i> <span class="dt-side-nav__text">eCommerce</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=product-grid" class="dt-side-nav__link" title="Product Grid">
+                  <span class="dt-side-nav__text">Product Grid</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=product-list" class="dt-side-nav__link" title="Product List">
+                  <span class="dt-side-nav__text">Product List</span>
+                </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Extra Pages">
+              <i class="icon icon-error icon-fw icon-xl"></i> <span class="dt-side-nav__text">Extra Pages</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=page-404" class="dt-side-nav__link" title="Error 404">
+                  <span class="dt-side-nav__text">Error 404</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=page-500" class="dt-side-nav__link" title="Error 500">
+                  <span class="dt-side-nav__text">Error 500</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html" class="dt-side-nav__link" title="Blank Page">
+                  <span class="dt-side-nav__text">Blank Page</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=search" class="dt-side-nav__link" title="Search Page">
+                  <span class="dt-side-nav__text">Search Page</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+
+          <li class="dt-side-nav__item">
+            <a href="javascript:void(0)" class="dt-side-nav__link dt-side-nav__arrow" title="Extra Pages">
+              <i class="icon icon-ellipse-h icon-fw icon-xl"></i> <span class="dt-side-nav__text">Extras</span> </a>
+
+            <!-- Sub-menu -->
+            <ul class="dt-side-nav__sub-menu">
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=pricing-table" class="dt-side-nav__link" title="Pricing Table">
+                  <span class="dt-side-nav__text">Pricing Table</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=callout" class="dt-side-nav__link" title="Callout">
+                  <span class="dt-side-nav__text">Callout</span> </a>
+              </li>
+              <li class="dt-side-nav__item">
+                <a href="page-blank.html?menu=testimonials" class="dt-side-nav__link" title="Testimonials">
+                  <span class="dt-side-nav__text">Testimonials</span> </a>
+              </li>
+            </ul>
+            <!-- /sub-menu -->
+          </li>
+
+        </ul>
+        <!-- /sidebar navigation -->
+
+      </div>
+      <!-- Sidebar Container -->
+    </aside>
+    <!-- /sidebar -->
+
+    <!-- Site Content Wrapper -->
+    <div class="dt-content-wrapper">
+
+      <!-- Site Content -->
+      <div class="dt-content">
+
+        <!-- Grid -->
+        <div class="row">
+
+          <!-- Grid Item -->
+          <div class="col-xl-3 col-sm-6">
+
+            <!-- Chart Card -->
+            <div class="dt-card dt-chart dt-card__full-height">
+
+              <!-- Chart Header -->
+              <div class="dt-chart__header">
+                <div class="style-default style-crypto">
+                  <h2>$9,626</h2>
+
+                  <div class="trending-section text-success">
+                    <h4>38%</h4>
+                    <i class="icon icon-menu-up"></i>
+                  </div>
+
+                  <p>Bitcoin Price</p>
+                </div>
+              </div>
+              <!-- /chart header -->
+
+              <!-- Action Tools -->
+              <div class="action-tools">
+                <i class="icon icon-bitcoin icon-3x text-primary"></i>
+              </div>
+              <!-- /action tools -->
+
+              <!-- Chart Body -->
+              <div class="dt-chart__body">
+                <canvas class="rounded-xl" id="chart-active-users" height="96" data-shadow="yes"></canvas>
+              </div>
+              <!-- /chart body -->
+
+            </div>
+            <!-- /chart card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-3 col-sm-6">
+
+            <!-- Chart Card -->
+            <div class="dt-card dt-chart dt-card__full-height">
+
+              <!-- Chart Header -->
+              <div class="dt-chart__header">
+                <div class="style-default style-crypto">
+                  <h2>$7,831</h2>
+
+                  <div class="trending-section text-success">
+                    <h4>07%</h4>
+                    <i class="icon icon-menu-up"></i>
+                  </div>
+
+                  <p>Etherium Price</p>
+                </div>
+              </div>
+              <!-- /chart header -->
+
+              <!-- Action Tools -->
+              <div class="action-tools">
+                <i class="icon icon-etherium icon-3x text-primary"></i>
+              </div>
+              <!-- /action tools -->
+
+              <!-- Chart Body -->
+              <div class="dt-chart__body">
+                <canvas class="rounded-xl" id="chart-extra-revenue" height="96" data-shadow="yes"></canvas>
+              </div>
+              <!-- /chart body -->
+
+            </div>
+            <!-- /chart card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-3 col-sm-6">
+
+            <!-- Chart Card -->
+            <div class="dt-card dt-chart dt-card__full-height">
+
+              <!-- Chart Header -->
+              <div class="dt-chart__header">
+                <div class="style-default style-crypto">
+                  <h2>$1,239</h2>
+
+                  <div class="trending-section text-danger">
+                    <h4>08%</h4>
+                    <i class="icon icon-menu-down"></i>
+                  </div>
+
+                  <p>Ripple Price</p>
+                </div>
+              </div>
+              <!-- /chart header -->
+
+              <!-- Action Tools -->
+              <div class="action-tools">
+                <i class="icon icon-ripple icon-3x text-primary"></i>
+              </div>
+              <!-- /action tools -->
+
+              <!-- Chart Body -->
+              <div class="dt-chart__body">
+                <canvas class="rounded-xl" id="chart-orders" height="96" data-shadow="yes"></canvas>
+              </div>
+              <!-- /chart body -->
+
+            </div>
+            <!-- /chart card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-3 col-sm-6">
+
+            <!-- Chart Card -->
+            <div class="dt-card dt-chart dt-card__full-height">
+
+              <!-- Chart Header -->
+              <div class="dt-chart__header">
+                <div class="style-default style-crypto">
+                  <h2>$849</h2>
+
+                  <div class="trending-section text-danger">
+                    <h4>47%</h4>
+                    <i class="icon icon-menu-down"></i>
+                  </div>
+
+                  <p>Litcoin Price</p>
+                </div>
+              </div>
+              <!-- /chart header -->
+
+              <!-- Action Tools -->
+              <div class="action-tools">
+                <i class="icon icon-litcoin icon-3x text-primary"></i>
+              </div>
+              <!-- /action tools -->
+
+              <!-- Chart Body -->
+              <div class="dt-chart__body">
+                <canvas class="rounded-xl" id="chart-traffic-raise" height="96" data-shadow="no"
+                        data-type="line"></canvas>
+              </div>
+              <!-- /chart body -->
+
+            </div>
+            <!-- /chart card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-6">
+
+            <!-- Card -->
+            <div class="dt-card dt-card__full-height">
+
+              <!-- Card Header -->
+              <div class="dt-card__header">
+
+                <!-- Card Heading -->
+                <div class="dt-card__heading">
+                  <h3 class="dt-card__title">Your Portfolio Balance</h3>
+                </div>
+                <!-- /card heading -->
+
+              </div>
+              <!-- /card header -->
+
+              <!-- Card Body -->
+              <div class="dt-card__body">
+                <!-- Grid -->
+                <div class="row no-gutters">
+                  <!-- Grid Item -->
+                  <div class="col-sm-7 pr-sm-2 mb-6 mb-sm-0">
+                    <h2 class="display-2 font-weight-medium mb-3">
+                      $179,626
+                      <span class="d-inline-block f-14 text-success">64% <i class="icon icon-menu-up"></i></span>
+                    </h2>
+
+                    <span class="d-inline-block text-light-gray mb-6">Overall balance</span>
+
+                    <p class="card-text">
+                      <a href="javascript:void(0)" class="btn btn-primary mr-2">Deposit</a>
+                      <a href="javascript:void(0)" class="btn text-white bg-cyan">Withdraw</a>
+                    </p>
+
+                    <a href="javascript:void(0)" class="d-inline-block">
+                      <i class="icon icon-add-circle mr-2"></i>Add New Wallet
+                    </a>
+                  </div>
+                  <!-- /grid item -->
+                  <!-- Grid Item -->
+                  <div class="col-sm-5">
+                    <h5 class="mb-4">Portfolio Distribution</h5>
+                    <ul class="dt-indicator">
+                      <li class="dt-indicator-item">
+                        <h5 class="dt-indicator-title f-12">BTC <span
+                              class="d-inline-block border-left text-light-gray pl-2 ml-1">8.74</span></h5>
+                        <div class="dt-indicator-item__info" data-fill="78" data-max="100" data-percent="true">
+                          <div class="dt-indicator-item__fill bg-primary"></div>
+                          <span class="dt-indicator-item__count ml-3">0</span>
+                        </div>
+                      </li>
+                      <li class="dt-indicator-item">
+                        <h5 class="dt-indicator-title f-12">RPL <span
+                              class="d-inline-block border-left text-light-gray pl-2 ml-1">1.23</span></h5>
+                        <div class="dt-indicator-item__info" data-fill="52" data-max="100" data-percent="true">
+                          <div class="dt-indicator-item__fill bg-success"></div>
+                          <span class="dt-indicator-item__count ml-3">0</span>
+                        </div>
+                      </li>
+                      <li class="dt-indicator-item">
+                        <h5 class="dt-indicator-title f-12">LTE <span
+                              class="d-inline-block border-left text-light-gray pl-2 ml-1">0.71</span></h5>
+                        <div class="dt-indicator-item__info" data-fill="18" data-max="100" data-percent="true">
+                          <div class="dt-indicator-item__fill bg-warning"></div>
+                          <span class="dt-indicator-item__count ml-3">0</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /grid item -->
+                </div>
+                <!-- /grid -->
+              </div>
+              <!-- /card body -->
+
+            </div>
+            <!-- /card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-6">
+
+            <!-- Card -->
+            <div class="dt-card dt-card__full-height">
+
+              <!-- Card Header -->
+              <div class="dt-card__header">
+
+                <!-- Card Heading -->
+                <div class="dt-card__heading">
+                  <h3 class="dt-card__title">Balance History</h3>
+                </div>
+                <!-- /card heading -->
+
+                <!-- Card Tools -->
+                <div class="dt-card__tools">
+
+                  <!-- Dropdown -->
+                  <div class="dropdown d-inline-block">
+                    <a class="dropdown-toggle d-inline-block f-12 py-1 px-2 border rounded text-light-gray"
+                       href="#"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                      Last 30 days
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="javascript:void(0)">Last week</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Last 6 month</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Last 1 year</a>
+                    </div>
+                  </div>
+                  <!-- /dropdown -->
+
+                </div>
+                <!-- /card tools -->
+
+              </div>
+              <!-- /card header -->
+
+              <!-- Chart Body -->
+              <div class="dt-chart__body">
+                <canvas height="100" id="chart-balance-history"></canvas>
+              </div>
+              <!-- /chart body -->
+
+            </div>
+            <!-- /card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-5 col-md-12">
+
+            <!-- Card -->
+            <div class="dt-card dt-card__full-height">
+
+              <!-- Card Header -->
+              <div class="dt-card__header">
+
+                <!-- Card Heading -->
+                <div class="dt-card__heading">
+                  <h3 class="dt-card__title">Send Money to</h3>
+                </div>
+                <!-- /card heading -->
+
+                <!-- Card Tools -->
+                <div class="dt-card__tools">
+                  <a href="javascript:void(0)" class="dt-card__more"><i class="icon icon-add-circle mr-2"></i>Add New
+                    Account</a>
+                </div>
+                <!-- /card tools -->
+
+              </div>
+              <!-- /card header -->
+
+              <!-- Card Body -->
+              <div class="dt-card__body pb-2">
+
+                <!-- Campaigns Widget -->
+                <div class="campaigns-widget">
+
+                  <!-- Grid -->
+                  <div class="row no-gutters pb-3 border-bottom">
+
+                    <!-- Grid Item -->
+                    <div class="col-6">
+                      Account Holder Name
+                    </div>
+                    <!-- /grid item -->
+
+                    <!-- Grid Item -->
+                    <div class="col-3 text-right">
+                      Last Transfer
+                    </div>
+                    <!-- /grid item -->
+
+                    <!-- Grid Item -->
+                    <div class="col-3 text-right">
+                      ACTION
+                    </div>
+                    <!-- /grid item -->
+
+                  </div>
+                  <!-- /grid -->
+
+                  <!-- Widget -->
+                  <div class="dt-widget dt-widget-sm dt-widget-hover">
+
+                    <!-- Widget Item -->
+                    <div class="dt-widget__item">
+
+                      <!-- Grid -->
+                      <div class="row no-gutters">
+
+                        <!-- Grid Item -->
+                        <div class="col-6 pr-2">
+
+                          <!-- Avatar Wrapper -->
+                          <div class="dt-avatar-wrapper">
+                            <!-- Avatar -->
+                            <img class="dt-avatar size-30" src="https://via.placeholder.com/150x150" alt="Mila Alba">
+                            <!-- /avatar -->
+
+                            <!-- Info -->
+                            <div class="dt-avatar-info dt-widget__title">
+                              <span class="dt-avatar-name">Mila Alba</span>
+                            </div>
+                            <!-- /info -->
+                          </div>
+                          <!-- /avatar wrapper -->
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <span class="mb-0 d-inline-block">2 hrs. ago</span>
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <a class="d-inline-block" href="javascript:void(0)"><i
+                                class="icon icon-forward icon-fw mr-2"></i>Pay</a>
+                        </div>
+                        <!-- /grid item -->
+
+                      </div>
+                      <!-- /grid -->
+
+                    </div>
+                    <!-- /widgets item -->
+
+                    <!-- Widget Item -->
+                    <div class="dt-widget__item">
+
+                      <!-- Grid -->
+                      <div class="row no-gutters">
+
+                        <!-- Grid Item -->
+                        <div class="col-6 pr-2">
+
+                          <!-- Avatar Wrapper -->
+                          <div class="dt-avatar-wrapper">
+                            <!-- Avatar -->
+                            <img class="dt-avatar size-30" src="https://via.placeholder.com/150x150" alt="Dinesh Suthar">
+                            <!-- /avatar -->
+
+                            <!-- Info -->
+                            <div class="dt-avatar-info dt-widget__title">
+                              <span class="dt-avatar-name">Dinesh Suthar</span>
+                            </div>
+                            <!-- /info -->
+                          </div>
+                          <!-- /avatar wrapper -->
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <span class="mb-0 d-inline-block">17 days ago</span>
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <a class="d-inline-block" href="javascript:void(0)"><i
+                                class="icon icon-forward icon-fw mr-2"></i>Pay</a>
+                        </div>
+                        <!-- /grid item -->
+
+                      </div>
+                      <!-- /grid -->
+
+                    </div>
+                    <!-- /widgets item -->
+
+                    <!-- Widget Item -->
+                    <div class="dt-widget__item">
+
+                      <!-- Grid -->
+                      <div class="row no-gutters">
+
+                        <!-- Grid Item -->
+                        <div class="col-6 pr-2">
+
+                          <!-- Avatar Wrapper -->
+                          <div class="dt-avatar-wrapper">
+                            <!-- Avatar -->
+                            <img class="dt-avatar size-30" src="https://via.placeholder.com/150x150"
+                                 alt="Pukhraj">
+                            <!-- /avatar -->
+
+                            <!-- Info -->
+                            <div class="dt-avatar-info dt-widget__title">
+                              <span class="dt-avatar-name">Pukhraj Prajapat</span>
+                            </div>
+                            <!-- /info -->
+                          </div>
+                          <!-- /avatar wrapper -->
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <span class="mb-0 d-inline-block">1 month ago</span>
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <a class="d-inline-block" href="javascript:void(0)"><i
+                                class="icon icon-forward icon-fw mr-2"></i>Pay</a>
+                        </div>
+                        <!-- /grid item -->
+
+                      </div>
+                      <!-- /grid -->
+
+                    </div>
+                    <!-- /widgets item -->
+
+                    <!-- Widget Item -->
+                    <div class="dt-widget__item">
+
+                      <!-- Grid -->
+                      <div class="row no-gutters">
+
+                        <!-- Grid Item -->
+                        <div class="col-6 pr-2">
+
+                          <!-- Avatar Wrapper -->
+                          <div class="dt-avatar-wrapper">
+                            <!-- Avatar -->
+                            <img class="dt-avatar size-30" src="https://via.placeholder.com/150x150"
+                                 alt="crish Harris">
+                            <!-- /avatar -->
+
+                            <!-- Info -->
+                            <div class="dt-avatar-info dt-widget__title">
+                              <span class="dt-avatar-name">Chris Harris</span>
+                            </div>
+                            <!-- /info -->
+                          </div>
+                          <!-- /avatar wrapper -->
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <span class="mb-0 d-inline-block">1 month ago</span>
+                        </div>
+                        <!-- /grid item -->
+
+                        <!-- Grid Item -->
+                        <div class="col-3 d-flex align-items-center justify-content-end">
+                          <a class="d-inline-block" href="javascript:void(0)"><i
+                                class="icon icon-forward icon-fw mr-2"></i>Pay</a>
+                        </div>
+                        <!-- /grid item -->
+
+                      </div>
+                      <!-- /grid -->
+
+                    </div>
+                    <!-- /widgets item -->
+
+                  </div>
+                  <!-- /widget -->
+
+                </div>
+                <!-- /campaigns widget -->
+
+              </div>
+              <!-- /card body -->
+
+            </div>
+            <!-- /card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-3 col-md-6">
+
+            <!-- Card -->
+            <div class="dt-card dt-card__full-height bg-dark-primary text-white">
+
+              <!-- Card Body -->
+              <div class="dt-card__body text-center">
+
+                <!-- Icon -->
+                <i class="icon icon-refer icon-6x mb-5"></i>
+                <!-- /icon -->
+
+                <h3 class="text-white">Refer and Get Reward</h3>
+
+                <p class="card-text">Reffer us to your friends and earn bonus when they join.</p>
+                <a class="btn btn-secondary text-white" href="javascript:void(0)">Invite Friends</a>
+
+              </div>
+              <!-- /card body -->
+
+            </div>
+            <!-- /card -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-4 col-md-6">
+
+            <!-- Card -->
+            <div class="dt-card dt-card__full-height">
+
+              <!-- Card Header -->
+              <div class="dt-card__header mb-4">
+
+                <!-- Card Heading -->
+                <div class="dt-card__heading">
+                  <h3 class="dt-card__title">Currency Calculator</h3>
+                </div>
+                <!-- /card heading -->
+
+              </div>
+              <!-- /card header -->
+
+              <!-- Card Body -->
+              <div class="dt-card__body">
+
+                <span class="d-block mb-2">1.87 BTC equals</span>
+                <h2 class="mb-2 display-4 font-weight-medium text-primary">11466.78 USD</h2>
+                <span class="d-block mb-6 f-12">@ 1 BTC = 6718.72 USD</span>
+
+                <!-- Form -->
+                <form>
+                  <div class="form-row mb-4">
+                    <div class="col-sm-4 col-6">
+                      <label for="currency-type-1">From</label>
+                      <select class="custom-select custom-select-sm" id="currency-type-1">
+                        <option selected>BTC</option>
+                        <option value="1">RPL</option>
+                        <option value="2">LTE</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-4 col-6">
+                      <label for="currency-type">From</label>
+                      <select class="custom-select custom-select-sm" id="currency-type">
+                        <option selected>USD</option>
+                        <option value="1">Yen</option>
+                        <option value="2">Dinar</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-4 col-12 mt-5 mt-sm-0">
+                      <label for="amount">Amount(BTC)</label>
+                      <input type="text" class="form-control form-control-sm" id="amount" placeholder="Amount">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" type="submit">Transfer Now</button>
+                </form>
+                <!-- /form -->
+
+              </div>
+              <!-- /card body -->
+
+            </div>
+            <!-- /card -->
+
+          </div>
+          <!-- /grid item -->
+
+        </div>
+        <!-- /grid -->
+
+        <!-- Grid -->
+        <div class="row">
+
+          <!-- Grid Item -->
+          <div class="col-xl-4 order-xl-2">
+
+            <!-- Grid -->
+            <div class="row">
+              <!-- Grid Item -->
+              <div class="col-xl-12">
+
+                <!-- Card -->
+                <div class="dt-card dt-card__full-height bg-image">
+
+                  <!-- Card Body -->
+                  <div class="dt-card__body bg-gradient-dark-purple">
+
+                    <!-- Grid -->
+                    <div class="row">
+
+                      <!-- Grid Item -->
+                      <div class="col-xl-8">
+                        <p class="mb-2">Download Mobile Apps</p>
+                        <p class="mb-xl-0 display-5 font-weight-medium">Now, your account is on your fingers</p>
+                      </div>
+                      <!-- /grid item -->
+
+                      <!-- Grid Item -->
+                      <div class="col-xl-4">
+                        <a href="javascript:void(0)" class="d-inline-block mb-2">
+                          <img src="assets/images/dashboard/google-play-store.png" alt="Play Store" class="img-fluid">
+                        </a> <a href="javascript:void(0)" class="d-inline-block">
+                          <img src="assets/images/dashboard/apple-app-store.png" alt="App Store" class="img-fluid"> </a>
+                      </div>
+                      <!-- /grid item -->
+
+                    </div>
+                    <!-- /grid -->
+                  </div>
+                  <!-- /card body -->
+
+                </div>
+                <!-- /card -->
+
+              </div>
+              <!-- /grid item -->
+
+              <!-- Grid Item -->
+              <div class="col-xl-12">
+
+                <!-- Card -->
+                <div class="dt-card">
+
+                  <!-- Card Header -->
+                  <div class="dt-card__header">
+
+                    <!-- Card Heading -->
+                    <div class="dt-card__heading">
+                      <h3 class="dt-card__title">Order History</h3>
+                    </div>
+                    <!-- /card heading -->
+
+                    <!-- Card Tools -->
+                    <div class="dt-card__tools">
+                      <a href="javascript:void(0)" class="dt-card__more">Detailed History</a>
+                    </div>
+                    <!-- /card tools -->
+
+                  </div>
+                  <!-- /card header -->
+
+                  <!-- Card Body -->
+                  <div class="dt-card__body pb-5">
+
+                    <!-- Tables -->
+                    <div class="table-responsive ps-custom-scrollbar">
+                      <table class="table table-ordered table-bordered-0 mb-0">
+                        <thead>
+                        <tr>
+                          <th class="text-uppercase">Currency</th>
+                          <th class="text-uppercase text-right" scope="col">Rate (USD)</th>
+                          <th class="text-uppercase text-center" scope="col">Date</th>
+                          <th class="text-uppercase text-right" scope="col">Fee</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>0.24 BTC</td>
+                          <td class="text-right text-nowrap">1 BTC = $740</td>
+                          <td class="text-center">08.10.17</td>
+                          <td class="text-right text-danger">-$2.33</td>
+                        </tr>
+                        <tr>
+                          <td>0.32 RPL</td>
+                          <td class="text-right text-nowrap">1 RPL = $80.2</td>
+                          <td class="text-center">08.03.17</td>
+                          <td class="text-right text-danger">-$1.23</td>
+                        </tr>
+                        <tr>
+                          <td>0.24 BTC</td>
+                          <td class="text-right text-nowrap">1 BTC = $740</td>
+                          <td class="text-center">07.29.17</td>
+                          <td class="text-right text-danger">-$3.22</td>
+                        </tr>
+                        <tr>
+                          <td>0.22 BTC</td>
+                          <td class="text-right text-nowrap">1 BTC = $740</td>
+                          <td class="text-center">07.28.17</td>
+                          <td class="text-right text-danger">-$3.22</td>
+                        </tr>
+                        <tr>
+                          <td>0.74 LTE</td>
+                          <td class="text-right text-nowrap">1 LTE = $99.9</td>
+                          <td class="text-center">05.22.17</td>
+                          <td class="text-right text-danger">-$2.21</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /tables -->
+
+                  </div>
+                  <!-- /card body -->
+
+                </div>
+                <!-- /card -->
+
+              </div>
+              <!-- /grid item -->
+            </div>
+            <!-- /grid -->
+
+          </div>
+          <!-- /grid item -->
+
+          <!-- Grid Item -->
+          <div class="col-xl-8 order-xl-1">
+
+            <!-- Card -->
+            <div class="dt-card dt-card__full-height">
+
+              <!-- Card Header -->
+              <div class="dt-card__header">
+
+                <!-- Card Heading -->
+                <div class="dt-card__heading order-sm-1 flex-initial">
+                  <h3 class="dt-card__title">Crypto News</h3>
+                </div>
+                <!-- /card heading -->
+
+                <!-- Card Tools -->
+                <div class="dt-card__tools order-sm-3">
+                  <a href="javascript:void(0)" class="dt-card__more">
+                    <i class="icon icon-search-new icon-xl"></i>
+                  </a>
+                </div>
+                <!-- /card tools -->
+
+                <!-- Menu -->
+                <ul class="nav nav-pills nav-pills-sm order-sm-2">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="javascript:void(0)">All</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Bitcoin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Ripple</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Litecoin</a>
+                  </li>
+                </ul>
+                <!-- /menu -->
+
+              </div>
+              <!-- /card header -->
+
+              <!-- Card Body -->
+              <div class="dt-card__body">
+
+                <!-- Media List -->
+                <div class="media-list">
+                  <!-- Media -->
+                  <div class="media media-news">
+
+                    <!-- Image -->
+                    <img class="img-fluid rounded-xl" src="https://via.placeholder.com/640x420"
+                         alt="Crypto Currency">
+                    <!-- /image -->
+
+                    <!-- Media Body -->
+                    <div class="media-body">
+                      <h4 class="mb-2">10 things you must know before trading in cryptocurrency</h4>
+                      <p>
+                        Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar
+                        felis pharetra in vestibulum sed.
+                      </p>
+                      <div class="d-flex flex-wrap">
+                        <p class="mb-0 text-light-gray flex-1 text-truncate">
+                          <i class="icon icon-tag-new icon-lg mr-2 align-top"></i>
+                          BTC, Crypto, Trading, Tips, Cryptocurrency
+                        </p>
+                        <a class="d-inline-block ml-auto" href="javascript:void(0)"><span>Ready Full Story</span><i
+                              class="icon icon-long-arrow-right icon-lg ml-2"></i></a>
+                      </div>
+                    </div>
+                    <!-- /media body -->
+
+                  </div>
+                  <!-- /media -->
+                  <!-- Media -->
+                  <div class="media media-news">
+
+                    <!-- Image -->
+                    <img class="img-fluid rounded-xl" src="https://via.placeholder.com/640x420"
+                         alt="Crypto Currency">
+                    <!-- /image -->
+
+                    <!-- Media Body -->
+                    <div class="media-body">
+                      <h4 class="mb-2">Getting started with cryptocurrency - what is blockchain</h4>
+                      <p>
+                        Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar
+                        felis pharetra in vestibulum sed.
+                      </p>
+                      <div class="d-flex flex-wrap">
+                        <p class="mb-0 text-light-gray flex-1 text-truncate">
+                          <i class="icon icon-tag-new icon-lg mr-2 align-top"></i>
+                          Blockchain, tutorial, Cryptocurrency
+                        </p>
+                        <a class="d-inline-block ml-auto" href="javascript:void(0)"><span>Ready Full Story</span><i
+                              class="icon icon-long-arrow-right icon-lg ml-2"></i></a>
+                      </div>
+                    </div>
+                    <!-- /media body -->
+
+                  </div>
+                  <!-- /media -->
+                  <!-- Media -->
+                  <div class="media media-news">
+
+                    <!-- Image -->
+                    <img class="img-fluid rounded-xl" src="https://via.placeholder.com/640x420"
+                         alt="Block Chain">
+                    <!-- /image -->
+
+                    <!-- Media Body -->
+                    <div class="media-body">
+                      <h4 class="mb-2">Is cryptocurrency investment a trap or opportunity?</h4>
+                      <p>
+                        Cras tincidunt sit amet massa at accumsan. Mauris tincidunt tincidunt est, et pulvinar
+                        felis pharetra in vestibulum sed.
+                      </p>
+                      <div class="d-flex flex-wrap">
+                        <p class="mb-0 text-light-gray flex-1 text-truncate">
+                          <i class="icon icon-tag-new icon-lg mr-2 align-top"></i>
+                          Blockchain, tips, Cryptocurrency
+                        </p>
+                        <a class="d-inline-block ml-auto" href="javascript:void(0)"><span>Ready Full Story</span><i
+                              class="icon icon-long-arrow-right icon-lg ml-2"></i></a>
+                      </div>
+                    </div>
+                    <!-- /media body -->
+
+                  </div>
+                  <!-- /media -->
+                </div>
+                <!-- /media list -->
+
+              </div>
+              <!-- /card body -->
+
+            </div>
+            <!-- /card -->
+
+          </div>
+          <!-- /grid item -->
+
+        </div>
+        <!-- /grid -->
+
+      </div>
+      <!-- /site content -->
+
+      <!-- Footer -->
+      <footer class="dt-footer">
+        Copyright Company Name © 2019
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /site content wrapper -->
+
+    <!-- Theme Chooser -->
+    <div class="dt-customizer-toggle">
+      <a href="javascript:void(0)" data-toggle="customizer"> <i class="icon icon-spin icon-setting"></i> </a>
+    </div>
+    <!-- /theme chooser -->
+
+    <!-- Customizer Sidebar -->
+    <aside class="dt-customizer dt-drawer position-right">
+      <div class="dt-customizer__inner">
+
+        <!-- Customizer Header -->
+        <div class="dt-customizer__header">
+
+          <!-- Customizer Title -->
+          <div class="dt-customizer__title">
+            <h3 class="mb-0">Theme Settings</h3>
+          </div>
+          <!-- /customizer title -->
+
+          <!-- Close Button -->
+          <button type="button" class="close" data-toggle="customizer">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <!-- /close button -->
+
+        </div>
+        <!-- /customizer header -->
+
+        <!-- Customizer Body -->
+        <div class="dt-customizer__body ps-custom-scrollbar">
+          <!-- Customizer Body Inner  -->
+          <div class="dt-customizer__body-inner">
+
+            <!-- Section -->
+            <section id="theme-chooser">
+              <h6 class="text-uppercase">Theme</h6>
+
+              <!-- Button Group -->
+              <div class="dt-customizer__btn-group btn-group btn-group-toggle btn-group mb-1" data-toggle="buttons">
+                <label class="btn btn-outline-light"><input class="theme-option" type="radio" name="options" id="theme-option-lite" value="lite">Lite</label>
+                <label class="btn btn-outline-light"><input class="theme-option" type="radio" name="options" id="theme-option-semidark" value="semidark">Semi Dark</label>
+                <label class="btn btn-outline-light"><input class="theme-option" type="radio" name="options" id="theme-option-dark" value="dark">Dark</label>
+              </div>
+              <!-- /button group -->
+
+            </section>
+            <!-- /section -->
+
+            <!-- Section -->
+            <section id="theme-style-chooser">
+              <h6 class="text-uppercase">Colors</h6>
+
+              <!-- List -->
+              <ul class="dt-list dt-list-sm dt-color-options">
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-1"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-2"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-3"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-4"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-5"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-6"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-7"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-8"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-9"></span>
+                </li>
+                <li class="dt-list__item">
+                  <span class="dt-color-option" data-style="style-10"></span>
+                </li>
+              </ul>
+              <!-- /list -->
+
+            </section>
+            <!-- /section -->
+
+            <!-- Section -->
+            <section>
+              <h6 class="text-uppercase">Nav Style</h6>
+
+              <!-- List -->
+              <ul class="dt-list">
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/default" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/fixed.png" alt="Fixed Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/mini-sidebar" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/mini-sidebar.png" alt="Mini Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/drawer" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/drawer-nav.png" alt="Drawer Nav Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/back-office-mini" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/no-header-mini-sidebar.png" alt="No Header Mini Sidebar Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/back-office" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/vertical-no-header.png" alt="Vertical No Header Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/horizontal" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/horizontal-default.png"
+                           alt="Horizontal Default Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/horizontal-dark" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/horizontal-dark.png" alt="Horizontal Dark Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/horizontal-inside-nav" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/horizontal-inside-nav.png" alt="Horizontal Inside Nav Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/horizontal-bottom-nav" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/horizontal-bottom-nav.png" alt="Horizontal Bottom Nav Layout">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="http://wieldy.g-axon.work/html-bs4/horizontal-top-nav" target="_blank" class="choose-option__icon">
+                      <img src="assets/images/layouts/horizontal-top-nav.png" alt="Horizontal Top Nav Layout">
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <!-- /list -->
+
+            </section>
+            <!-- /section -->
+
+            <!-- Section -->
+            <section  id="layout-chooser">
+              <h6 class="text-uppercase">Layout</h6>
+
+              <!-- List -->
+              <ul class="dt-list dt-list-sm">
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="javascript:void(0)" class="choose-option__icon" data-layout="framed">
+                      <img src="assets/images/layouts/framed.png" alt="Framed">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="javascript:void(0)" class="choose-option__icon" data-layout="full-width">
+                      <img src="assets/images/layouts/full-width.png" alt="Full Width">
+                    </a>
+                  </div>
+                </li>
+                <li class="dt-list__item">
+                  <div class="choose-option">
+                    <a href="javascript:void(0)" class="choose-option__icon" data-layout="boxed">
+                      <img src="assets/images/layouts/boxed.png" alt="Boxed">
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <!-- /list -->
+
+            </section>
+            <!-- /section -->
+
+          </div>
+          <!-- /customizer body inner -->
+        </div>
+        <!-- /customizer body -->
+
+      </div>
+    </aside>
+    <!-- /customizer sidebar -->
+
+  </main>
+  <!-- /site main -->
+</div>
+<!-- /root -->
+
+<!-- Optional JavaScript -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/moment/moment.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Perfect Scrollbar jQuery -->
+<script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+<!-- /perfect scrollbar jQuery -->
+
+<!-- masonry script -->
+<script src="../node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+<script src="../node_modules/sweetalert2/dist/sweetalert2.js"></script>
+
+<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/custom/charts/dashboard-crypto.js"></script>
+</body>
+</html>

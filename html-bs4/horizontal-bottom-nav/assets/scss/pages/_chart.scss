@@ -1,0 +1,133 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Charts Styles.
+// -----------------------------------------------------------------------------
+.#{$class-prefix}-chart {
+  position: relative;
+
+  &__header {
+    padding: 1.6rem;
+    &:not(:last-child) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($white, 0.25);
+    color: $white;
+    padding: 15px 20px;
+    overflow: hidden;
+	@include border-radius($card-border-radius);
+
+    & .close-btn,
+    & .action-btn {
+      position: absolute;
+      z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      @include transition(all 0.3s ease);
+    }
+
+    & .action-btn {
+      bottom: 15px;
+      right: 20px;
+    }
+
+    & .close-btn {
+      top: 10px;
+      right: 20px;
+    }
+
+    @include hover {
+      & .action-btn {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &.#{$class-prefix}-chart__reveal {
+    & .content-area,
+    & .action-btn {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    & .close-btn {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & .#{$class-prefix}-chart__overlay {
+      background-color: rgba($black, 0.1);
+    }
+  }
+}
+
+.#{$class-prefix}-chart__header {
+  & .style-default {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+
+    p {
+      font-size: 12px;
+      -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & .trending-section {
+      display: flex;
+      align-items: center;
+
+      & h4 {
+        margin-bottom: 0;
+        margin-right: 3px;
+        color: inherit;
+        font-size: 2rem;
+      }
+    }
+
+    &.style-crypto h2 {
+      font-size: 2.4rem;
+      font-weight: 500;
+	  line-height: $line-height-base;
+    }
+
+    &.style-crypto h4 {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &.vertical-view .style-default {
+    flex-flow: column nowrap;
+
+    h2 {
+      margin-bottom: 4px;
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}

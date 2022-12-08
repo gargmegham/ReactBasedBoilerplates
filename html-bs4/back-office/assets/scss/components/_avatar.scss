@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the avatar component.
+// -----------------------------------------------------------------------------
+
+.#{$class-prefix}-avatar {
+  @extend %circle-shape;
+  & > img {
+    width: 100%;
+  }
+
+  &__outline {
+    @extend %circle-shape;
+    border: $dt-border;
+  }
+
+  &__shadow {
+    @include box-shadow($box-shadow-avatar);
+  }
+
+  &-name {
+    display: block;
+    line-height: 1;
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+
+    & + .meta-date {
+      font-size: 12px;
+      display: block;
+    }
+  }
+
+  &-info {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &-status {
+    position: relative;
+  }
+
+  &-status & {
+    & + .dot-shape {
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.#{$class-prefix}-avatar {
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-status + &-info,
+  & + &-info {
+    padding-left: 8px;
+  }
+}

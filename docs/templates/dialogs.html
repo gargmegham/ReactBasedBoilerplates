@@ -1,0 +1,177 @@
+<div>
+    <h3 id="badge">Dialogs</h3>
+    <p class="comments-section">Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.
+        Dialogs contain text and UI controls. They retain focus until dismissed or a required action has been taken. Use dialogs sparingly because they are interruptive.
+    </p>
+    <h4 id="basic-example-2">Simple Dialogs</h4>
+    <p class=""><img src="./images/component/dialog.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Dialogs you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;Button variant="raised" className="bg-primary text-white"
+         onClick={() =&gt; this.setState({open: true})}&gt;Open alert dialog&lt;/Button&gt;
+
+   &lt;Dialog open={this.state.open} onClose={this.handleRequestClose}&gt;
+            &lt;DialogTitle&gt;
+                {"Use Google's location service?"}
+            &lt;/DialogTitle&gt;
+            &lt;DialogContent&gt;
+                &lt;DialogContentText&gt;
+                  Let Google help apps determine location. This means sending
+                 anonymous location data to Google, even when no apps are running.
+                &lt;/DialogContentText&gt;
+            &lt;/DialogContent&gt;
+            &lt;DialogActions&gt;
+               &lt;Button onClick={this.handleRequestClose} color="secondary"&gt;
+                        Disagree
+               &lt;/Button&gt;
+               &lt;Button onClick={this.handleRequestClose} color="primary"&gt;
+                      Agree
+               &lt;/Button&gt;
+            &lt;/DialogActions&gt;
+    &lt;/Dialog&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>Dialog children, usually the included sub-components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disableBackdropClick</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, clicking the backdrop will not fire the <code>onClose</code> callback.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disableEscapeKeyDown</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, hitting escape will not fire the <code>onClose</code> callback.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">fullScreen</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the dialog will be full-screen</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">fullWidth</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the dialog stretches to <code>maxWidth</code>.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">maxWidth</span></td>
+            <td><span class="prop-type">enum:&nbsp;'xs'&nbsp;|<br>&nbsp;'sm'&nbsp;|<br>&nbsp;'md'&nbsp;|<br>&nbsp;false<br></span></td>
+            <td><span class="prop-default">'sm'</span></td>
+            <td>Determine the max width of the dialog. The dialog width grows with the size of the screen, this property is useful on the desktop where you might need some coherent different width size across your application. Set to <code>false</code> to disable <code>maxWidth</code>.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onBackdropClick</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the backdrop is clicked.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onClose</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component requests to be closed.<br><br><strong>Signature:</strong><br><code>function(event: object) =&gt; void</code><br><em>event:</em> The event source of the callback</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEnter</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the dialog enters.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntered</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the dialog has entered.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntering</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the dialog is entering.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEscapeKeyDown</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the escape key is pressed, <code>disableKeyboard</code> is false and the modal is in focus.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExit</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the dialog exits.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExited</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the dialog has exited.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExiting</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the dialog is exiting.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name required">open&nbsp;*</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the Dialog is open.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">PaperProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Paper</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TransitionComponent</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">Fade</span></td>
+            <td>Transition component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">transitionDuration</span></td>
+            <td><span class="prop-type">union:&nbsp;number&nbsp;|<br>&nbsp;{enter?: number, exit?: number}<br></span></td>
+            <td><span class="prop-default">{ enter: duration.enteringScreen, exit: duration.leavingScreen }</span></td>
+            <td>The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">TransitionProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Transition</code> element.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

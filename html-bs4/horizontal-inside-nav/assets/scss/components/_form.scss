@@ -1,0 +1,362 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form component.
+// -----------------------------------------------------------------------------
+
+//Form Row
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+
+//Custom Select
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+//Custom Control
+.custom-control {
+  //line-height: 1;
+}
+
+//Search Bar Style
+.search-box {
+  position: relative;
+  width: 400px;
+
+  & input[type="search"] {
+    padding-left: 40px;
+  }
+
+  & .search-icon {
+    color: $text-color;
+    line-height: 1;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    z-index: 4;
+    @include translateY(-50%);
+  }
+
+  & button.search-icon {
+    background-color: transparent;
+    border: 0 none;
+    padding: 0;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+
+  .#{$class-prefix}-header & {
+    & .form-control {
+      box-shadow: none;
+      border-color: darken($white, 5%);
+	  
+	  .theme-dark & {
+	  	 border-color: $border-color;
+	  }
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 270px;
+
+      .btn {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 200px;
+    }
+  }
+}
+
+.search-box.right-side-icon {
+  & input[type="search"] {
+    padding-left: $input-btn-padding-x;
+    padding-right: 40px;
+  }
+
+  & .search-icon {
+    left: auto;
+    right: 15px;
+  }
+}
+
+//Switch Button
+.switch-double {
+
+  & .switch {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    & .slider {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0;
+
+  & input {
+    display: none;
+  }
+
+  & input {
+    &:checked + .slider {
+      background-color: $primary;
+
+      &:before {
+        @include translateX(26px);
+      }
+    }
+
+    &:focus + .slider {
+      @include box-shadow(0 0 1px $primary);
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+  background-color: $gray-400;
+  @include border-radius(50px);
+  @include transition(all 0.2s ease);
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: $white;
+    @include border-radius($border-radius-circle);
+    @include transition(all 0.2s ease);
+  }
+}
+
+.switch-sm {
+  & .slider {
+    width: 35px;
+    height: 18px;
+
+    &:before {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  input:checked + .slider:before {
+    @include translateX(17px);
+  }
+}
+
+//Custom Checkbox
+.#{$class-prefix}-checkbox {
+  position: relative;
+  padding-left: 2.5rem;
+  display: inline-block;
+
+  & input[type="checkbox"] {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    margin-left: -2rem;
+    opacity: 0;
+  }
+
+  &-content {
+    position: relative;
+    display: inline-block;
+    padding-left: 8px;
+    margin-bottom: 0;
+    line-height: 1.3;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      left: 0;
+      top: 0;
+      margin-left: -2rem;
+      border: 1px solid lighten($text-color, 14%);
+      @include border-radius($border-radius);
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);
+    }
+
+    &:after {
+      position: absolute;
+      display: inline-block;
+      font-size: 1.2rem;
+      left: 0.35rem;
+      top: 0.25rem;
+      margin-left: -2rem;
+    }
+  }
+
+  &-circle &-content {
+    &:before {
+      @include border-radius($border-radius-circle);
+    }
+  }
+
+  &-todo {
+    display: block;
+  }
+
+  &-todo &-content {
+    &:before {
+      @include border-radius($border-radius-circle);
+    }
+
+    &:after {
+      content: '\e935';
+      font: {
+        family: 'gaxon';
+      }
+      left: 0.4rem;
+      top: 0.4rem;
+      font-size: 1rem;
+
+      @include media-breakpoint-down(xs) {
+        top: 0.3rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-todo input[type="checkbox"] {
+    &:checked ~ .#{$class-prefix}-checkbox-content {
+      text-decoration: line-through;
+      color: lighten($text-color, 14%);
+
+      &:before {
+        border-color: $success;
+      }
+      &:after {
+        color: $success;
+      }
+    }
+  }
+
+  & input[type="checkbox"] {
+    &:focus ~ .#{$class-prefix}-checkbox-content:before {
+      outline: 0 none;
+    }
+
+    &:checked ~ .#{$class-prefix}-checkbox-content:after {
+      content: '\31';
+      font: {
+        family: 'gaxon';
+      }
+    }
+  }
+}
+
+.#{$class-prefix}-checkbox {
+  &-icon &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -8px;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    .checked,
+    .unchecked {
+      font-size: 1.8rem;
+      display: inline-block;
+    }
+
+    .checked {
+      display: none;
+    }
+  }
+
+  &-icon input[type="checkbox"] {
+    &:checked ~ .#{$class-prefix}-checkbox-content {
+
+      &:before,
+      &:after {
+        content: none;
+      }
+
+      & .unchecked {
+        display: none;
+      }
+
+      & .checked {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.#{$class-prefix}-checkbox-only {
+  padding-left: 0;
+
+  & input[type="checkbox"] {
+    margin-left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  & .#{$class-prefix}-checkbox-content {
+    position: relative;
+    padding-left: 0;
+    margin-left: 0;
+    cursor: pointer;
+  }
+}
+
+.#{$class-prefix}-attachment-btn {
+  position: relative;
+  border: $dt-border;
+  background-color: $dt-card-bg;
+
+  & input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.#{$class-prefix}-login__content-inner {
+	.form-control {
+		background-color: #f5f5f5;
+	}
+}

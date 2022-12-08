@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Pricing table component.
+// -----------------------------------------------------------------------------
+
+.#{$class-prefix}-pricing {
+    position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background-color: $white;
+	color: $pricing-text-color;
+	margin-bottom: $dt-pricing-margin-bottom;
+	@include border-radius($border-radius-xl);
+	@include box-shadow($box-shadow);
+	height: calc(100% - #{$dt-pricing-margin-bottom});
+	@include transition($transition-base);
+	@include scale(.95);
+	
+	@include hover {
+		@include scale(1);
+		@include box-shadow(0 0 4px rgba(0, 0, 0, 0.55));
+	}
+	
+	&.#{$class-prefix}-highlight {
+		@include scale(1);
+	}
+	
+	&-classic {
+		@include border-radius(0);
+	}
+	
+	 
+	&-circle &__header {
+		@include border-radius($border-radius-circle);
+		@include size(22.4rem);
+		margin: 4rem auto 0;
+	}
+
+    &__header {
+		padding: 3rem;
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+	    flex-wrap: nowrap;
+
+		& .#{$class-prefix}-price {
+			font-size: 3.6rem;
+			margin-bottom: 1.2rem;
+			font-weight: 500;
+		}
+    }
+   
+    &__body {
+		padding: 5rem 3rem;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		flex: 1;
+		align-items: center;
+    }
+	
+	&-items {
+		@include list-unstyled;
+		margin-bottom: 2rem;
+		padding-left: 0;
+		flex: 1;
+		
+		& li {
+			margin-bottom: 1.6rem;
+		}
+	}
+	
+	.theme-dark & {
+		&.bg-dark, & .bg-dark {
+		   background-color: #000 !important;
+		}
+		
+		& .btn.bg-yellow {
+			color: #000;
+		}
+	}
+  
+}
+

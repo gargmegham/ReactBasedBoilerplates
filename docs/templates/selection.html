@@ -1,0 +1,64 @@
+
+<div>
+    <h3 id="badge">Selection Controls</h3>
+    <p class="comments-section">Selection controls allow the user to select options.
+        Three types of selection controls are covered in this section:
+    </p>
+    <h4 id="basic-example-2">Checkboxes</h4>
+    <p><img src="./images/component/selection.png" alt=""/></p>
+    <p class="comments-section">To show this type of Selection Controls you will need this code in down here.
+    </p>
+
+    <pre>
+<code class="html">
+&lt;FormGroup&gt;
+    &lt;FormControlLabel
+            control={
+            &lt;Checkbox color="primary"
+                      checked={this.state.checkedA}
+                      onChange={this.handleChange('checkedA')}
+                      value="checkedA" /&gt;
+        }
+        label="Pizza" /&gt;
+    &lt;FormControlLabel
+            control={
+            &lt;Checkbox color="primary"
+                      checked={this.state.checkedB}
+                      onChange={this.handleChange('checkedB')}
+                      value="checkedB"  /&gt;
+        }
+        label="Burger" /&gt;
+
+    &lt;FormControlLabel
+            control={
+            &lt;Checkbox color="primary"
+                      checked={this.state.checkedC}
+                      onChange={this.handleChange('checkedC')}
+                      value="checkedC" /&gt;
+        }
+        label="Doughnut" /&gt;
+
+&lt;/FormGroup&gt;
+</code>
+</pre>
+
+    <h4>Radio Buttons</h4>
+    <p><img src="./images/component/selection1.png" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;FormControl component="fieldset" required&gt;
+    &lt;FormHelperText className="text-grey"&gt;Storage In Basic Plan&lt;/FormHelperText&gt;
+        &lt;RadioGroup
+                value={this.state.value}
+                onChange={this.handleChange}&gt;
+            &lt;FormControlLabel value="gb1" control={&lt;Radio color="primary"/&gt;} label="1 GB"/&gt;
+            &lt;FormControlLabel value="gb5" control={&lt;Radio color="primary"/&gt;} label="5 GB"/&gt;
+            &lt;FormControlLabel value="gb50" control={&lt;Radio color="primary"/&gt;} label="50 GB"/&gt;
+        &lt;/RadioGroup&gt;
+    &lt;FormHelperText className="text-danger"&gt;Your error message goes here.&lt;/FormHelperText&gt;
+&lt;/FormControl&gt;
+   </code>
+</pre>
+
+</div>

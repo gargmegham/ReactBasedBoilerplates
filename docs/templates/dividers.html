@@ -1,0 +1,106 @@
+<div>
+    <h3 id="badge">Dividers</h3>
+    <p class="comments-section">Dividers group and separate content within lists and page layouts. The divider is a thin rule, lightweight yet sufficient to distinguish content visually and spatially.    </p>
+    <h4 id="basic-example-2">List Dividers</h4>
+    <p><img src="./images/component/dividers.png" alt=""/></p>
+    <p class="comments-section">To show this type of Dividers you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;List&gt;
+   &lt;ListItem button&gt;
+       &lt;ListItemIcon&gt;
+           &lt;i className="zmdi zmdi-email zmdi-hc-fw zmdi-hc-2x" /&gt;
+       &lt;/ListItemIcon&gt;
+                &lt;ListItemText primary="Inbox" /&gt;
+   &lt;/ListItem&gt;
+   &lt;Divider light /&gt;
+   &lt;ListItem button&gt;
+        &lt;ListItemIcon&gt;
+            &lt;i className="zmdi zmdi-mail-send zmdi-hc-fw zmdi-hc-2x" /&gt;
+        &lt;/ListItemIcon&gt;
+             &lt;ListItemText primary="Sent" /&gt;
+   &lt;/ListItem&gt;
+ &lt;/List&gt;
+  </code>
+</pre>
+
+    <h4 class="pb-2">Inset Dividerss</h4>
+    <p><img src="./images/component/dividers1.png" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;List&gt;
+    &lt;ListItem button&gt;
+        &lt;Avatar className="size-50" alt="Remy Sharp" src="assets/images/userAvatar/domnic-harris.jpg"/&gt;
+        &lt;ListItemText primary="Jhon Smith" secondary="Jan 28, 2017" /&gt;
+        &lt;ListItemSecondaryAction&gt;
+            &lt;Badge className="mt-3 mr-3 text-uppercase" color="primary" pill&gt;Admin&lt;/Badge&gt;
+        &lt;/ListItemSecondaryAction&gt;
+    &lt;/ListItem&gt;
+    &lt;Divider inset /&gt;
+    &lt;ListItem button&gt;
+        &lt;Avatar className="size-50" alt="Adelle Charles" src="assets/images/userAvatar/man-3.jpg"/&gt;
+        &lt;ListItemText primary="Crish Harris" secondary="Nov 20, 2017" /&gt;
+        &lt;ListItemSecondaryAction&gt;
+            &lt;Badge className="mt-3 mr-3 text-uppercase text-white" color="warning" pill&gt;Guest&lt;/Badge&gt;
+        &lt;/ListItemSecondaryAction&gt;
+    &lt;/ListItem&gt;
+    &lt;Divider inset /&gt;
+    &lt;ListItem button&gt;
+        &lt;Avatar className="size-50" alt="Remy Sharp" src="assets/images/userAvatar/stella-johnson.png"/&gt;
+        &lt;ListItemText primary="Stella Jhonson" secondary="Dec 02, 2014" /&gt;
+        &lt;ListItemSecondaryAction&gt;
+            &lt;Badge className="mt-3 mr-3 text-uppercase" color="success" pill&gt;Agent&lt;/Badge&gt;
+        &lt;/ListItemSecondaryAction&gt;
+    &lt;/ListItem&gt;
+&lt;/List&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">absolute</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">component</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">'hr'</span></td>
+            <td>The component used for the root node. Either a string to use a DOM element or a component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">inset</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the divider will be indented.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">light</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the divider will have a lighter color.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

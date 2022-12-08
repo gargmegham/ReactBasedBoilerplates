@@ -1,0 +1,216 @@
+<div>
+    <h3 id="badge">Widget</h3>
+    <p class="comments-section">To find out the code of widgets
+    </p>
+    <h4 id="basic-example-2">Recent Activities</h4>
+    <p><img src="./images/component/recent-activities.png" alt=""/></p>
+    <p class="comments-section">To show this type of badge you will need this code in down here.
+    </p>
+
+    <pre>
+<code class="html">
+&lt;div className="media social-list-line"&gt;
+    &lt;Avatar className={`${color} z-index-20 size-40 align-item-self mr-3`}&gt;
+        &lt;i className={`zmdi zmdi-${image} text-white`} /&gt;
+    &lt;/Avatar&gt;
+    &lt;div className="media-body"&gt;
+        &lt;h4 className="mb-1"&gt;{title}&lt;/h4&gt;
+        &lt;h5 className="text-muted mb-1"&gt;{description}&lt;/h5&gt;
+        &lt;p className="meta-date"&gt;{date}&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    <h4 >Latest Notifications</h4>
+    <p><img src="./images/component/latest -notifications.gif" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;CardLayout styleName="col-lg-12"&gt;
+    &lt;div className="jr-card-header mb-3 d-flex align-items-center"&gt;
+        &lt;div className="mr-auto"&gt;
+            &lt;h3 className="card-heading mb-0"&gt;
+                &lt;i className="zmdi zmdi-notifications-active mr-2"/&gt;
+                Latest Notifications
+            &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;IconButton className="size-30" onClick={this.onOptionMenuSelect.bind(this)}&gt;
+            &lt;i className="zmdi zmdi-more-vert"/&gt;
+        &lt;/IconButton&gt;
+    &lt;/div&gt;
+
+    &lt;div className="tab-notifications"&gt;
+        &lt;Tabs
+            value={this.state.value}
+            onChange={this.handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            centered
+            fullWidth &gt;
+            &lt;Tab className="tab" label="App Notifications"/&gt;
+            &lt;Tab className="tab" label="Announcements"/&gt;
+        &lt;/Tabs&gt;
+    &lt;/div&gt;
+
+    &lt;SwipeableViews
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={this.state.value}
+        onChangeIndex={this.handleChangeIndex}&gt;
+        &lt;TabContainer dir={theme.direction}&gt;
+            &lt;UserList users={this.props.appNotification} /&gt;
+        &lt;/TabContainer&gt;
+        &lt;TabContainer dir={theme.direction}&gt;
+            &lt;UserList users={this.props.announcementsNotification} /&gt;
+        &lt;/TabContainer&gt;
+
+    &lt;/SwipeableViews&gt;
+    &lt;CardMenu menuState={menuState} anchorEl={anchorEl}
+            handleRequestClose={this.handleRequestClose.bind(this)} /&gt;
+&lt;/CardLayout&gt;
+  </code>
+</pre>
+
+    <h4>TimeLine Card</h4>
+    <p><img src="./images/component/time-line.png" alt=""/></p>
+
+    <pre>
+    <code class="html">
+&lt;div className="jr-card"&gt;
+    &lt;div className={`jr-card-header-color text-center bg-${headerColor}`}&gt;
+        &lt;div className="jr-card-header-top"&gt;
+            &lt;IconButton className="jr-menu-icon mr-auto" aria-label="Menu"&gt;
+                &lt;span className="menu-icon bg-white"/&gt;
+            &lt;/IconButton&gt;
+            &lt;IconButton onClick={this.onOptionMenuSelect.bind(this)}&gt;&lt;i
+                    className="zmdi zmdi-more-vert text-white"/&gt;&lt;/IconButton&gt;
+        &lt;/div&gt;
+
+        &lt;Avatar className="bg-blue lighten-4 size-100 mx-auto mb-3"&gt;&lt;h1
+                className="m-0 text-blue text-darken-4 font-weight-bold"&gt;24&lt;/h1&gt;&lt;/Avatar&gt;
+
+        &lt;div className="jr-card-hd-content text-white"&gt;
+            &lt;h2 className="text-white"&gt;Monday&lt;/h2&gt;
+            &lt;p className="font-weight-bold"&gt;July 2017&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div className="jr-card-body"&gt;
+        &lt;div className="d-flex flex-column"&gt;
+            &lt;div className="list-line-item"&gt;
+                &lt;div className={`list-line-badge bg-${headerColor}`}/&gt;
+
+                &lt;div className="list-line-content"&gt;
+                    &lt;h3 className={`mb-1 text-${headerColor}`}&gt;Learning React&lt;/h3&gt;
+                    &lt;p className="text-muted"&gt;6:30 pm&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div className="list-line-item"&gt;
+                &lt;div className="list-line-badge bg-danger"/&gt;
+
+                &lt;div className="list-line-content"&gt;
+                    &lt;h3 className="text-danger mb-1"&gt;Logo Design&lt;/h3&gt;
+                    &lt;p className="text-muted"&gt;7:15 pm&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div className="list-line-item"&gt;
+                &lt;div className="list-line-badge bg-success"/&gt;
+
+                &lt;div className="list-line-content"&gt;
+                    &lt;h3 className="text-success mb-1"&gt;Timesheet Setup&lt;/h3&gt;
+                    &lt;p className="text-muted"&gt;8:45 pm&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;CardMenu menuState={menuState} anchorEl={anchorEl}
+              handleRequestClose={this.handleRequestClose.bind(this)} /&gt;
+&lt;/div&gt;
+  </code>
+    </pre>
+
+    <h4>Chart Card</h4>
+    <p><img src="./images/component/widgets-chart.png" alt=""/></p>
+
+    <pre>
+    <code class="html">
+&lt;ChartCard styleName="bg-blue text-white"&gt;
+    &lt;div className="chart-title"&gt;
+        &lt;h3&gt;$87,345&lt;/h3&gt;
+        &lt;p&gt;&lt;IntlMessages id="dashboard.totalRevenue"/&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ResponsiveContainer width="100%" height={110}&gt;
+        &lt;LineChart data={data1} margin={{top: 0, right: 30, bottom: 0, left: 30}}&gt;
+            &lt;Line dataKey="uv" stroke="#ffffff" activeDot={{r: 8}}/&gt;
+        &lt;/LineChart&gt;
+    &lt;/ResponsiveContainer&gt;
+&lt;/ChartCard&gt;
+  </code>
+  </code>
+    </pre>
+
+    <h4>Customer Around The World</h4>
+    <p><img src="./images/component/around-the-world.png" alt=""/></p>
+
+    <pre>
+    <code class="html">
+&lt;div className="jr-card"&gt;
+    &lt;div className="jr-card-header"&gt;
+        &lt;h3 className="mb-0"&gt;
+            Customer Around The World
+        &lt;/h3&gt;
+        &lt;p className="text-muted"&gt;
+            In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to
+            demonstrate the text
+        &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;h4 className="text-muted"&gt;Countries&lt;/h4&gt;
+    &lt;div className="row"&gt;
+        &lt;div className="col-lg-8 col-12"&gt;
+            &lt;div className="row"&gt;
+                &lt;div className="col-sm-6 col-12"&gt;
+                    {countryList1.map((country, index) =&gt; &lt;CountryListItem key={index} country={country} /&gt;)}
+                &lt;/div&gt;
+                &lt;div className="col-sm-6 col-12 mb-5 mb-md-1"&gt;
+                    {countryList2.map((country, index) =&gt; &lt;CountryListItem key={index} country={country} /&gt;)}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className="col-lg-4 col-12"&gt;
+            &lt;ResponsiveContainer width="100%" height={150}&gt;
+                &lt;AreaChart data={chartData}&gt;
+                    &lt;Area type="monotone" dataKey="pv" stroke="rgba(255,255,255,0.5)"
+                          fillOpacity={.8}
+                          fill="#3367d6" /&gt;
+                    &lt;Area type="monotone" dataKey="uv" stroke="rgba(255,255,255,0.5)"
+                          fillOpacity={.8}
+                          fill="#f3b439" /&gt;
+                &lt;/AreaChart&gt;
+            &lt;/ResponsiveContainer&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+  </code>
+    </pre>
+
+    <h4>InfoCard</h4>
+    <p class="center-cropped center-cropped-lg"><img class="img-fluid" src="./images/component/info-card.gif" alt=""/></p>
+
+<pre>
+<code class="html">
+&lt;div className="row"&gt;
+    &lt;div className="col-sm-6 col-12"&gt;
+        &lt;InfoCard data={cardData} styleName="bg-secondary"/&gt;
+    &lt;/div&gt;
+    &lt;div className="col-sm-6 col-12"&gt;
+        &lt;InfoCard data={cardData1} styleName="bg-cyan darken-2"/&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+
+  </div>

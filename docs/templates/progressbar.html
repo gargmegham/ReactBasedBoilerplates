@@ -1,0 +1,93 @@
+<div>
+    <h3 id="badge">Progress</h3>
+    <p class="comments-section">Progress and activity indicators are visual indications of an app loading content.
+        A single visual indicator should be used to represent each type of operation. For example, a refresh operation should display either a refresh bar or an activity circle, but not both.
+    </p>
+    <h4 id="basic-example-2">Indeterminate Circular</h4>
+    <p><img src="./images/component/progress.png" alt=""/></p>
+    <p class="comments-section">To show this type of Progress you will need this code in down here.
+    </p>
+
+    <pre>
+  <code class="html">
+&lt;CircularProgress/&gt;
+&lt;CircularProgress size={50} /&gt;
+&lt;CircularProgress color="secondary"/&gt;
+&lt;CircularProgress color="secondary" size={50} /&gt;
+  </code>
+</pre>
+
+    <h4 class="pb-2">Determinate Circular</h4>
+    <p><img src="./images/component/progress1.png" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;CircularProgress variant="determinate" value={75} /&gt;
+&lt;CircularProgress
+        size={50}
+        variant="determinate"
+        value={25}
+        min={0}
+        max={50} /&gt;
+&lt;CircularProgress color="secondary" variant="determinate" value={75} /&gt;
+&lt;CircularProgress
+        color="secondary"
+        size={50}
+        variant="determinate"
+        value={25}
+        min={0}
+        max={50} /&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table  class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">color</span></td>
+            <td><span class="prop-type">enum:&nbsp;'primary'&nbsp;|<br>&nbsp;'secondary'&nbsp;|<br>&nbsp;'inherit'<br></span></td>
+            <td><span class="prop-default">'primary'</span></td>
+            <td>The color of the component. It supports those theme colors that make sense for this component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">size</span></td>
+            <td><span class="prop-type">union:&nbsp;number&nbsp;|<br>&nbsp;string<br></span></td>
+            <td><span class="prop-default">40</span></td>
+            <td>The size of the circle.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">thickness</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td><span class="prop-default">3.6</span></td>
+            <td>The thickness of the circle.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">value</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td><span class="prop-default">0</span></td>
+            <td>The value of the progress indicator for the determinate and static variants. Value between 0 and 100.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">variant</span></td>
+            <td><span class="prop-type">enum:&nbsp;'determinate'&nbsp;|<br>&nbsp;'indeterminate'&nbsp;|<br>&nbsp;'static'<br></span></td>
+            <td><span class="prop-default">'indeterminate'</span></td>
+            <td>The variant of progress indicator. Use indeterminate when there is no progress value.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

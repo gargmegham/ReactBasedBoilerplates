@@ -1,0 +1,134 @@
+<div>
+    <h3 id="badge">Drawer</h3>
+    <p class="comments-section">The Drawer slides in from the side. It is a common pattern found in Google apps and follows the keylines and metrics for lists.
+    </p>
+    <h4 id="basic-example-2">Persistent Drawer</h4>
+    <p class=""><img src="./images/component/drawer.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Drawer you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;div className={classes.root}&gt;
+    &lt;div className={classes.appFrame}&gt;
+        &lt;AppBar className={classNames('bg-primary',classes.appBar, this.state.open && classes.appBarShift)}&gt;
+            &lt;Toolbar disableGutters={!this.state.open}&gt;
+                &lt;IconButton
+                        aria-label="open drawer"
+                        onClick={this.handleDrawerOpen}
+                        className={classNames(classes.menuButton,this.state.open && classes.hide)} &gt;
+                    &lt;MenuIcon className="text-white" /&gt;
+                &lt;/IconButton&gt;
+                &lt;Typography type="title" color="inherit" className="text-white" noWrap&gt;
+                    Persistent drawer
+                &lt;/Typography&gt;
+            &lt;/Toolbar&gt;
+        &lt;/AppBar&gt;
+        &lt;Drawer
+                variant="persistent"
+                classes={{
+                paper: classes.drawerPaper,
+                }}
+                open={this.state.open} &gt;
+            &lt;div className={classes.drawerInner}&gt;
+                &lt;div className={classes.drawerHeader}&gt;
+                    &lt;IconButton onClick={this.handleDrawerClose}&gt;
+                        {theme.direction === 'rtl' ? &lt;ChevronRightIcon /&gt; : &lt;ChevronLeftIcon /&gt;}
+                    &lt;/IconButton&gt;
+                &lt;/div&gt;
+                &lt;Divider /&gt;
+                &lt;List className={classes.list}&gt;{mailFolderListItems}&lt;/List&gt;
+                &lt;Divider /&gt;
+                &lt;List className={classes.list}&gt;{otherMailFolderListItems}&lt;/List&gt;
+            &lt;/div&gt;
+        &lt;/Drawer&gt;
+        &lt;main className={classNames(classes.content, this.state.open && classes.contentShift)}&gt;
+            &lt;Typography type="body1" noWrap&gt;
+                {'You think water moves fast? You should see ice.'}
+            &lt;/Typography&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table  class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">anchor</span></td>
+            <td><span class="prop-type">enum:&nbsp;'left'&nbsp;|<br>&nbsp;'top'&nbsp;|<br>&nbsp;'right'&nbsp;|<br>&nbsp;'bottom'<br></span></td>
+            <td><span class="prop-default">'left'</span></td>
+            <td>Side from which the drawer will appear.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The contents of the drawer.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">elevation</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td><span class="prop-default">16</span></td>
+            <td>The elevation of the drawer.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">ModalProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Modal</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onClose</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component requests to be closed.<br><br><strong>Signature:</strong><br><code>function(event: object) =&gt; void</code><br><em>event:</em> The event source of the callback</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">open</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the drawer is open.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">PaperProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Paper</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">SlideProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Slide</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">transitionDuration</span></td>
+            <td><span class="prop-type">union:&nbsp;number&nbsp;|<br>&nbsp;{enter?: number, exit?: number}<br></span></td>
+            <td><span class="prop-default">{ enter: duration.enteringScreen, exit: duration.leavingScreen }</span></td>
+            <td>The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">variant</span></td>
+            <td><span class="prop-type">enum:&nbsp;'permanent'&nbsp;|<br>&nbsp;'persistent'&nbsp;|<br>&nbsp;'temporary'<br></span></td>
+            <td><span class="prop-default">'temporary'</span></td>
+            <td>The variant of drawer.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

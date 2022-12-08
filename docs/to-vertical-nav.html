@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+    <meta name="description" content="A fully responsive, HTML5 based admin theme">
+
+    <meta name="keywords" content="Responsive, HTML5, business, professional, Adapt, web design, CSS3">
+
+    <title>Wieldy - Docs</title>    <!-- Site favicon -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">    <!-- /site favicon -->
+
+    <!-- Ant font stylesheet -->
+
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- /material font stylesheet -->    <!-- Bootstrap stylesheet min version -->
+
+    <link href="css/bootstrap.css" rel="stylesheet">    <!-- /bootstrap stylesheet min version -->
+
+    <!-- Style css stylesheet -->
+
+    <link href="css/style.css" rel="stylesheet">    <!-- /style css stylesheet -->    <!-- Highlight css stylesheet -->
+
+    <link href="js/plugin/highlight/styles/dark.css" rel="stylesheet">    <!-- /highlight css stylesheet -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
+
+    <script src="js/html5shiv.min.js"></script>
+
+    <script src="js/respond.min.js"></script>    <![endif]--></head>
+
+<body><!--Site-->
+
+<div class="site">    <!--Site header-->
+
+    <header class="site-header">
+
+        <nav class="navbar fixed-top navbar-expand-lg d-flex align-items-center">
+
+            <div class="container">
+
+                <div class="navbar-bottom"><a class="site-logo" href="index.html"> <img src="images/logo.png"
+
+                                                                                        alt="Wieldy" title="Wieldy">
+                </a>
+
+                    <div class="d-flex flex-grow-1">
+
+                        <ul class="quick-links align-self-center">
+
+                            <li><a target="_blank" href="http://wieldy.g-axon.work/">
+                                <i class="zmdi zmdi-open-in-new zmdi-hc-fw"></i>Take Demo</a></li>
+
+                            
+
+                        </ul>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>    <!--/site header-->    <!--Site main-->
+
+    <main class="site-main">
+
+        <div class="container">
+
+            <div class="site-main-inner">
+			<section class="docs-section">
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Side Nav Style</h2>
+    <div class="adocs-section-content ng-binding">
+	<p>This article is dedicated to give a step-by-step guide on how to add a new menu item to the vertical navigation.</p>
+	<p>This can be achieved in following 3 steps:</p>
+	<ol>
+		<li>
+			<strong>Create a Page</strong><br>
+			<p>All of the pages in Wieldy  are placed/created under the folder location:</p>
+			<p><span class="f-path small">src/routes/{folder name based on page name}</p>
+			<p>In the example here, we are going to create a new page “About Us”. In order to do that, we are going to create a folder “About Us” inside the <span class="f-path small">src/routes/</span>.</p>
+			<p>Now, we will create a file index.js inside this “AboutUs” folder which will represent AboutUs page component.</p>
+			<p>After this, the folder structure will look like as given in following figure:</p>
+			<p class="lead"><strong>Screenshot to show the structure of src/routes/AboutUs/index.js</strong></p>
+			<img src="./images/about-us-route-folder-structure.png" alt=""/>
+			<p>Then we will write the code in index.js to create our AboutUs page component. Following is the sample page component structure you can follow:</p>
+			<p class="lead"><strong>Screenshot with sample structure. Check in register.</strong></p>
+			<p>So, our <span class="f-path small">index.js</span> file will look like as below:</p>
+			<img src="./images/html-about-us-page.png" alt=""/>
+			<p class="lead"><strong>Here the source code will go for AboutUs page component</strong></p>
+		</li>
+		<li>
+			<strong>Create a Route</strong><br>
+			<p>In this step, we are going to create a route for our newly created About Us page.</p>
+
+			<p>To add a main route, we need to open the file <span class="f-path small">src/routes/index.js</span></p>
+
+			<p>Here, we will ada new route which we will then link to our AboutUs page component. Below is the source code which will do it for us when we add this to the above mentioned file:</p>
+
+			<p class="lead"><strong>Source code from register</strong></p>
+			<img src="./images/html-about-us-route.png" alt=""/>
+
+			<p>In above source code <span class="f-path small">asyncComponent()</span> is being used to implement the async loading.</p>
+
+		</li>
+		<li>
+			<strong>Add a menu item</strong><br>
+			<p>So far, we have create a page and added a route which will take user to that page when accessed in browser directly.</p>
+			<p>Now, in this final step, we are going to add a menu item which user can click to access that route.</p>
+			<p>To add a new menu item in vertical navigation bar, we will need to follow below steps:</p>
+			<h5>Add to Vertical Navigation Bar</h5>
+			<p>Now, let’s add the menu item to the vertical navigation bar and this will show on small devices like smartphones.</p>
+			<p>To do that, we will need to reach to the file “SidebarContent.js which can be found under <span class="f-path small">src/containers/Sidebar/SidebarContent.js</span>
+			<p>Now, here in this file SidebarContent.js, we will look for the <span class="f-path small">&lt;Menu&gt;</span> tag which represents default menu item “Sample Page” in the starter template.</p>
+			<p>Following is a screenshot for reference:</p>
+			<p class="lead"><strong>Screenshot of menu tag for sample page menu.</strong></p>
+			<p>Now, here you can add your own menu item as per given in below sour code:</p>
+			<p class="lead"><strong>Source code structure</strong></p>
+			<img src="./images/html-structure-nav-v.png" alt=""/>
+
+
+
+			M
+			<p>We hope this article was helpful to you.</p>
+
+
+
+
+
+		</li>
+	</ol>
+	</div>
+</div>
+</section>
+
+                <div class="sidebar-wrapper">
+
+                    <aside class="right-sidebar">
+
+                        <ul class="sidebar-menu">
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">About Wieldy </a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="javascript:void(0);" data-template="introduction">Introduction</a>
+
+                                    </li>
+
+                                    <li><a href="javascript:void(0);" data-template="product-overview">Product
+
+                                        Overview</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Installation</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="#setup-dev-env" data-template="setup-dev-env">Setup Development
+
+                                        Environment</a></li>
+
+                                    <li><a href="#setup-wieldy" data-template="setup-wieldy">Setup Wieldy</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Structure &amp; Layouts</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li class="active"><a href="#folder-file-structure" data-template="folder-file-structure">Folder
+
+                                        and File Structure</a></li>
+
+                                    <li><a href="#layout-structure" data-template="layout-structure">Layout
+                                        Structure</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Settings &amp; Customization</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="#change-color-theme" data-template="change-color-theme">Change Color
+
+                                        Theme</a></li>
+
+                                    <li><a href="#vertical-navigation-style" data-template="vertical-navigation-style">Vertical
+
+                                        Navigation style</a></li>
+
+                                    <li><a href="#horizontal-navigation-style"
+
+                                           data-template="horizontal-navigation-style">Horizontal Navigation style</a>
+
+                                    </li>
+
+                                    <li><a href="#change_layouts"
+
+                                           data-template="change_layouts">Layout style</a>
+
+                                    </li>
+                                    <li><a href="#change_themes"
+
+                                           data-template="change_themes">Theme style</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li class="open">
+
+                                <a href="javascript:void(0)" class="collapse-hadle">Add New Menu</a>
+
+                                <ul class="sub-menu document-menus" style="display:block">
+
+                                    <li>
+
+                                        <a href="#to-horizontal-nav" data-template="to-horizontal-nav">To Horizontal
+
+                                            Nav</a></li>
+
+                                    <li class="active">
+
+                                        <a href="#to-vertical-nav" data-template="to-vertical-nav">To Vertical Nav</a>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Multi Language</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <li><a href="#add-new-language" data-template="add-new-language">Add New
+
+                                        Language</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            
+                            <li><a href="javascript:void(0)" class="collapse-hadle">Other Elements</a>
+
+                                <ul class="sub-menu document-menus">
+
+                                    <!-- <li><a href="#widgets" data-template="widgets">Widgets</a></li>-->
+
+                                    <li><a href="#map" data-template="map">Map</a></li>
+
+                                    <li><a href="#chart" data-template="chart">Charts</a></li>
+
+                                    <li><a href="#calendar" data-template="calendar">Calendar</a></li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+
+                    </aside>
+
+                    <a href="javascript:void(0)" class="btn-fixed"> <span class="hamburger-inner"></span> </a></div>
+
+            </div>
+
+        </div>
+
+    </main>    <!--/site main-->   
+
+    <!--Site footer-->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo footer-widget"><img src="images/logo.png" alt="Footer logo"></div>
+                    <p class="copy-right">Copyright © 2020 G-axon</p></div>
+                <div class="col-lg-8">
+                    <ul class="footer-menu-wrapper">
+                        <li>
+                            <div class="footer-widget"><h3 class="footer-menu-title">Products</h3>
+                                <ul class="footer-menu">
+                                    <li><a target="_blank" href="https://themeforest.net/item/drift-admin-template-html-jquery-and-bootstrap4/23385839?s_rank=2">Drift</a></li>
+                                    <li><a target="_blank" href="https://themeforest.net/item/react-material-bootstrap-4-admin-template/20978545?s_rank=2">Jumbo React</a></li>
+                                    <li><a target="_blank" href="https://themeforest.net/item/jumbo-admin-responsive-admin-dashboard-template/21368029?s_rank=1">Jumbo Admin</a></li>
+                                    <li><a target="_blank" href="https://wrapbootstrap.com/theme/mouldifi-html-react-redux-admin-template-WB009538N">Mouldifi</a></li>
+                                    <li><a target="_blank" href="https://themeforest.net/item/wieldy-react-redux-admin-template/22277962?s_rank=1">Flexile</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="footer-widget"><h3 class="footer-menu-title">Support</h3>
+                                <ul class="footer-menu">
+                                    <li><a target="_blank" href="https://themeforest.net/item/wieldy-react-redux-admin-template/22277962/support">Submit a Ticket</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
+    <!--/site foter-->
+
+</div><!--/site--><!--Load JQuery-->
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/plugin/highlight/highlight.pack.js"></script>
+
+<script src="js/functions.js"></script>
+
+</body>
+
+</html>

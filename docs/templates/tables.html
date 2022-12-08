@@ -1,0 +1,109 @@
+<div>
+    <h3 id="badge">Tables</h3>
+    <p class="comments-section">Data tables display sets of raw data. They usually appear in desktop enterprise products.
+    </p>
+    <h4 id="basic-example-2">Basic Table</h4>
+    <p><img src="./images/component/tables1.png" alt=""/></p>
+    <p class="comments-section">To show this type of Cards you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;Table&gt;
+    &lt;TableHead&gt;
+        &lt;TableRow&gt;
+            &lt;TableCell&gt;Dessert (100g serving)&lt;/TableCell&gt;
+            &lt;TableCell numeric&gt;Calories&lt;/TableCell&gt;
+            &lt;TableCell numeric&gt;Fat (g)&lt;/TableCell&gt;
+            &lt;TableCell numeric&gt;Carbs (g)&lt;/TableCell&gt;
+            &lt;TableCell numeric&gt;Protein (g)&lt;/TableCell&gt;
+        &lt;/TableRow&gt;
+    &lt;/TableHead&gt;
+    &lt;TableBody&gt;
+        {data.map(n =&gt; {
+            return (
+                &lt;TableRow key={n.id}&gt;
+                    &lt;TableCell&gt;{n.name}&lt;/TableCell&gt;
+                    &lt;TableCell numeric&gt;{n.calories}&lt;/TableCell&gt;
+                    &lt;TableCell numeric&gt;{n.fat}&lt;/TableCell&gt;
+                    &lt;TableCell numeric&gt;{n.carbs}&lt;/TableCell&gt;
+                    &lt;TableCell numeric&gt;{n.protein}&lt;/TableCell&gt;
+                &lt;/TableRow&gt;
+            );
+        })}
+    &lt;/TableBody&gt;
+&lt;/Table&gt;
+  </code>
+</pre>
+
+    <h4>Data Table</h4>
+    <p><img src="./images/component/tables.png" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;TableHead&gt;
+    &lt;TableRow&gt;
+        &lt;TableCell padding="checkbox"&gt;
+            &lt;Checkbox color="primary"
+                      indeterminate={numSelected &gt; 0 && numSelected &lt; rowCount}
+                      checked={numSelected === rowCount}
+                      onChange={onSelectAllClick} /&gt;
+        &lt;/TableCell&gt;
+        {columnData.map(column =&gt; {
+            return (
+                &lt;TableCell
+                        key={column.id}
+                        numeric={column.numeric}
+                        padding={column.disablePadding ? 'none' : 'default'} &gt;
+                    &lt;Tooltip
+                            title="Sort"
+                            placement={column.numeric ? 'bottom-end' : 'bottom-start'}
+                        enterDelay={300} &gt;
+                        &lt;TableSortLabel
+                                active={orderBy === column.id}
+                            direction={order}
+                            onClick={this.createSortHandler(column.id)} &gt;
+                            {column.label}
+        &lt;/TableSortLabel&gt;
+        &lt;/Tooltip&gt;
+        &lt;/TableCell&gt;
+        );
+        }, this)}
+    &lt;/TableRow&gt;
+&lt;/TableHead&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the table, normally <code>TableHeader</code> and <code>TableBody</code>.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">component</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">'table'</span></td>
+            <td>The component used for the root node. Either a string to use a DOM element or a component.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

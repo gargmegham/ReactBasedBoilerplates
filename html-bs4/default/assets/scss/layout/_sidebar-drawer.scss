@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sidebar of the site/application.
+// -----------------------------------------------------------------------------
+
+// Sidebar drawer style
+
+.#{$class-prefix}-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100% !important;
+  z-index: 1501 !important;
+  -ms-touch-action: manipulation;
+  -webkit-touch-callout: inherit;
+  touch-action: manipulation;
+  @include transition(all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0s);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  background-color: $dt-drawer-bg;
+
+  &.position-left {
+    @include transform(translate3d(-100%, 0, 0));
+    left: 0;
+    right: auto;
+  }
+
+  &.position-right {
+    @include transform(translate3d(100%, 0, 0));
+    left: auto;
+    right: 0;
+  }
+
+  &.open {
+    @include transform(translate3d(0, 0, 0));
+
+    & + .#{$class-prefix}-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+      z-index: 1500;
+      background: $dt-backdrop-bg;
+      @include transition(all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0s);
+    }
+  }
+
+  &.#{$class-prefix}-sidebar {
+    width: calc(#{$sidebar-width + 40px});
+    background-color: $sidebar-bg;
+    
+    & .#{$class-prefix}-sidebar__container {
+      padding-top: 0;
+    }
+
+    & + .#{$class-prefix}-content-wrapper {
+      margin-left: 0;
+    }
+  }
+}

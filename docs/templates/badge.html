@@ -1,0 +1,84 @@
+<div>
+    <h3 id="badge">Badge</h3>
+    <p class="comments-section">6 types of badge design are available inside badge menu. You can use any of this. To
+        use this follow the instruct code example given below.
+    </p>
+    <h4 id="basic-example-2">Basic Example</h4>
+    <p><img src="./images/component/badges.png" alt=""/></p>
+    <p class="comments-section">To show this type of badge you will need this code in down here.
+    </p>
+
+  <pre>
+     <code class="html">
+&lt;Badge color="primary"&gt;Primary&lt;/Badge&gt;
+&lt;Badge color="secondary"&gt;Secondary&lt;/Badge&gt;
+&lt;Badge color="success"&gt;Success&lt;/Badge&gt;
+&lt;Badge color="danger"&gt;Danger&lt;/Badge&gt;
+&lt;Badge color="warning"&gt;Warning&lt;/Badge&gt;
+&lt;Badge color="info"&gt;Info&lt;/Badge&gt;
+&lt;Badge color="light"&gt;Light&lt;/Badge&gt;
+&lt;Badge color="dark"&gt;Dark&lt;/Badge&gt;
+  </code>
+</pre>
+    <h4>Pill Badges</h4>
+    <p>Use the .badge-pill modifier class to make badges more rounded (with a larger border-radius and additional horizontal padding). Useful if you miss the badges from v3.</p>
+    <p><img src="./images/component/pill-badges.png" alt=""/></p>
+
+<pre>
+     <code class="html">
+&lt;Badge color="primary" pill&gt;Primary&lt;/Badge&gt;
+&lt;Badge color="secondary" pill&gt;Secondary&lt;/Badge&gt;
+&lt;Badge color="success" pill&gt;Success&lt;/Badge&gt;
+&lt;Badge color="danger" pill&gt;Danger&lt;/Badge&gt;
+&lt;Badge color="warning" pill&gt;Warning&lt;/Badge&gt;
+&lt;Badge color="info" pill&gt;Info&lt;/Badge&gt;
+&lt;Badge color="light" pill&gt;Light&lt;/Badge&gt;
+&lt;Badge color="dark" pill&gt;Dark&lt;/Badge&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table  class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">badgeContent&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content rendered within the badge.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The badge will be added relative to this node.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">color</span></td>
+            <td><span class="prop-type">enum:&nbsp;'default'&nbsp;|<br>&nbsp;'primary'&nbsp;|<br>&nbsp;'secondary'&nbsp;|<br>&nbsp;'error'<br></span></td>
+            <td><span class="prop-default">'default'</span></td>
+            <td>The color of the component. It supports those theme colors that make sense for this component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">component</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">'span'</span></td>
+            <td>The component used for the root node. Either a string to use a DOM element or a component.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

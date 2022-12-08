@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.#{$class-prefix}-footer {
+  background-color: $footer-bg;
+  color: $footer-color;
+  padding: 1.2rem 3.2rem;
+  display: flex;
+  align-items: center;
+  min-height: $footer-height;
+  max-height: $footer-height;
+  margin-top: auto;
+  border-top: solid 1px $footer-border-color;
+}

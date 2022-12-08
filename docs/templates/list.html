@@ -1,0 +1,114 @@
+<div>
+    <h3 id="badge">Lists</h3>
+    <p class="comments-section">Lists present multiple line items vertically as a single continuous element.
+        Lists are made up of a continuous column of rows. Each row contains a tile. Primary actions fill the tile, and supplemental actions are represented by icons and text.
+        Lists are best suited for similar data types.
+    </p>
+    <h4 id="basic-example-2">Folder List</h4>
+    <p><img src="./images/component/folder-list.png" alt=""/></p>
+    <p class="comments-section">To show this type of Lists you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;List&gt;
+    &lt;ListItem button&gt;
+        &lt;Avatar&gt;
+            &lt;i className="zmdi zmdi-folder zmdi-hc-fw zmdi-hc-lg text-white"/&gt;
+        &lt;/Avatar&gt;
+        &lt;ListItemText primary="Photos" secondary="Jan 9, 2016" /&gt;
+    &lt;/ListItem&gt;
+
+    &lt;ListItem button&gt;
+        &lt;Avatar&gt;
+            &lt;i className="zmdi zmdi-file zmdi-hc-fw zmdi-hc-lg text-white"/&gt;
+        &lt;/Avatar&gt;
+        &lt;ListItemText primary="Work" secondary="Jan 7, 2016" /&gt;
+    &lt;/ListItem&gt;
+
+    &lt;ListItem button&gt;
+        &lt;Avatar&gt;
+            &lt;i className="zmdi zmdi-account zmdi-hc-fw zmdi-hc-lg text-white"/&gt;
+        &lt;/Avatar&gt;
+        &lt;ListItemText primary="Meetings" secondary="Jan 7, 2016" /&gt;
+    &lt;/ListItem&gt;
+&lt;/List&gt;
+  </code>
+</pre>
+
+    <h4>Checkbox List</h4>
+    <p><img src="./images/component/checkboxl-list.png" alt=""/></p>
+
+    <pre>
+     <code class="html">
+ &lt;List&gt;
+    {users.map(user =&gt;
+        &lt;ListItem button key={user.email} onClick={event =&gt; this.handleToggle(event, user.id)}&gt;
+            &lt;Avatar alt="Remy Sharp" src={user.image} /&gt;
+            &lt;ListItemText className="br-break" primary={user.email} secondary="Nov 8, 2017"/&gt;
+            &lt;Badge className="mr-4 mt-2 text-uppercase" color="success" pill&gt;Agent&lt;/Badge&gt;
+            &lt;ListItemSecondaryAction&gt;
+                &lt;Checkbox color="primary"
+                          checked={this.state.checked.indexOf(user.id) !== -1}
+                /&gt;
+            &lt;/ListItemSecondaryAction&gt;
+        &lt;/ListItem&gt;,
+    )}
+&lt;/List&gt;
+   </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">component</span></td>
+            <td><span class="prop-type">union:&nbsp;string&nbsp;|<br>&nbsp;func<br></span></td>
+            <td><span class="prop-default">'ul'</span></td>
+            <td>The component used for the root node. Either a string to use a DOM element or a component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">dense</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, compact vertical padding designed for keyboard and mouse input will be used for
+                the list and list items. The property is available to descendant components as the <code>dense</code>
+                context.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disablePadding</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, vertical padding will be removed from the list.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">subheader</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the subheader, normally <code>ListSubheader</code>.</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

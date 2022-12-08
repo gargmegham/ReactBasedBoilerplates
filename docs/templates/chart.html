@@ -1,0 +1,78 @@
+<div>
+    <h3>Charts</h3>
+    <p class="comments-section">If you want to render Recharts component like the following images. The configurations are given in the
+    </p>
+    <h4 id="basic-example-2">Simple LineChart</h4>
+    <p class="center-cropped center-cropped-lg"><img src="./images/component/line-chart.png" alt=""/></p>
+    <p class="comments-section">To show this type of LineChart you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;ResponsiveContainer width="100%" height={200}&gt;
+    &lt;LineChart data={data}
+               margin={{top: 10, right: 0, left: -25, bottom: 0}}&gt;
+        &lt;XAxis dataKey="name" /&gt;
+        &lt;YAxis /&gt;
+        &lt;CartesianGrid strokeDasharray="3 3" /&gt;
+        &lt;Tooltip /&gt;
+        &lt;Legend /&gt;
+        &lt;Line type="monotone" dataKey="pv" stroke="#3367d6" activeDot={{r: 8}} /&gt;
+        &lt;Line type="monotone" dataKey="uv" stroke="#ffc658" /&gt;
+    &lt;/LineChart&gt;
+&lt;/ResponsiveContainer&gt;
+  </code>
+</pre>
+
+    <h4>Bar Chart</h4>
+    <p class="center-cropped center-cropped-lg"><img src="./images/component/bar-chart.png" alt=""/></p>
+    <pre>
+<code class="html">
+&lt;ResponsiveContainer width="100%" height={200}&gt;
+    &lt;BarChart data={data}
+              margin={{top: 10, right: 0, left: -25, bottom: 0}}&gt;
+        &lt;XAxis dataKey="name" /&gt;
+        &lt;YAxis /&gt;
+        &lt;CartesianGrid strokeDasharray="3 3" /&gt;
+        &lt;Tooltip /&gt;
+        &lt;Legend /&gt;
+        &lt;Bar dataKey="pv" fill="#3367d6" /&gt;
+        &lt;Bar dataKey="uv" fill="#ffc658" /&gt;
+    &lt;/BarChart&gt;
+&lt;/ResponsiveContainer&gt;
+</code>
+</pre>
+
+    <h4>Area Chart</h4>
+    <p class="center-cropped center-cropped-lg"><img src="./images/component/area-chart.png" alt=""/></p>
+    <pre>
+<code class="html">
+&lt;ResponsiveContainer width="100%" height={200}&gt;
+    &lt;AreaChart data={data}
+               margin={{top: 10, right: 0, left: -25, bottom: 0}}&gt;
+        &lt;XAxis dataKey="name" /&gt;
+        &lt;YAxis /&gt;
+        &lt;CartesianGrid strokeDasharray="3 3" /&gt;
+        &lt;Tooltip /&gt;
+        &lt;Area type='monotone' dataKey='uv' stroke='#3367d6' fill='#3367d6' /&gt;
+    &lt;/AreaChart&gt;
+&lt;/ResponsiveContainer&gt;
+</code>
+</pre>
+
+    <h4>Two Level Pie Chart</h4>
+    <p><img src="./images/component/pie-chart.png" alt=""/></p>
+    <pre>
+<code class="html">
+&lt;ResponsiveContainer width="100%" height={300}&gt;
+    &lt;PieChart&gt;
+        &lt;Pie dataKey="value" data={data01} outerRadius={60} fill="#3367d6" /&gt;
+        &lt;Pie dataKey="value" data={data02} innerRadius={70} outerRadius={90} fill="#ffc658"
+             label /&gt;
+    &lt;/PieChart&gt;
+&lt;/ResponsiveContainer&gt;
+</code>
+</pre>
+
+
+</div>

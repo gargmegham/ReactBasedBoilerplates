@@ -1,0 +1,168 @@
+<div>
+    <h3 id="badge">Steppers</h3>
+    <p class="comments-section">Steppers convey progress through numbered steps.
+        Steppers display progress through a sequence of logical and numbered steps. They may also be used for navigation.
+        Steppers may display a transient feedback message after a step is saved.
+    </p>
+    <h4 id="basic-example-2">Horizontal Linear</h4>
+    <p><img src="./images/component/stepper.png" alt=""/></p>
+    <p class="comments-section">To show this type of Steppers you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+&lt;Stepper activeStep={activeStep} className="horizontal-stepper-linear"&gt;
+    {steps.map((label, index) =&gt; {
+        const props = {};
+        const labelProps = {};
+        if (this.isStepOptional(index)) {
+            labelProps.optional = &lt;Typography type="caption"&gt;Optional&lt;/Typography&gt;;
+        }
+        if (this.isStepSkipped(index)) {
+            props.completed = false;
+        }
+        return (
+            &lt;Step key={label} className={`horizontal-stepper
+                 ${index===activeStep?'active':''}`} {...props}&gt;
+                &lt;StepLabel className="stepperlabel" {...labelProps}&gt;{label}&lt;/StepLabel&gt;
+            &lt;/Step&gt;
+        );
+    })}
+&lt;/Stepper&gt;
+&lt;div&gt;
+    {activeStep === steps.length ? (
+        &lt;div&gt;
+            &lt;Typography className="my-2"&gt;
+                All steps completed - you&quot;re finished
+            &lt;/Typography&gt;
+            &lt;Button onClick={this.handleReset} className="jr-btn"&gt;
+                Reset
+            &lt;/Button&gt;
+        &lt;/div&gt;
+    ) : (
+        &lt;div&gt;
+            &lt;Typography className="my-2"&gt;{getStepContent(activeStep)}&lt;/Typography&gt;
+            &lt;div&gt;
+                &lt;Button disabled={activeStep === 0}
+                    onClick={this.handleBack} className="jr-btn" &gt;
+                    Back
+                &lt;/Button&gt;
+                {this.isStepOptional(activeStep) && (
+                    &lt;Button  variant="raised"  color="primary"
+                            onClick={this.handleSkip} className="jr-btn" &gt;
+                        Skip
+                    &lt;/Button&gt;
+                )}
+                &lt;Button variant="raised" color="primary"
+                     onClick={this.handleNext} className="jr-btn"&gt;
+                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                &lt;/Button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    )}
+&lt;/div&gt;
+  </code>
+</pre>
+
+    <h4>Vertical Stepper</h4>
+    <p><img src="./images/component/stepper1.png" alt=""/></p>
+
+    <pre>
+     <code class="html">
+&lt;Stepper activeStep={activeStep} orientation="vertical"&gt;
+    {steps.map((label, index) =&gt; {
+        return (
+            &lt;Step key={label}&gt;
+                &lt;StepLabel&gt;{label}&lt;/StepLabel&gt;
+                &lt;StepContent className="pb-3"&gt;
+                    &lt;Typography&gt;{getStepContent(index)}&lt;/Typography&gt;
+                    &lt;div className="mt-2"&gt;
+                        &lt;div&gt;
+                            &lt;Button
+                                    disabled={activeStep === 0}
+                                onClick={this.handleBack}
+                            className="jr-btn"&gt;
+                                Back
+                            &lt;/Button&gt;
+                            &lt;Button
+                                    variant="raised"
+                                    color="primary"
+                                    onClick={this.handleNext}
+                                    className="jr-btn"&gt;
+                                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                            &lt;/Button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/StepContent&gt;
+            &lt;/Step&gt;
+        );
+    })}
+&lt;/Stepper&gt;
+    {activeStep === steps.length && (
+        &lt;Paper square elevation={0} className="p-2"&gt;
+            &lt;Typography&gt;All steps completed - you&quot;re finished&lt;/Typography&gt;
+            &lt;Button onClick={this.handleReset} className="jr-btn"&gt;
+                Reset
+            &lt;/Button&gt;
+        &lt;/Paper&gt;
+    )}
+</code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">activeStep</span></td>
+            <td><span class="prop-type">number</span></td>
+            <td><span class="prop-default">0</span></td>
+            <td>Set the active step (zero based index).</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">alternativeLabel</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If set to 'true' and orientation is horizontal, then the step label will be positioned under the icon.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>Two or more <code>&amp;lt;Step /&gt;</code> components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">connector</span></td>
+            <td><span class="prop-type">element</span></td>
+            <td><span class="prop-default">&lt;StepConnector /&gt;</span></td>
+            <td>A component to be placed between each step.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">nonLinear</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If set the <code>Stepper</code> will not assist in controlling steps for linear flow.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">orientation</span></td>
+            <td><span class="prop-type">enum:&nbsp;'horizontal'&nbsp;|<br>&nbsp;'vertical'<br></span></td>
+            <td><span class="prop-default">'horizontal'</span></td>
+            <td>The stepper orientation (layout flow direction).</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

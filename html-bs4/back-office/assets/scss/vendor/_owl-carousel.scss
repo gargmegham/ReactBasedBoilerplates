@@ -1,0 +1,53 @@
+@import "../../../../node_modules/owl.carousel/src/scss/owl.theme.default";
+
+.owl-theme {
+  & .owl-dots {
+    text-align: left;
+
+    & .owl-dot {
+      span {
+        border: 2px solid $text-color;
+      }
+
+      &.active span {
+        border-color: $primary;
+        @include size(14px);
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+  
+  & .owl-nav {
+    position: absolute;
+    top: 50%;
+    display: block;
+    @include translateY(-50%);
+    cursor: pointer;
+	height: 30px;
+	margin-top: 0;
+	left: 0;
+	right: 0;
+  }
+  
+  & .owl-nav .owl-prev,
+  & .owl-nav .owl-next {
+  		left: -15px;
+		width: 20px;
+        height: 20px;
+		background-color: $black !important;
+		color: $white !important;
+		@include border-radius($border-radius-circle);
+		position: absolute;
+  }
+  
+  & .owl-nav .owl-next {
+		right: -15px;
+		left: auto;
+  }
+  
+}
+
+

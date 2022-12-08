@@ -1,0 +1,98 @@
+<div>
+    <h3 id="badge">Expansion Panel</h3>
+    <p class="comments-section">Expansion Panels contain creation flows and allow lightweight editing of an element.
+    </p>
+    <h4 id="basic-example-2">Simple Expansion Panel</h4>
+    <p><img src="./images/component/expansion- panel.png" alt=""/></p>
+    <p class="comments-section">To show this type of Expansion Panel you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;ExpansionPanel&gt;
+        &lt;ExpansionPanelSummary expandIcon={&lt;ExpandMoreIcon/&gt;}&gt;
+            &lt;Typography className={classes.heading}&gt;Expansion Panel 1&lt;/Typography&gt;
+        &lt;/ExpansionPanelSummary&gt;
+        &lt;ExpansionPanelDetails&gt;
+            &lt;Typography&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                sit amet blandit leo lobortis eget.
+            &lt;/Typography&gt;
+        &lt;/ExpansionPanelDetails&gt;
+    &lt;/ExpansionPanel&gt;
+    &lt;ExpansionPanel&gt;
+        &lt;ExpansionPanelSummary expandIcon={&lt;ExpandMoreIcon/&gt;}&gt;
+            &lt;Typography className={classes.heading}&gt;Expansion Panel 2&lt;/Typography&gt;
+        &lt;/ExpansionPanelSummary&gt;
+        &lt;ExpansionPanelDetails&gt;
+            &lt;Typography&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                sit amet blandit leo lobortis eget.
+            &lt;/Typography&gt;
+        &lt;/ExpansionPanelDetails&gt;
+    &lt;/ExpansionPanel&gt;
+    &lt;ExpansionPanel disabled&gt;
+        &lt;ExpansionPanelSummary expandIcon={&lt;ExpandMoreIcon/&gt;}&gt;
+            &lt;Typography className={classes.heading}&gt;Disabled Expansion Panel&lt;/Typography&gt;
+        &lt;/ExpansionPanelSummary&gt;
+&lt;/ExpansionPanel&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the expansion panel.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">CollapseProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>Collapse</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">defaultExpanded</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, expands the panel by default.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">disabled</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td><span class="prop-default">false</span></td>
+            <td>If <code>true</code>, the panel will be displayed in a disabled state.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">expanded</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, expands the panel, otherwise collapse it. Setting this prop enables control over the panel.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onChange</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the expand/collapse state is changed.<br><br><strong>Signature:</strong><br><code>function(event: object, expanded: boolean) =&gt; void</code><br><em>event:</em> The event source of the callback<br><em>expanded:</em> The <code>expanded</code> state of the panel</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

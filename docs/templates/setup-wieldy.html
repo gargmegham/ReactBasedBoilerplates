@@ -1,0 +1,79 @@
+<div class="adocs-content">
+    <h2 class="adocs-heading ng-binding">Setup Wieldy </h2>
+    <div class="adocs-section-content ng-binding">
+
+        <p class="lead">
+            In this article, we are considering that you have already setup all the tools mentioned in the article Setup
+            React Development Environment
+        </p>
+        <p>Now, when you download <a
+                href="https://themeforest.net/item/wieldy-react-redux-admin-template/22277962?s_rank=1">Wieldy - React
+            Redux Admin Template based on Ant Framework</a> from themeforest.net. You will receive a zip file with a
+            name like <span class="f-path small">Wieldy-{x.x}</span> where {x.x} represents to the latest version
+            number.
+        </p>
+        <p>Extracting this file will give you a folder which will further contain 4 sub-folders. This folder represents to the React version of Wieldy .</p>
+
+        <p><span class="f-path small">source/</span>. You can use this folder to setup your demo project.</p>
+    
+        <p><span class="f-path small">build/</span>. Build folder contains the built distribution (production) version,
+            which is for demo purpose only</p>
+
+        <h4>To Run the Demo</h4>
+
+        <div class="callout callout-warning"><p>Note: <em>build/ </em>folder contains the built distribution
+            (production) version, which is for demo purpose only</p></div>
+        <section>
+            <div class="callout callout-info"><p>You can build a local server using WAMP or XAMP (if you
+                use PHP). Also it's pretty easy to build one with Python or Ruby (if you prefer either of them). Here,
+                in our case, we are going to build a local server in NodeJS</p></div>
+            <p><strong>Preparation:</strong></p>
+            <P>You'll need to install <a href="http://nodejs.org/">Node.js >=v8.5.0 (Recommended Version)</a> (NPM comes
+                along with
+                it) and serve (a NPM package)</P>
+            <p>For environments using Node, the easiest way to handle this would be to install
+                <strong>serve</strong> and let it handle the rest:</p>
+            <pre>
+$ npm install -g serve
+$ serve -s build</pre>
+            <p>The last command shown above will serve your static site on the port 5000. Like many of serve’s
+                internal settings, the port can be adjusted using the <strong>-p</strong> or <strong>--port</strong>
+                flags.</p>
+            <p>It'll return something like this: </p>
+            <pre>
+
+   ┌──────────────────────────────────────────────────┐
+   │                                                  │
+   │   Serving!                                       │
+   │                                                  │
+   │   - Local:            http://localhost:5000      │
+   │   - On Your Network:  http://192.168.9.63:5000   │
+   │                                                  │
+   │   Copied local address to clipboard!             │
+   │                                                  │
+   └──────────────────────────────────────────────────┘
+                </pre>
+
+            <p>Then you can view the template on <code>http://localhost:5000</code> in your browser</p>
+        </section>
+
+
+        <h4>To setup Wieldy react demo</h4>
+        <p>you can copy this source/ folder to the location where you want to setup the demo.</p>
+        <p>For example, to your desktop.</p>
+        <p>Now, after copying the folder, you can rename this with the project name you want to give it to. Let’s say
+            wieldy-demo</p>
+        <p>Then open your command line tool. This is powershell in windows and terminal on mac/linux.</p>
+        <p>In this command line tool, let’s go inside the wieldy-demo folder with command CD</p>
+        <p>Once you are there, all you need to do is, run the command <span class="f-path small command">$ yarn</span>.
+            This will import all the dependencies Wieldy react demo uses.</p>
+        <p>Okay, so now we have all the dependency libraries imported successfully. Its the time to start demo in
+            browser and all you need to do for that is run the command <span
+                    class="f-path small command">$ yarn start</span>.</p>
+        <p>This will shortly run the demo in your default browser automatically.</p>
+        <p>So, that is all you have to do to import source code of the Wieldy react demo and run it locally. If you
+            want to build a compiled version of demo. You need to run the command <span class="f-path small command">$ yarn build</span>
+            and this will build a compiled version of demo for you.</p>
+        <p>I hope this article was helpful</p>
+    </div>
+</div>

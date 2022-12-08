@@ -1,0 +1,133 @@
+<div>
+    <h3 id="badge">Menu</h3>
+    <p class="comments-section">Menus display a list of choices on a transient sheet of material.
+        Menus appear upon interaction with a button, action, or other control. They display a list of choices, with one choice per line.
+        Menu items may be disabled if not applicable to a certain context. Contextual menus dynamically change their available menu items based on the current state of the app.
+        Menus should not be used as a primary method for navigation within an app.
+    </p>
+    <h4 id="basic-example-2">Simple Menu</h4>
+    <p><img src="./images/component/menu.gif" alt=""/></p>
+    <p class="comments-section">To show this type of Cards you will need this code in down here.
+    </p>
+
+    <pre>
+     <code class="html">
+ &lt;div&gt;
+    &lt;Button
+         aria-owns={this.state.open ? 'simple-SidenavContent.js' : null}
+         aria-haspopup="true"
+         onClick={this.handleClick} &gt;
+         Open Menu
+    &lt;/Button&gt;
+    &lt;Menu
+         id="simple-menu"
+         anchorEl={this.state.anchorEl}
+         open={this.state.open}
+         onClose={this.handleRequestClose} &gt;
+            &lt;MenuItem onClick={this.handleRequestClose}&gt;Profile&lt;/MenuItem&gt;
+            &lt;MenuItem onClick={this.handleRequestClose}&gt;My account&lt;/MenuItem&gt;
+            &lt;MenuItem onClick={this.handleRequestClose}&gt;Logout&lt;/MenuItem&gt;
+    &lt;/Menu&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name">anchorEl</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>The DOM element used to set the position of the menu.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">children</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>Menu contents, normally <code>MenuItem</code>s.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">MenuListProps</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Properties applied to the <code>MenuList</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onClose</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the component requests to be closed.<br><br><strong>Signature:</strong><br><code>function(event: object) =&gt; void</code><br><em>event:</em> The event source of the callback</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEnter</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the Menu enters.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntered</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the Menu has entered.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onEntering</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the Menu is entering.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExit</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired before the Menu exits.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExited</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the Menu has exited.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">onExiting</span></td>
+            <td><span class="prop-type">func</span></td>
+            <td></td>
+            <td>Callback fired when the Menu is exiting.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name required">open&nbsp;*</span></td>
+            <td><span class="prop-type">bool</span></td>
+            <td></td>
+            <td>If <code>true</code>, the menu is visible.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">PopoverClasses</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td><code>classes</code> property applied to the <code>Popover</code> element.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">transitionDuration</span></td>
+            <td><span class="prop-type">union:&nbsp;number&nbsp;|<br>&nbsp;{enter?: number, exit?: number}&nbsp;|<br>&nbsp;enum:&nbsp;'auto'<br><br></span></td>
+            <td><span class="prop-default">'auto'</span></td>
+            <td>The length of the transition in <code>ms</code>, or 'auto'</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,331 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main content of the Modules
+// -----------------------------------------------------------------------------
+
+//Module Style
+.#{$class-prefix}-module {
+  @extend %dt-card-style;
+  margin-bottom: 0;
+  overflow: hidden;
+  margin: -3.2rem -3.2rem -0.2rem;
+  @include border-radius(0);
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    @include media-breakpoint-up(md) {
+      max-width: calc(100% - #{$module-sidebar-width});
+      flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: none;
+      margin-top: 0.2rem;
+      width: 100%;
+    }
+  }
+}
+
+//Module Sidebar Style
+.#{$class-prefix}-module__sidebar {
+  position: relative;
+  z-index: 2;
+  @include media-breakpoint-up(md) {
+    max-width: $module-sidebar-width;
+    flex: 0 0 $module-sidebar-width;
+    -ms-flex: 0 0 $module-sidebar-width;
+    display: flex;
+    flex-direction: column;
+    border-right: $dt-border;
+    min-height: 100%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    border-right: 0 none;
+    @include box-shadow($header-shadow);
+  }
+
+  &-header {
+  	background-color: $module-sidebar-header-bg;
+    @include media-breakpoint-up(md) {
+      min-height: 8.2rem;
+      padding: 2.7rem 2.6rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 2.6rem;
+      border-color: transparent !important;
+    }
+  }
+
+  &-header .quick-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+	align-items: center;
+    font-size: 0;
+    margin-left: -9px;
+    margin-right: -9px;
+
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-down(sm) {
+      & .search-box {
+        padding: 1.2rem 0;
+        margin-right: auto;
+        width: 280px;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      & .search-box {
+        width: 150px;
+      }
+    }
+
+    & .quick-menu {
+      display: block;
+      font-size: 2.2rem;
+      padding-left: 9px;
+      padding-right: 9px;
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        
+      }
+    }
+  }
+
+  &-content {
+    overflow-y: auto;
+
+    & .action-area {
+      padding-left: 2.6rem;
+      padding-right: 2.6rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.#{$class-prefix}-module-side-nav {
+  @extend %list-style-none;
+	
+  @include media-breakpoint-down(sm) {
+  	padding-top: 1rem;
+	padding-bottom: 1rem;
+  }
+   	
+  &__header {
+    position: relative;
+    padding: 0.8rem 2.6rem;
+    line-height: 1;
+    font-size: 14px;
+	margin-bottom: 0.4rem;
+  }
+
+  &__item {
+    &.active .#{$class-prefix}-module-side-nav__link {
+      color: $primary;
+    }
+
+    & + .#{$class-prefix}-module-side-nav__header {
+      margin-top: 0.4rem;
+	  
+    }
+  }
+
+  & + .#{$class-prefix}-contacts {
+    margin-top: 3rem;
+  }
+
+  &__more {
+    padding: 1rem 2.6rem;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    align-items: center;
+    padding: 0.8rem 2.6rem;
+    line-height: 1;
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: $module-sidebar-color;
+    transition: all 0.3s ease;
+
+    & .icon,
+    & i {
+      margin-right: 8px;
+    }
+
+    @include hover-focus-active {
+      color: $module-sidebar-color-hover;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+  }
+}
+
+//Module Content Style
+.#{$class-prefix}-module {
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 2.2rem 3.2rem;
+    border-bottom: $dt-border;
+
+    @include media-breakpoint-up(md) {
+      min-height: 8.2rem;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    -ms-flex: 1;
+    overflow-y: auto;
+
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 0;
+  }
+}
+
+.#{$class-prefix}-module__drawer {
+  &.#{$class-prefix}-drawer {
+    position: absolute;
+    z-index: 100 !important;
+    height: 100%;
+    width: 64%;
+    background-color: $dt-drawer-bg;
+
+    @include media-breakpoint-down(sm) {
+      width: 90%;
+    }
+
+    &.open + .#{$class-prefix}-backdrop {
+      position: absolute;
+      z-index: 99;
+    }
+  }
+
+  &-inner {
+    height: 100%;
+  }
+
+  &-header {
+    padding: 2rem 2.2rem;
+    height: 6.5rem;
+  }
+}
+
+.#{$class-prefix}-actionable-drawer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  -ms-flex: 1;
+  height: 100%;
+
+  & .#{$class-prefix}-notification.fade:not(.show) {
+    display: none;
+  }
+
+  .theme-dark & .search-result {
+    @include hover-focus {
+      background-color: rgba($primary, 0.2);
+    }
+  }
+
+  & .search-result {
+    padding: 6px 4px;
+
+    a {
+      color: $headings-color;
+    }
+
+    @include hover-focus {
+      background-color: $gray-200;
+    }
+
+    & + .search-result {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.#{$class-prefix}-action {
+  &-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    max-width: 6rem;
+    flex: 0 0 6rem;
+    -ms-flex: 0 0 6rem;
+    height: calc(100% - 6.5rem);
+  }
+
+  &-nav {
+    @extend %list-style-none;
+
+    &__item {
+      &.active .#{$class-prefix}-action-nav__link {
+        background-color: $module-sidebar-color-hover;
+        color: $white;
+        @include border-right-radius(50px);
+      }
+    }
+
+    &__link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.2rem 1rem 2.2rem;
+      line-height: 1;
+      white-space: nowrap;
+      color: $module-sidebar-color;
+      transition: all 0.3s ease;
+
+      & .icon,
+      & i {
+        font-size: 2rem;
+      }
+
+      @include hover-focus-active {
+        color: $module-sidebar-color-hover;
+      }
+    }
+  }
+
+  &-content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: calc(100% - 6rem);
+    flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 6.5rem);
+  }
+
+  &-content {
+    padding: 0 2.6rem 2.6rem;
+    height: 100%;
+  }
+}

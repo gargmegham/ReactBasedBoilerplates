@@ -1,0 +1,115 @@
+<div>
+    <h3 id="badge">App Bar</h3>
+    <p class="comments-section">The App bar, formerly known as the action bar in Android, is a special kind of toolbar
+        that’s used for branding, navigation, search, and actions.</p>
+    <p><img class="img-fluid" src="./images/component/appbar.png" alt=""/></p>
+    <p class="comments-section">To show this type of App bar you will need this code in down here.
+    </p>
+
+    <pre>
+<code class="html">
+    &lt;AppBar position="static" color="inherit"&gt;
+        &lt;Toolbar&gt;
+            &lt;IconButton className="jr-menu-icon" aria-label="Menu"&gt;
+                &lt;span className="menu-icon bg-grey"/&gt;
+            &lt;/IconButton&gt;
+            &lt;h4 className="mb-0"&gt;Company Name&lt;/h4&gt;
+        &lt;/Toolbar&gt;
+    &lt;/AppBar&gt;
+</code>
+   </pre>
+
+    <h4>Fully Featured App bar</h4>
+    <img class="img-fluid" src="./images/component/appbar1.png" alt=""/>
+    <pre>
+<code class="html mt-4">
+&lt;AppBar className="app-main-header" position="static"&gt;
+    &lt;Toolbar&gt;
+        &lt;IconButton className="jr-menu-icon" aria-label="Menu"&gt;
+            &lt;span className="menu-icon"/&gt;
+        &lt;/IconButton&gt;
+
+        &lt;h4 className="mb-0 mr-auto"&gt;Company Name&lt;/h4&gt;
+
+        &lt;SearchBox styleName="d-none d-sm-block"/&gt;
+
+        &lt;Button size="small" className="ml-3 text-white d-none d-sm-block"&gt;Login&lt;/Button&gt;
+
+        &lt;div className="d-inline-block d-sm-none list-inline-item"&gt;
+            &lt;Dropdown
+                    className="quick-menu nav-searchbox"
+                    isOpen={this.state.searchBox}
+                    toggle={this.onSearchBoxSelect.bind(this)}&gt;
+
+                &lt;DropdownToggle
+                        className="d-inline-block"
+                        tag="span"
+                        data-toggle="dropdown"&gt;
+                    &lt;IconButton className="icon-btn size-30"&gt;
+                        &lt;i className="zmdi zmdi-search zmdi-hc-fw"/&gt;
+                    &lt;/IconButton&gt;
+                &lt;/DropdownToggle&gt;
+
+                &lt;DropdownMenu right className="p-0"&gt;
+                    &lt;SearchBox styleName="search-dropdown" placeholder=""
+                               onChange={this.updateSearchText.bind(this)}
+                               value={this.state.searchText} /&gt;
+                &lt;/DropdownMenu&gt;
+            &lt;/Dropdown&gt;
+        &lt;/div&gt;
+
+        &lt;ul className="header-notifications list-inline ml-3 d-none d-sm-block"&gt;
+
+            &lt;li className="list-inline-item"&gt;
+                &lt;i className="zmdi zmdi-notifications-active zmdi-hc-lg zmdi-hc-fw"/&gt;
+            &lt;/li&gt;
+            &lt;li className="list-inline-item"&gt;
+                &lt;i className="zmdi zmdi-comment-alt-text zmdi-hc-lg zmdi-hc-fw"/&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;Avatar className="ml-3 ml-lg-5 d-none d-sm-block" alt="Remy Sharp"
+                src="assets/images/userAvatar/stella-johnson.png"/&gt;
+    &lt;/Toolbar&gt;
+&lt;/AppBar&gt;
+</code>
+        </pre>
+
+    <h4 class="mb-4">Available parameters, type and descriptions are down below.</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="prop-name required">children&nbsp;*</span></td>
+            <td><span class="prop-type">node</span></td>
+            <td></td>
+            <td>The content of the component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">classes</span></td>
+            <td><span class="prop-type">object</span></td>
+            <td></td>
+            <td>Useful to extend the style applied to components.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">color</span></td>
+            <td><span class="prop-type">enum:&nbsp;'inherit'&nbsp;|<br>&nbsp;'primary'&nbsp;|<br>&nbsp;'secondary'&nbsp;|<br>&nbsp;'default'<br></span></td>
+            <td><span class="prop-default">'primary'</span></td>
+            <td>The color of the component. It supports those theme colors that make sense for this component.</td>
+        </tr>
+        <tr>
+            <td><span class="prop-name">position</span></td>
+            <td><span class="prop-type">enum:&nbsp;'fixed'&nbsp;|<br>&nbsp;'absolute'&nbsp;|<br>&nbsp;'sticky'&nbsp;|<br>&nbsp;'static'<br></span></td>
+            <td><span class="prop-default">'fixed'</span></td>
+            <td>The positioning type. The behavior of the different options is described <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">here</a>. Note: <code>sticky</code> is not universally supported and will fall back to <code>static</code> when unavailable.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

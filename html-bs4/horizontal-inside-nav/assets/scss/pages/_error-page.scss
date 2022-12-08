@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Maps.
+// -----------------------------------------------------------------------------
+
+//Page Style
+.#{$class-prefix}-page {
+  &--container {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    -ms-flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: $headings-color;
+    font-size: 1.6rem;
+
+    & > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    & .title {
+      font: {
+        size: 7.2rem;
+        weight: 600;
+      }
+    }
+
+    & .search-box {
+      width: 320px;
+      margin: 0 auto;
+
+      @include media-breakpoint-down(xs) {
+        width: 250px;
+      }
+    }
+
+    .error-page {
+	  max-width: 380px;
+      width: 94%;
+      margin-right: auto;
+      margin-left: auto;
+	  padding-bottom: 2.2rem;
+    }
+  }
+}
+
+.#{$class-prefix}-error-code {
+	color: #595959;
+	font-size: 16rem;
+	line-height: 1;
+	font-weight: 500;
+	text-shadow: 10px 6px 8px hsla(0,0%,45.9%,.8);
+	
+	@include media-breakpoint-down(xs) {
+      font-size: 12rem;
+   }
+   
+   .theme-dark & {
+   	   color: $text-color;
+	   text-shadow: 10px 6px 8px rgba(255,117,117,.8);
+   }
+}
+

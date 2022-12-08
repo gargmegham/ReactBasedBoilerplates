@@ -1,0 +1,340 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Dashboard Page.
+// -----------------------------------------------------------------------------
+
+//Invoice Widget
+.invoice-list {
+  @extend %list-style-none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+  justify-content: space-around;
+
+  &__item {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  &__number {
+    font: {
+      size: 2.2rem;
+    }
+    line-height: 1;
+    margin-bottom: 4px;
+    color: $headings-color;
+    display: block;
+  }
+
+  &__label {
+    display: inline-block;
+    line-height: 1;
+    font-size: 12px;
+    color: lighten($text-color, 14%);
+  }
+}
+
+.invoice-list__item {
+  position: relative;
+  cursor: pointer;
+  & .dot-shape {
+    margin-right: 4px;
+    @include transition(all 120ms ease);
+  }
+
+  @include hover-focus {
+    & .dot-shape {
+      @include scale(1.4);
+    }
+  }
+
+  & .custom-tooltip {
+    @include transition(all 0.5s ease);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @include hover-focus {
+    & .custom-tooltip {
+      position: absolute;
+      top: -120%;
+      left: 50%;
+      @include translateX(-50%);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// Indicator Style
+
+.#{$class-prefix}-indicator {
+  @extend %list-style-none;
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__bar {
+      height: 3px;
+      width: 100%;
+      background-color: $gray-200;
+    }
+
+    &__fill {
+      min-height: 3px;
+      height: 100%;
+      width: 0;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+    }
+
+    &__count {
+      font: {
+        size: $font-size-sm;
+      }
+    }
+  }
+
+  &-half {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+
+    &-item {
+      width: 50%;
+      padding: 0 12px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 0;
+  }
+}
+
+.#{$class-prefix}-zone-stats {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: $dt-border;
+
+  @include media-breakpoint-down(xs) {
+    border-left: 0;
+    border-top: $dt-border;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    -ms-flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    &:not(:last-child) {
+      border-bottom: $dt-border;
+    }
+  }
+}
+
+//Widgets
+.#{$class-prefix}-widget {
+  &.#{$class-prefix}-widget-sm &__item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  &.#{$class-prefix}-widget-xl &__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  & + .#{$class-prefix}-widget {
+    margin-top: 18px;
+  }
+
+  & + &-link,
+  &__item + &-link {
+    margin-top: 10px;
+    font-size: 12px;
+    padding-left: $dt-card-padding-x;
+    padding-right: $dt-card-padding-x;
+  }
+
+  & &__heading {
+    padding-left: $dt-card-padding-x;
+    padding-right: $dt-card-padding-x;
+    margin-bottom: 4px;
+    color: lighten($text-color, 14%);
+  }
+
+  & &__item {
+    display: flex;
+    flex: 1;
+    -ms-flex: 1;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1.4rem $dt-card-padding-x 1.5rem;
+  }
+
+  & &__item &__info {
+    flex: 1;
+    -ms-flex: 1;
+    align-self: center;
+
+    &:not(:last-child) {
+      padding-right: 1.6rem;
+    }
+  }
+
+  & &__item &__img + &__info {
+    padding-left: 1.6rem;
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 1.4rem;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: $font-size-base;
+    color: $headings-color;
+    margin-bottom: 2px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: ($font-size-base + 0.2rem);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.#{$class-prefix}-task {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & &__number {
+    display: none;
+  }
+
+  @include media-breakpoint-up(sm) {
+    min-width: 135px;
+
+    & &__number {
+      display: block;
+      font-size: $font-size-sm;
+      @include transition(all 0.4s ease);
+      margin-right: -1.4rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    & &__redirect {
+      @include transition(all 0.4s ease);
+      @include translateX(100%);
+    }
+  }
+}
+
+.#{$class-prefix}-widget-hover {
+  & .#{$class-prefix}-widget__item {
+    @extend %widget-hover;
+
+    @include media-breakpoint-up(sm) {
+      @include hover {
+        & .#{$class-prefix}-task {
+          & .#{$class-prefix}-task__number {
+            color: $primary;
+            margin-right: 6rem;
+          }
+
+          & .#{$class-prefix}-task__redirect {
+            @include translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &-bg {
+    & .#{$class-prefix}-widget__item {
+      @extend %widget-hover;
+
+      @include hover {
+        background-color: $primary-lighten;
+      }
+
+      @include media-breakpoint-up(sm) {
+        @include hover {
+          & .#{$class-prefix}-task {
+            & .#{$class-prefix}-task__number {
+              color: $primary;
+              margin-right: 6rem;
+            }
+
+            & .#{$class-prefix}-task__redirect {
+              @include translateX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme-dark .#{$class-prefix}-widget-hover {
+  &-bg .#{$class-prefix}-widget__item {
+    @include hover {
+      background-color: #4a5763;
+    }
+  }
+}
+
+.#{$class-prefix}-widget-border {
+  & .#{$class-prefix}-widget__item:not(:last-child) {
+    border-bottom: $dt-border;
+  }
+}
+
+//Campaigns Table
+.campaigns-widget {
+  & .#{$class-prefix}-widget {
+    margin-left: -($dt-card-padding-x / 2);
+    margin-right: -($dt-card-padding-x /2);
+  }
+  & .#{$class-prefix}-widget__item {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px ($dt-card-padding-x / 2);
+    @include border-radius($border-radius);
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+
+    & .#{$class-prefix}-widget__title {
+      font-size: 12px;
+    }
+  }
+}
